@@ -1,21 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TheEnd/scripts/Game/dialogue/controller/DialogueManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TheEnd\dialogue\chapter1.json">
     <Files>
-      <File FileName="Assets/Resources/Editor/CM Tools/TileMaster/TileMaster.cs" Line="988" Column="1" />
-      <File FileName="Assets/TheEnd/scripts/Game/Enemy/EnemySpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/ColorChanger.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/scripts/Game/Dialogue/controller/DialogueInputManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/scripts/Game/dialogue/controller/DialogueLoader.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/scripts/Game/dialogue/model/Dialogue.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/scripts/Game/Enemy/Enemy.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/dialogue/chapter1.json" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/scripts/Game/dialogue/controller/TypeWriter.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/scripts/Game/dialogue/controller/DialogueManager.cs" Line="44" Column="4" />
-      <File FileName="Assets/MyStandardPackage/sprite/IsometricSprite.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/scripts/Game/Enemy/EnemyManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/scripts/Game/stage/objects/MapTrigger.cs" Line="21" Column="3" />
-      <File FileName="Assets/TheEnd/scripts/Game/Game Flow/LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\TheEnd\dialogue\chapter1.json" Line="2" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,46 +1,87 @@
 {
     "version": "1.0",
-    "data": {
-        "sampleArray": [
-            "string value",
-            5,
-            {
-                "name": "sub object"
-            }
-        ]
-    },
     "dialogues":[
     	{
-		    "id" : "area1", 
-		    "type" :"conversation",
+		    "id" : "1-1Asentence1", 
+		    "type" :"description",
 		    "lines" : [
 			    {
-			    	"character" : "JERRY",
-			    	"expression" : "smile",
-			    	"line" : "HIHI, HOW ARE YOU"
-			    },
-			    {
-			    	"character" : "allie",
-			    	"expression" : "smile",
-			    	"line" : "HIHI, HOW ARE YOU"
-			    },
+			    	"line" : "已關閉的圖書館氣氛顯得壓抑，在一片伸手不見五指的黑暗中，鍾末雪身邊忽然出現了亮光，她滿臉驚駭看著右手緊握的項鍊，此時卻傳來廣播的聲音。"
+			    }
 			]
 		},
 		{
-		    "id" : "area2", 
+		    "id" : "1-1Aplayfemale1os", 
 		    "type" :"conversation",
 		    "lines" : [
 			    {
-			    	"character" : "JERRY",
-			    	"expression" : "smile",
-			    	"line" : "HIHI, HOW ARE YOU"
-			    },
-			    {
-			    	"character" : "allie",
-			    	"expression" : "smile",
-			    	"line" : "HIHI, HOW ARE YOU"
-			    },
+			    	"character" : "moshiue",
+			    	"expression" : "confused",
+			    	"line" : "感覺圖書館沒有人的樣子，怎麼會有廣播放英文詩呢？而且總覺得我好像在哪邊有聽過……"
+			    }
 			]
-		}
+		},
+		{
+		    "id" : "1-1Apaperfemale1os1", 
+		    "type" :"conversation",
+		    "lines" : [
+			    {
+			    	"character" : "moshiue",
+			    	"expression" : "shocked",
+			    	"line" : "「這不是子晴寫的紙條嗎？她是不是還……」"
+			    }
+			]
+		},
+		{
+		    "id" : "1-1Apaperfemale1os1", 
+		    "type" :"description",
+		    "lines" : [
+			    {
+			    	"line" : "鍾末雪一時之間內心五味雜陳，她沒有想到在這鬼地方還有機會遇見樓子晴，她最想說對不起的好朋友，而鍾末雪重新再看一次紙條，不禁啞然失笑。"
+			    }
+			]
+		},
+		{
+		    "id" : "1-1Apapersentence1", 
+		    "type" :"description",
+		    "lines" : [
+			    {
+			    	"line" : "鍾末雪一時之間內心五味雜陳，她沒有想到在這鬼地方還有機會遇見樓子晴，她最想說對不起的好朋友，而鍾末雪重新再看一次紙條，不禁啞然失笑。"
+			    }
+			]
+		},
+		{
+		    "id" : "1-1Apaperfemale1os2", 
+		    "type" :"conversation",
+		    "lines" : [
+			    {
+			    	"character" : "moshiue",
+			    	"expression" : "smile",
+			    	"line" : "「末雪我想你一定知道那人是誰，她怎麼能篤定我一定知道是誰呢？」"
+			    }
+			]
+		},
+		{
+		    "id" : "1-1Apaperfemale1os3", 
+		    "type" :"conversation",
+		    "lines" : [
+			    {
+			    	"character" : "moshiue",
+			    	"expression" : "normal",
+			    	"line" : "「說著永不復焉的烏鴉、厄謝府的沒落……我想起來了，廣播不就是放著烏鴉的詩嗎？」"
+			    }
+			]
+		},
+		{
+		    "id" : "1-1Apaperfemale1os4", 
+		    "type" :"conversation",
+		    "lines" : [
+			    {
+			    	"character" : "moshiue",
+			    	"expression" : "worried",
+			    	"line" : "「可是寫烏鴉這首詩的作者是誰？我記得她很喜歡那位作者的，或許我可以透過這線索找到她！」"
+			    }
+			]
+		},
 	]
 }

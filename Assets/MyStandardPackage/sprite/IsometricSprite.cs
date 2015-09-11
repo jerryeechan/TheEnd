@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-//[ExecuteInEditMode]
+[ExecuteInEditMode]
 public class IsometricSprite : MonoBehaviour {
 
 	// Use this for initialization
@@ -36,7 +36,7 @@ public class IsometricSprite : MonoBehaviour {
 		for(int i=0;i<sprs.Count;i++)
 		{
 			//sprs[i].sortingOrder = localSortingOrders[i]- Mathf.RoundToInt(myTransform.position.y*200);
-			sprs[i].sortingOrder = - Mathf.RoundToInt(myTransform.position.y*200);
+			sprs[i].sortingOrder = - (Mathf.RoundToInt(myTransform.position.y*200) - Mathf.RoundToInt(sprs[i].transform.position.y));
 		}
 		
 	}

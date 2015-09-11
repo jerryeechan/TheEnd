@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour {
 	
 	void test()
 	{	
-		if(dialogueFiles[0])
+		if(dialogueFiles.Length>0)
 			PlayDialogue(loader.LoadDialoguesText(dialogueFiles[0]));
 	}
 	

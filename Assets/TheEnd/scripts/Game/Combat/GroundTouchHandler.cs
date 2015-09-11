@@ -28,7 +28,7 @@ public class GroundTouchHandler : MonoBehaviour , IPointerDownHandler, IDragHand
 		pos.z = 0;
 		currentBaisema = Instantiate(baisemaPrefab,pos,Quaternion.identity) as Baisema;
 		currentState = BaisemaState.Growing;
-		PlayerController.instance.isCastingBaisema = true;
+		//PlayerController.instance.isCastingBaisema = true;
 	}
 
 	#endregion
@@ -75,7 +75,7 @@ public class GroundTouchHandler : MonoBehaviour , IPointerDownHandler, IDragHand
 				currentState = BaisemaState.Finished;
 		}
 		
-		PlayerController.instance.isCastingBaisema = false;
+		//PlayerController.instance.isCastingBaisema = false;
 	}
 
 	#endregion
@@ -85,7 +85,7 @@ public class GroundTouchHandler : MonoBehaviour , IPointerDownHandler, IDragHand
 		print("touch began");
 		currentBaisema = Instantiate(baisemaPrefab,touchInfo.touchPos,Quaternion.identity) as Baisema;
 		currentState = BaisemaState.Growing;
-		PlayerController.instance.isCastingBaisema = true;
+		//PlayerController.instance.isCastingBaisema = true;
 	}
 	void OnTouchMoved(TouchInfo touchInfo)
 	{
@@ -122,7 +122,7 @@ public class GroundTouchHandler : MonoBehaviour , IPointerDownHandler, IDragHand
 				currentState = BaisemaState.Finished;
 		}
 		
-		PlayerController.instance.isCastingBaisema = false;
+		//PlayerController.instance.isCastingBaisema = false;
 		
 	}
 }
