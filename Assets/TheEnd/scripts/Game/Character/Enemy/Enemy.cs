@@ -18,7 +18,9 @@ public class Enemy : MonoBehaviour {
 
 
     enum EnemyState { Movable, Trapped, Died };
+    
     EnemyState state = EnemyState.Movable;
+    /*
     void OnTriggerEnter2D(Collider2D collider2D)
     {
         if (collider2D.tag == "Baisema")
@@ -29,6 +31,7 @@ public class Enemy : MonoBehaviour {
             print("locked");
         }
     }
+
     void OnCollisionEnter2D(Collision2D collision2D)
     {
         print(collision2D.collider.tag);
@@ -36,6 +39,23 @@ public class Enemy : MonoBehaviour {
         {
             //c2d.isTrigger = true;
         }
+    }*/
+    public Baisema lockedBaisema;
+    public bool isBaisemaLocked;
+    public bool isMovable()
+    {
+        return state == EnemyState.Movable;
+    }
+    public void Locked()
+    {
+        isBaisemaLocked = true;
+    }
+    public void Trapped()
+    {
+        state = EnemyState.Trapped;
+        c2d.enabled = false;
+        anim.speed = 0;
+        rb2d.isKinematic = true;
     }
     enum EnemyAnimationState { Walk_Back, Walk_Front, Walk_Left, Walk_Right }
     Vector2 moveVec = Vector2.zero;
@@ -68,14 +88,16 @@ public class Enemy : MonoBehaviour {
                     state = CharacterAnimationState.Stand_Right; break;
             }
         }
-        print(CharacterAnimationStateManager.instance);
         string stateName = CharacterAnimationStateManager.instance.getAnimationStateString(state);
         anim.Play(stateName);
         lastState = state;
     }
     void Update()
     {
-        rb2d.velocity = moveVec * data.moveVelocity;
+        if (state == EnemyState.Movable)
+        {
+            rb2d.velocity = moveVec * data.moveVelocity;
+        }
     }
     public void takeDamage(float damage)
 	{

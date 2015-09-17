@@ -34,7 +34,7 @@ public class Player : MonoBehaviour {
         this.moveVec = moveVec;
         attackRange.changeDir(moveVec);
     }
-
+    
     void Update()
     {
         if (!isCastingBaisema)
@@ -87,5 +87,23 @@ public class Player : MonoBehaviour {
     public void damaged(int damageRaw)
     {
 
+    }
+
+    public float getAttackValue()
+    {
+        return data.damage;
+    }
+
+    public void useSkill(int index)
+    {
+        Enemy target = attackRange.getTarget();
+        if(target != null)
+        {
+            Baisema baisema = BaisemaManager.instance.genBaisema(target.transform.position);
+            baisema.lockUp(target);
+            anim.Play("magic");
+        }
+        
+        
     }
 }

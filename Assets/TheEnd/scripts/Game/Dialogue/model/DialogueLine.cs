@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using TheEnd;
 public class DialogueLine{
 
 	public string text;
 	public string expression;
-	public DialogueCharacter character;
-	public DialogueLine(string text,string character,string expression)
+	public string character;
+    public int chIndex;
+	public DialogueLine(string text,string character,string expression,int chIndex)
 	{
 		this.text = text;
 		this.expression = expression;
-		this.character = DialogueManager.instance.getCharacter(character);
-		
+        this.character = character;
+        this.chIndex = chIndex;
 		//this.character = 
 	}
 	
@@ -22,10 +23,8 @@ public class DialogueLine{
 	
 	public void Play()
 	{
-		if(character != null)
-		{
-			character.Play(expression);
-		}
+        //DialogueManager.instance.
+        
 	}
 	
 }

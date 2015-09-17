@@ -10,9 +10,10 @@ public class DialogueManager : MonoBehaviour {
 	DialogueLoader loader;
 	Dictionary<string,Dialogue> dialogueDictionary;
 	Dictionary<string,DialogueCharacter> characterDict;
-	
-	public List<DialogueCharacter> dialogueCharacters;
-	public static DialogueManager instance;
+
+    public DialogueCharaterPanel chPanel1;
+    public DialogueCharaterPanel chPanel2;
+    public static DialogueManager instance;
 	public enum TextFormat{JSON,TXT};
 	public TextFormat format;
 	void Awake()
@@ -29,7 +30,7 @@ public class DialogueManager : MonoBehaviour {
 		characterDict = new Dictionary<string, DialogueCharacter>();
 		loader = new DialogueLoader();
 		
-		initCharacterDict();	
+		//initCharacterDict();	
 		test();
 		
 	}
@@ -42,15 +43,6 @@ public class DialogueManager : MonoBehaviour {
 	{	
 		if(dialogueFiles.Length>0)
 			PlayDialogue(loader.LoadDialoguesText(dialogueFiles[0]));
-	}
-	
-	
-	void initCharacterDict()
-	{
-		for(int i=0;i<dialogueCharacters.Count;i++)
-		{
-			characterDict.Add(dialogueCharacters[i].name,dialogueCharacters[i]);
-		}
 	}
 	
 	List<Dialogue> dialogues;
@@ -94,7 +86,10 @@ public class DialogueManager : MonoBehaviour {
 		typeWriter.Skip();
 	}
 	
-	
+	public void PlayCharacterExpression(int chIndex,string character, string expression)
+    {
+        chPanel1.setCharater(character, expression);
+    }
 	public DialogueCharacter getCharacter(string chName)
 	{
 		return characterDict[chName];

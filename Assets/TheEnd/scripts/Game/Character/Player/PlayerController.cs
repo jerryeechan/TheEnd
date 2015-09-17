@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityStandardAssets.CrossPlatformInput;
 using TheEnd;
 public class PlayerController : MonoBehaviour {
     public static PlayerController instance;

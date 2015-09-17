@@ -44,8 +44,8 @@ public class DialogueLoader  {
 		{
 			case Dialogue.DialogueType.Conversation:
 			foreach(JSONNode lineJSON in linesJSON)
-			{
-				dialogue.addLine(new DialogueLine(lineJSON["line"],lineJSON["character"],lineJSON["expression"]));
+			{    
+				dialogue.addLine(new DialogueLine(lineJSON["line"],lineJSON["character"],lineJSON["expression"], int.Parse(lineJSON["chIndex"])));
 			}
 			break;
 			

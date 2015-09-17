@@ -34,14 +34,18 @@ public class AttackRange:MonoBehaviour
     {
         if(collider2D.tag == "Enemy")
         {
-            enemyInRange.Add(collider2D.GetComponent<Enemy>());
+            Enemy enemy = collider2D.GetComponent<Enemy>();
+            if(!enemy.isBaisemaLocked)
+            enemyInRange.Add(enemy);
         }
     }
     void OnTriggerExit2D(Collider2D collider2D)
     {
         if (collider2D.tag == "Enemy")
         {
-            enemyInRange.Remove(collider2D.GetComponent<Enemy>());
+            Enemy enemy = collider2D.GetComponent<Enemy>();
+            if(enemyInRange.Contains(enemy))
+                enemyInRange.Remove(enemy);
         }
     }
     public Enemy getTarget()
@@ -57,6 +61,8 @@ public class AttackRange:MonoBehaviour
                 nearestIndex = i;
             }
         }
-        return enemyInRange[nearestIndex];
+        Enemy target = enemyInRange[nearestIndex];
+        enemyInRange.Remove(target);
+        return target;
     }
 }

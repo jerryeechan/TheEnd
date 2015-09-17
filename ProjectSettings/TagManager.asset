@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Baisema
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Baisema
   - 
   - 
   - 
@@ -42,6 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Baisema_Base
+    uniqueID: 2282722895
+    locked: 0
   - name: Unit
     uniqueID: 2088901503
+    locked: 0
+  - name: Baisema_Top
+    uniqueID: 3169430061
+    locked: 0
+  - name: Roof
+    uniqueID: 2635571915
     locked: 0
