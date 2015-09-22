@@ -7,12 +7,13 @@ public class Enemy : MonoBehaviour {
     Rigidbody2D rb2d;
     Collider2D c2d;
     public EnemyData data;
-    Animator anim;
+    public Animator anim;
+    public Animator effectAnim;
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         c2d = GetComponent<BoxCollider2D>();
-        anim = GetComponentInChildren<Animator>();
+
         lastState = CharacterAnimationState.Stand_Front;
     }
 
@@ -101,6 +102,7 @@ public class Enemy : MonoBehaviour {
     }
     public void takeDamage(float damage)
 	{
+        damage = 100;
 		data.health -= damage;
 		if (data.health<=0)
 		{
@@ -110,7 +112,7 @@ public class Enemy : MonoBehaviour {
 	public void DieAnimation()
 	{
 		state = EnemyState.Died;
-		
+        effectAnim.Play("disappear");
 	}
 	
 	public void die()

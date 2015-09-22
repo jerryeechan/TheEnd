@@ -16,7 +16,7 @@ public class BaisemaManager : MonoBehaviour {
 	{
 		baisemaList.Add(b);
 	}
-	void explodeAll()
+	public void explodeAll()
 	{
 		foreach(Baisema b in baisemaList)
 		{
@@ -25,14 +25,19 @@ public class BaisemaManager : MonoBehaviour {
 		baisemaList.Clear();
 		
 	}
+    public void SetUpAll()
+    {
+        foreach (Baisema b in baisemaList)
+        {
+            b.SetUp();
+        }
+    }
     public Baisema genBaisema(Vector3 pos)
     {
         Baisema newBaisema = Instantiate(baisemaPrefab, pos, Quaternion.identity) as Baisema;
         addBaisema(newBaisema);
         return newBaisema;
     }
-    public void swipeUp()
-    {
-        explodeAll();
-    }
+
+
 }

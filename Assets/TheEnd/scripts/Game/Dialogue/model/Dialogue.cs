@@ -8,7 +8,7 @@ public class Dialogue  {
 	int chapter;
 	public TextAsset dialogueJSONFile;
 	List<DialogueLine> lines;
-	public enum DialogueType{OS,Conversation,Description};
+	public enum DialogueType{os,conversation,description};
 	public DialogueType type;
 	public Dialogue(DialogueType type)
 	{
@@ -29,7 +29,11 @@ public class Dialogue  {
 		if(currentLineIndex<lines.Count)
 		return lines[currentLineIndex++];
 		else
-		return null;
+        {
+            currentLineIndex = 0;
+            return null;
+        }
+		
 	}
 	// Update is called once per frame
 	

@@ -28,11 +28,12 @@ public class BaisemaGestureHandler : MonoBehaviour , IPointerDownHandler, IDragH
 
 	public void OnDrag (PointerEventData eventData)
 	{  
+        /*
 		if (eventData.delta.y>0.6)
 		{
 			print("swipe up");
             BaisemaManager.instance.swipeUp();
-		}
+		}*/
 	}
 	#endregion
 	

@@ -10,7 +10,8 @@ public class DialogueManager : MonoBehaviour {
 	DialogueLoader loader;
 	Dictionary<string,Dialogue> dialogueDictionary;
 	Dictionary<string,DialogueCharacter> characterDict;
-
+    
+    public DialoguePanelView dialoguePanel;
     public DialogueCharaterPanel chPanel1;
     public DialogueCharaterPanel chPanel2;
     public static DialogueManager instance;
@@ -29,9 +30,9 @@ public class DialogueManager : MonoBehaviour {
 		dialogueDictionary = new Dictionary<string, Dialogue>();
 		characterDict = new Dictionary<string, DialogueCharacter>();
 		loader = new DialogueLoader();
-		
-		//initCharacterDict();	
-		test();
+
+        //initCharacterDict();	
+        loadDialogue(1);
 		
 	}
 	/**
@@ -42,13 +43,13 @@ public class DialogueManager : MonoBehaviour {
 	void test()
 	{	
 		if(dialogueFiles.Length>0)
-			PlayDialogue(loader.LoadDialoguesText(dialogueFiles[0]));
+			loader.LoadDialoguesText(dialogueFiles[0]);
 	}
 	
 	List<Dialogue> dialogues;
 	public void loadDialogue(int chapter)
 	{
-		dialogueDictionary = loader.LoadDialoguesJSON(dialogueFiles[chapter]);
+		dialogueDictionary = loader.LoadDialoguesJSON(dialogueFiles[chapter-1]);
 	}
 	
 	Dialogue currentDialogue;
@@ -58,7 +59,9 @@ public class DialogueManager : MonoBehaviour {
 	}
 	public void PlayDialogue(Dialogue dialogue)
 	{
-		currentDialogue = dialogue;
+        
+        dialoguePanel.Show();
+        currentDialogue = dialogue;
 		PlayNextLine();
 	}
 	
@@ -77,6 +80,10 @@ public class DialogueManager : MonoBehaviour {
 				typeWriter.Play(line.text);
 				print("next line");
 			}
+            else
+            {
+                dialoguePanel.Hide();
+            }
 
 		}
 		

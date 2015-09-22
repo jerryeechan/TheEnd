@@ -17,7 +17,6 @@ public class Player : MonoBehaviour {
     void Awake()
 	{
 		instance = this;
-        print(instance);
 		anim = GetComponentInChildren<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
 
@@ -94,16 +93,30 @@ public class Player : MonoBehaviour {
         return data.damage;
     }
 
-    public void useSkill(int index)
+    public void skillBtnTouched()
     {
-        Enemy target = attackRange.getTarget();
-        if(target != null)
+        if(!attackRange.isObjectTrigger())
         {
-            Baisema baisema = BaisemaManager.instance.genBaisema(target.transform.position);
-            baisema.lockUp(target);
-            anim.Play("magic");
+            Enemy target = attackRange.getTarget();
+            if (target != null)
+            {
+                Baisema baisema = BaisemaManager.instance.genBaisema(target.transform.position);
+                baisema.lockUp(target);
+                anim.Play("magic");
+            }
         }
         
         
+        
+    }
+    public void swipeUp()
+    {
+        anim.Play("magic");
+        BaisemaManager.instance.SetUpAll();
+    }
+    public void swipeDown()
+    {
+        anim.Play("explode");
+        BaisemaManager.instance.explodeAll();
     }
 }

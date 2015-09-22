@@ -18,7 +18,7 @@ public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,I
 
 	public void OnPointerDown (PointerEventData eventData)
 	{
-		
+        
 	}
 
 	#endregion

@@ -13,7 +13,7 @@ public class DialogueLoader  {
 	{
 		string[] lines = file.text.Split('\n');
 		Debug.Log("DialogueLoader:"+lines.Length);	
-		Dialogue dialogue = new Dialogue(Dialogue.DialogueType.Description);
+		Dialogue dialogue = new Dialogue(Dialogue.DialogueType.description);
 		foreach(string line in lines)
 		{
 			dialogue.addLine(new DialogueLine(line));
@@ -42,14 +42,14 @@ public class DialogueLoader  {
 	{
 		switch(dialogue.type)
 		{
-			case Dialogue.DialogueType.Conversation:
+			case Dialogue.DialogueType.conversation:
 			foreach(JSONNode lineJSON in linesJSON)
 			{    
 				dialogue.addLine(new DialogueLine(lineJSON["line"],lineJSON["character"],lineJSON["expression"], int.Parse(lineJSON["chIndex"])));
 			}
 			break;
 			
-			case Dialogue.DialogueType.Description:
+			case Dialogue.DialogueType.description:
 			foreach(JSONNode lineJSON in linesJSON)
 			{
 				dialogue.addLine(new DialogueLine(lineJSON["line"]));

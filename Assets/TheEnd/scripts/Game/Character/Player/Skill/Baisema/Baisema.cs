@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using System;
 
-public class Baisema : MonoBehaviour ,IPointerDownHandler{
+public class Baisema : MonoBehaviour{
 
     // Use this for initialization
 
@@ -49,8 +49,8 @@ public class Baisema : MonoBehaviour ,IPointerDownHandler{
 
     }
     //set the baisema up with concrete collider
-    enum BaisemaState {None, TargetLocking, TargetLocked, Setting, Set, Exploding };
-    BaisemaState state = BaisemaState.None;
+    public enum BaisemaState {None, TargetLocking, TargetLocked, Setting, Set, Exploding };
+    public BaisemaState state = BaisemaState.None;
 
     Transform lockingTransform;
     Enemy targetEnemy;
@@ -76,6 +76,11 @@ public class Baisema : MonoBehaviour ,IPointerDownHandler{
         bodyCollider.enabled = true;
         targetEnemy.Trapped();
         bodyAnim.Play("setup");
+        Invoke("SetUpDone",0.6f);
+    }
+    public void SetUpDone()
+    {
+        state = BaisemaState.Set;
     }
 	//destroy the baiesma to attack the monster trap inside
 	public void explode()
@@ -83,7 +88,9 @@ public class Baisema : MonoBehaviour ,IPointerDownHandler{
         if (state == BaisemaState.Set)
         {
             targetEnemy.takeDamage(Player.instance.getAttackValue());
+            bodyAnim.Play("none");
             explosionAnim.Play("explode");
+            baseAnim.Play("disappear");
         }
 	}
 	public bool isSet()
@@ -99,6 +106,7 @@ public class Baisema : MonoBehaviour ,IPointerDownHandler{
 		Destroy(gameObject);
 	}
 
+    /*
     public void OnPointerDown(PointerEventData eventData)
     {
         print("point down baisema");
@@ -109,4 +117,5 @@ public class Baisema : MonoBehaviour ,IPointerDownHandler{
         }
         
     }
+    */
 }

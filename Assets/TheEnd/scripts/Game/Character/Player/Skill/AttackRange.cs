@@ -7,9 +7,11 @@ public class AttackRange:MonoBehaviour
 {
     Collider2D c2d;
     List<Enemy> enemyInRange;
+    List<NoteTrigger> noteTriggerInRange;
     void Awake()
     {
         enemyInRange = new List<Enemy>();
+        noteTriggerInRange = new List<NoteTrigger>();
     }
     public void changeDir(Vector3 dir)
     {
@@ -32,37 +34,69 @@ public class AttackRange:MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider2D)
     {
-        if(collider2D.tag == "Enemy")
+        switch(collider2D.tag)
         {
-            Enemy enemy = collider2D.GetComponent<Enemy>();
-            if(!enemy.isBaisemaLocked)
-            enemyInRange.Add(enemy);
+            case "Enemy":
+                Enemy enemy = collider2D.GetComponent<Enemy>();
+                if(!enemy.isBaisemaLocked)
+                enemyInRange.Add(enemy);
+                break;
+            case "Note":
+                NoteTrigger noteTrigger = collider2D.GetComponent<NoteTrigger>();
+                noteTriggerInRange.Add(noteTrigger);
+                break;
+            
         }
     }
     void OnTriggerExit2D(Collider2D collider2D)
     {
-        if (collider2D.tag == "Enemy")
+        switch (collider2D.tag)
         {
-            Enemy enemy = collider2D.GetComponent<Enemy>();
-            if(enemyInRange.Contains(enemy))
-                enemyInRange.Remove(enemy);
+            case "Enemy":
+
+                Enemy enemy = collider2D.GetComponent<Enemy>();
+                if (enemyInRange.Contains(enemy))
+                    enemyInRange.Remove(enemy);
+                break;
+            case "Note":
+                NoteTrigger noteTrigger = collider2D.GetComponent<NoteTrigger>();
+                if (noteTriggerInRange.Contains(noteTrigger))
+                    noteTriggerInRange.Remove(noteTrigger);
+                break;
+
         }
     }
+    public bool isObjectTrigger()
+    {
+        if (noteTriggerInRange.Count > 0)
+        {
+            noteTriggerInRange[0].show();
+            return true;
+        }
+        return false;
+    }
+
     public Enemy getTarget()
     {
-        float nearestDis = 100;
-        int nearestIndex = 0;
-        for(int i=0;i<enemyInRange.Count;i++)
+        if (enemyInRange.Count > 0)
         {
-            float dis = (transform.position - enemyInRange[i].transform.position).sqrMagnitude;
-            if (dis < nearestDis)
+            float nearestDis = 100;
+            int nearestIndex = 0;
+            for (int i = 0; i < enemyInRange.Count; i++)
             {
-                nearestDis = dis;
-                nearestIndex = i;
+                float dis = (transform.position - enemyInRange[i].transform.position).sqrMagnitude;
+                if (dis < nearestDis)
+                {
+                    nearestDis = dis;
+                    nearestIndex = i;
+                }
             }
+            Enemy target = enemyInRange[nearestIndex];
+            enemyInRange.Remove(target);
+            return target;
         }
-        Enemy target = enemyInRange[nearestIndex];
-        enemyInRange.Remove(target);
-        return target;
+        else
+            return null;
+        
     }
 }
