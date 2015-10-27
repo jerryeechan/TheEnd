@@ -3,7 +3,7 @@ using System.Collections;
 using TheEnd;
 public class Enemy : MonoBehaviour {
 
-
+    public EnemySpawner spawner;
     Rigidbody2D rb2d;
     Collider2D c2d;
     public EnemyData data;
@@ -113,10 +113,12 @@ public class Enemy : MonoBehaviour {
 	{
 		state = EnemyState.Died;
         effectAnim.Play("disappear");
+        Invoke("die",0.5f);
 	}
 	
 	public void die()
 	{
+        spawner.recycleEnemy(); 
 		Destroy(gameObject);
 	}
 }

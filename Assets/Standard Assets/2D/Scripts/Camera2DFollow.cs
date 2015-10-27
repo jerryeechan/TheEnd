@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections;
+
 namespace UnityStandardAssets._2D
 {
     public class Camera2DFollow : MonoBehaviour
@@ -21,6 +22,10 @@ namespace UnityStandardAssets._2D
 		float lookAheadDis = 1f;
 		float lookAheadVelocity = 1;
         // Use this for initialization
+        void Awake()
+        {
+            
+        }
         private void Start()
         {
 

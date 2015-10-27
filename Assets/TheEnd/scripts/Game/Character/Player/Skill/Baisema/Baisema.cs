@@ -15,17 +15,20 @@ public class Baisema : MonoBehaviour{
     Animator baseAnim;
     Animator bodyAnim;
     Animator explosionAnim;
+    Animator effectAnim;
 
     PolygonCollider2D bodyCollider;
 
     void Awake() {
-		baisemaBase = transform.Find("base").gameObject;
-        baisemaBody = transform.Find("body").gameObject;
-        baisemaExplosion = transform.Find("explosion").gameObject;
+        Transform effect = transform.Find("Effect");
+        baisemaBase = effect.Find("base").gameObject;
+        baisemaBody = effect.Find("body").gameObject;
+        baisemaExplosion = effect.Find("explosion").gameObject;
 
         baseAnim = baisemaBase.GetComponent<Animator>();
         bodyAnim = baisemaBody.GetComponent<Animator>();
         explosionAnim = baisemaExplosion.GetComponent<Animator>();
+        effectAnim = effect.GetComponent<Animator>();
 
         bodyCollider = GetComponent<PolygonCollider2D>();
        // bodyAnim.Stop();
@@ -85,12 +88,15 @@ public class Baisema : MonoBehaviour{
 	//destroy the baiesma to attack the monster trap inside
 	public void explode()
 	{
+        print("explode");
         if (state == BaisemaState.Set)
         {
+            print("success");
             targetEnemy.takeDamage(Player.instance.getAttackValue());
             bodyAnim.Play("none");
             explosionAnim.Play("explode");
             baseAnim.Play("disappear");
+            effectAnim.Play("disappear");
         }
 	}
 	public bool isSet()

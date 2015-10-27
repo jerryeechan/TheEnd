@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="30" height="30" tilewidth="60" tileheight="60" nextobjectid="1">
+ <tileset firstgid="1" name="wall" tilewidth="60" tileheight="60" tilecount="12">
+  <image source="../img/wall.png" trans="ff00ff" width="180" height="240"/>
+ </tileset>
+ <tileset firstgid="13" name="BarbedWire" tilewidth="60" tileheight="60" tilecount="9">
+  <image source="../img/BarbedWire.png" trans="ff00ff" width="180" height="180"/>
+ </tileset>
+ <tileset firstgid="22" name="BarbedWire2" tilewidth="60" tileheight="60" tilecount="6">
+  <image source="../img/BarbedWire2.png" trans="ff00ff" width="120" height="180"/>
+ </tileset>
+ <tileset firstgid="28" name="floor" tilewidth="60" tileheight="60" tilecount="15">
+  <image source="../img/floor.png" trans="ff00ff" width="180" height="300"/>
+ </tileset>
+ <tileset firstgid="43" name="top" tilewidth="60" tileheight="60" tilecount="6">
+  <image source="../img/top.png" trans="ff00ff" width="180" height="120"/>
+ </tileset>
+ <layer name="圖塊層 1" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztzTcKwDAQRFE5xyM4253j/U/nKbZSIRaB5WY+vGpZxhhdOxziVP646qBXuOAWj3UbPHZHmBQiiEVi3WaP3QVWhRQykVu37cPdAkpRBdytoRFtwF0X7nKXu//sMsYYYyx8L16gHpk=
+  </data>
+ </layer>
+ <layer name="圖塊層 2" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztzbkNwEAMA0E14P/39d/nMRQUWIACRzvAJkxoBgD4MqjRdaorbFlT4XdWi+tWT9iy1sLvpnbXq1rYso7CLwAA+F8HHokDxA==
+  </data>
+ </layer>
+</map>
