@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour {
     Transform skillBtn;
     void Awake()
     {
+
         if (instance == null)
             instance = this;
         else

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 public class NoteManager : MonoBehaviour {
 
    Animator noteAnim;
@@ -8,13 +8,15 @@ public class NoteManager : MonoBehaviour {
     public static NoteManager instance;
 
     public GameObject[] notePrefabs;
+    
+	Dictionary<string,NoteTrigger> noteDict = new Dictionary<string,NoteTrigger>();
     // Use this for initialization
     void Awake () {
         noteAnim = GetComponent<Animator>();
         print(noteAnim);
         instance = this;
+        
 	}
-
     Transform currentNote;
 	public void showNote(int index)
     {

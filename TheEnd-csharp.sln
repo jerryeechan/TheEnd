@@ -1,6 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{3A2445D8-9EDB-CAB6-6B2C-F292DAC1BB58}") = "TheEnd", "Assembly-CSharp-firstpass-vs.csproj", "{C86EE05E-2915-198C-8B72-C8F9E8C8370E}"
 EndProject
 Project("{3A2445D8-9EDB-CAB6-6B2C-F292DAC1BB58}") = "TheEnd", "Assembly-CSharp-vs.csproj", "{D377FD5C-C48C-6EC0-4911-83937FFBF34C}"
@@ -26,9 +25,6 @@ Global
 		{B3C171D9-ADD9-2E6C-7C7B-745FF9A97F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3C171D9-ADD9-2E6C-7C7B-745FF9A97F71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 																																																																																																																																																																																			GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
@@ -48,5 +44,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal
