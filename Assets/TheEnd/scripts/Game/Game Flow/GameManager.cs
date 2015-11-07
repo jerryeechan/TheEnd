@@ -2,14 +2,10 @@
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
+	public GameTrigger startTrigger;
+	void Start()
+	{
+		startTrigger.activeTriggerEvent();	
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

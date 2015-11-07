@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TheEnd;
 public class DialogueManager : MonoBehaviour {
 
 	// Use this for initialization
@@ -12,8 +13,9 @@ public class DialogueManager : MonoBehaviour {
 	Dictionary<string,DialogueCharacter> characterDict;
     
     public DialoguePanelView dialoguePanel;
-    public DialogueCharaterPanel chPanel1;
-    public DialogueCharaterPanel chPanel2;
+	
+	public DialogueCharacterPanel chPanel;
+    
     public static DialogueManager instance;
 	public enum TextFormat{JSON,TXT};
 	public TextFormat format;
@@ -40,11 +42,6 @@ public class DialogueManager : MonoBehaviour {
 	
 	**/
 	
-	void test()
-	{	
-		if(dialogueFiles.Length>0)
-			loader.LoadDialoguesText(dialogueFiles[0]);
-	}
 	
 	List<Dialogue> dialogues;
 	public void loadDialogue(int chapter)
@@ -59,7 +56,6 @@ public class DialogueManager : MonoBehaviour {
 	}
 	public void PlayDialogue(Dialogue dialogue)
 	{
-        
         dialoguePanel.Show();
         currentDialogue = dialogue;
 		PlayNextLine();
@@ -67,18 +63,40 @@ public class DialogueManager : MonoBehaviour {
 	
 	public void PlayNextLine()
 	{
+		
 		if(typeWriter.isPlaying == true)
 		{
-			typeWriter.Skip();
+			SkipLine();
 		}
 		else
 		{
 			DialogueLine line = currentDialogue.getCurrentLine();
+			
 			if(line!=null)
 			{
-				line.Play();
+				switch(line.type)
+				{
+					case DialogueLineType.character:
+						PlayCharacterExpression(line);
+						break;
+					case DialogueLineType.investigate:
+						PlayInvestigation(line);
+						break;
+					case DialogueLineType.description:
+						PlayDescription(line);
+						break;
+				}
+				
+				
+				
 				typeWriter.Play(line.text);
-				print("next line");
+				print("next line");	
+				if(SuperUser.instance.isSkippingDialogues)
+				{
+					SkipLine();
+					PlayNextLine();
+				}
+				
 			}
             else
             {
@@ -93,10 +111,19 @@ public class DialogueManager : MonoBehaviour {
 		typeWriter.Skip();
 	}
 	
-	public void PlayCharacterExpression(int chIndex,string character, string expression)
+	public void PlayDescription(DialogueLine line)
+	{
+		
+	}
+	public void PlayCharacterExpression(DialogueLine line)
     {
-        chPanel1.setCharater(character, expression);
+        chPanel.setCharater(line.chIndex,line.character, line.expression, line.addition);
     }
+	
+	public void PlayInvestigation(DialogueLine line)
+	{
+		
+	}
 	public DialogueCharacter getCharacter(string chName)
 	{
 		return characterDict[chName];

@@ -59,3 +59,6 @@ TagManager:
   - name: Effect
     uniqueID: 2005107133
     locked: 0
+  - name: FrontWall
+    uniqueID: 822799381
+    locked: 0

@@ -37,6 +37,9 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -65,7 +68,6 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -3819,7 +3821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63b78816ddfdb941996778c519af10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+  id: 
 --- !u!61 &720879483
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8124,11 +8126,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 467950, guid: 57aa93362bf998d40ad1d074d3b057a9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 18.2600002
       objectReference: {fileID: 0}
     - target: {fileID: 467950, guid: 57aa93362bf998d40ad1d074d3b057a9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -9.10000038
+      value: 9.92000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 143234, guid: 57aa93362bf998d40ad1d074d3b057a9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 121552, guid: 57aa93362bf998d40ad1d074d3b057a9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57aa93362bf998d40ad1d074d3b057a9, type: 2}
@@ -11086,7 +11096,7 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ForceModuleActive: 0
+  m_AllowActivationOnStandalone: 0
 --- !u!114 &2077648791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11104,7 +11114,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: .5
-  m_ForceModuleActive: 0
+  m_AllowActivationOnMobileDevice: 0
 --- !u!114 &2077648792
 MonoBehaviour:
   m_ObjectHideFlags: 0

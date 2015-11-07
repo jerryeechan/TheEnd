@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FinishedTrigger : MapTrigger {
+public class FinishedTrigger : GameTrigger {
     public void Done()
     {
         activeTriggerEvent();

@@ -46,6 +46,7 @@ public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,I
 		pivot_position = Vector2.SmoothDamp(pivot_position,last_position - moveVec*pivotDis, ref v,0.05f);
 		pivot.transform.position = pivot_position;
 		current.position = last_position;
+		
 	}
 	#region IDragHandler implementation
 	public void OnDrag (PointerEventData eventData)
@@ -72,7 +73,7 @@ public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,I
 			//		state = Player.PlayerAnimationState.Walk_Left;
 		} else
 			moveVec.x = 0;
-		
+		print(delta);
 		
 		moveVec = moveVec.normalized;
 

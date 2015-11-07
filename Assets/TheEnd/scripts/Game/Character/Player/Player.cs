@@ -7,7 +7,7 @@ public class Player : MonoBehaviour {
 	public static Player instance;
     public PlayerData data;
     Rigidbody2D rb2d;
-    public AttackRange attackRange;
+    public InteractRange attackRange;
     Animator anim;
     Vector2 moveVec;
     public bool isCastingBaisema = false;
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour {
 
         if(attackRange == null)
         {
-            attackRange = GetComponentInChildren<AttackRange>();
+            attackRange = GetComponentInChildren<InteractRange>();
         }
         
 		lastState = CharacterAnimationState.Stand_Front;
@@ -104,6 +104,7 @@ public class Player : MonoBehaviour {
                 baisema.lockUp(target);
                 anim.Play("magic");
             }
+            
         }
         
         
