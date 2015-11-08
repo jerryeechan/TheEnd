@@ -5,12 +5,12 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
+	<RootNamespace></RootNamespace>
 	<ProjectGuid>{D377FD5C-C48C-6EC0-4911-83937FFBF34C}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
-	<RootNamespace></RootNamespace>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
-	<TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
 	<LangVersion>default</LangVersion>
@@ -20,7 +20,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_5_1_1;UNITY_5_1;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_LICENSE;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_EDITOR_METRICS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;CROSS_PLATFORM_INPUT;MOBILE_INPUT</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_2_0;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;CROSS_PLATFORM_INPUT;MOBILE_INPUT</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -30,7 +30,6 @@
 	<DebugType>pdbonly</DebugType>
 	<Optimize>true</Optimize>
 	<OutputPath>Temp\bin\Release\</OutputPath>
-	<DefineConstants>TRACE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -42,10 +41,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -59,54 +58,54 @@
      <Compile Include="Assets\MyStandardPackage1\PoolManager\JPrefabPool.cs" />
      <Compile Include="Assets\MyStandardPackage1\Singleton.cs" />
      <Compile Include="Assets\Plugin\VSCode.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\CharacterAnimationStateManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\CharacterData.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\Enemy.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\EnemyController.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\EnemyData.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\EnemyManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\EnemySpawner.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Camera2DFollow.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Player.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\PlayerController.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\PlayerData.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Skill\Baisema\Baisema.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Skill\Baisema\BaisemaManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Skill\BaisemaGestureHandler.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Skill\EnemyAutoLocker.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Skill\InteractRange.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\DialogueTrigger.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\Investigate\DialogueImageManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\Panel\DialogueCharacterPanel.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\Panel\DialogueInvestigationPanel.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\character\DialogueCharacter.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\character\DialogueCharacterManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\controller\DialogueInputManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\controller\DialogueLoader.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\controller\DialogueManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\controller\TypeWriter.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\model\Dialogue.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\model\DialogueLine.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Dialogue\view\DialoguePanelView.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\GameManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\LevelManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\SuperUser.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Item\Bag.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\Item\CollectableObject.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Player\Control\PlayerMoveControlPad.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Player\Control\SkillBtn.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Player\UIManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\stage\Trigger\FinishedTrigger.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\stage\Trigger\GameTrigger.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\stage\Trigger\InteractableTrigger.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\stage\Trigger\MapTrigger.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\stage\Trigger\TargetEvent\OpenDoorEvent.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\stage\Trigger\TargetEvent\PlayDialogueEvent.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\stage\Trigger\TargetEvent\TargetEvent.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\stage\objects\Door.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\stage\objects\Note\Note.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\stage\objects\Note\NoteManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\stage\objects\Note\NoteTrigger.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\CharacterAnimationStateManager.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\CharacterData.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Enemy\Enemy.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Enemy\EnemyController.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Enemy\EnemyData.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Enemy\EnemyManager.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Enemy\EnemySpawner.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Camera2DFollow.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Player.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\PlayerController.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\PlayerData.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Skill\Baisema\Baisema.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Skill\Baisema\BaisemaManager.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Skill\BaisemaGestureHandler.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Skill\EnemyAutoLocker.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Skill\InteractRange.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\DialogueTrigger.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\Investigate\DialogueImageManager.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\Panel\DialogueCharacterPanel.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\Panel\DialogueInvestigationPanel.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\character\DialogueCharacter.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\character\DialogueCharacterManager.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\controller\DialogueInputManager.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\controller\DialogueLoader.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\controller\DialogueManager.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\controller\TypeWriter.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\model\Dialogue.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\model\DialogueLine.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Dialogue\view\DialoguePanelView.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Game Flow\GameManager.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Game Flow\LevelManager.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Game Flow\SuperUser.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Item\Bag.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\Item\CollectableObject.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\UI\Player\Control\PlayerMoveControlPad.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\UI\Player\Control\SkillBtn.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\UI\Player\UIManager.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\stage\Trigger\FinishedTrigger.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\stage\Trigger\GameTrigger.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\stage\Trigger\InteractableTrigger.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\stage\Trigger\MapTrigger.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\stage\Trigger\TargetEvent\OpenDoorEvent.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\stage\Trigger\TargetEvent\PlayDialogueEvent.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\stage\Trigger\TargetEvent\TargetEvent.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\stage\objects\Door.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\stage\objects\Note\Note.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\stage\objects\Note\NoteManager.cs" />
+     <Compile Include="Assets\TheEnd\scripts\Game\stage\objects\Note\NoteTrigger.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledInitialShaderProperties.cs" />
@@ -117,36 +116,35 @@
      <None Include="Assets\Tiled2Unity\Tiled2Unity.export.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1SketchClassRoom.tiled2unity.xml" />
      <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\1-1_FineArtClassRoom.tiled2unity.xml" />
      <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1-1.tiled2unity.xml" />
-     <None Include="Assets\Tiled2Unity\Imported\1-1_1-1_FineArtClassRoom.tiled2unity.xml" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Fonts\OFL.txt" />
      <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
-     <None Include="Assets\Tiled2Unity\Imported\TheEnd_chapter1_main.tiled2unity.xml" />
+     <None Include="Assets\Tiled2Unity\Imported\1-1_Garret.tiled2unity.xml" />
      <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
-     <None Include="Assets\TheEnd\Dialogue\1-1Dialogues.txt" />
-     <None Include="Assets\Tiled2Unity\Imported\1-1_stairwell.tiled2unity.xml" />
+     <None Include="Assets\TheEnd\dialogue\1-1Dialogues.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\1-1_Stairwell.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\License.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_3F.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Meshes\_ReadMe.txt" />
-     <None Include="Assets\Tiled2Unity\Imported\test.tiled2unity.xml" />
  <Reference Include="UnityEngine.UI">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>/Users/jerry/Desktop/game_project/TheEnd/TheEnd/Assets/plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ <HintPath>D:/Users/jerry/Documents/GitHub/TheEnd/Assets/plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Cecil">
+ <HintPath>D:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>D:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

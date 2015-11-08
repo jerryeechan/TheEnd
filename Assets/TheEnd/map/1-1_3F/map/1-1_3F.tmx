@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="left-up" width="100" height="100" tilewidth="60" tileheight="60" nextobjectid="1">
  <tileset firstgid="1" name="stairs" tilewidth="60" tileheight="60" tilecount="9">
-  <image source="../img/stairs.png" trans="ff00ff" width="180" height="180"/>
+  <image source="../img/1-1_3F_stairs.png" trans="ff00ff" width="180" height="180"/>
  </tileset>
  <tileset firstgid="10" name="floor" tilewidth="60" tileheight="60" tilecount="9">
-  <image source="../img/floor.png" trans="ff00ff" width="180" height="180"/>
+  <image source="../img/1-1_3F_floor.png" trans="ff00ff" width="180" height="180"/>
  </tileset>
  <tileset firstgid="19" name="wall" tilewidth="60" tileheight="60" tilecount="12">
-  <image source="../img/wall.png" trans="ff00ff" width="180" height="240"/>
+  <image source="../img/1-1_3F_wall.png" trans="ff00ff" width="180" height="240"/>
  </tileset>
  <layer name="圖塊層 1" width="100" height="100">
   <data encoding="base64" compression="zlib">
