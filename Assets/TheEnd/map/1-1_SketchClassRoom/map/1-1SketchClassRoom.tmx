@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="100" height="100" tilewidth="60" tileheight="60" nextobjectid="1">
+ <tileset firstgid="1" name="blackboard" tilewidth="60" tileheight="60" tilecount="8">
+  <image source="../img/blackboard.png" trans="ff00ff" width="240" height="120"/>
+ </tileset>
+ <tileset firstgid="9" name="floor" tilewidth="60" tileheight="60" tilecount="9">
+  <image source="../img/floor.png" trans="ff00ff" width="180" height="180"/>
+ </tileset>
+ <tileset firstgid="18" name="table" tilewidth="60" tileheight="60" tilecount="9">
+  <image source="../img/table.png" trans="ff00ff" width="180" height="180"/>
+ </tileset>
+ <tileset firstgid="27" name="wall" tilewidth="60" tileheight="60" tilecount="12">
+  <image source="../img/wall.png" trans="ff00ff" width="180" height="240"/>
+ </tileset>
+ <tileset firstgid="39" name="chair" tilewidth="60" tileheight="60" tilecount="1">
+  <image source="../img/chair.png" trans="ff00ff" width="60" height="60"/>
+ </tileset>
+ <tileset firstgid="40" name="podium" tilewidth="60" tileheight="60" tilecount="3">
+  <image source="../img/podium.png" trans="ff00ff" width="180" height="60"/>
+ </tileset>
+ <layer name="圖塊層 1" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt0TkKgjEAhNG07lq7/a73P6KxsLQQTBjCezAHGL59KeXQaMfCr05150ab+t0YxqXu2mi3jj9Gca97NNqz449RzOrmjbbo+GMUy7pVo607/hiFHln0yKJHFj2y6JFFjyx6ZNEjix5Z9MiiRxY9suiRRY8semTRI4seWfTIokcWPbJs6rZ/3qfHruMPvns31gIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY1QvoJChT
+  </data>
+ </layer>
+ <layer name="圖塊層 2" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt2DkOwjAQQFGzU7PDBVjuf0AmHUShcSzZwHvSV4ppLCspJinxTSbRdKBZNK94rn+1iJYDraJ1xXNBC27R/UOPiucCuPaeJWbk6e5yE22jXXq/29wZ4+yjQ3QsOCNP916/3mv/G8iZMc4pOkeXgjMAAGiB/bw99vN22M/bYz9vi//tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAr3sCrXQNOQ==
+  </data>
+ </layer>
+</map>

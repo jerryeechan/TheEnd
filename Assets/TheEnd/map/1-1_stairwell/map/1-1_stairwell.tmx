@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="20" height="20" tilewidth="60" tileheight="60" nextobjectid="1">
+ <tileset firstgid="1" name="stairs" tilewidth="60" tileheight="60" tilecount="9">
+  <image source="../img/stairs.png" trans="ff00ff" width="180" height="180"/>
+ </tileset>
+ <tileset firstgid="10" name="wall" tilewidth="60" tileheight="60" tilecount="12">
+  <image source="../img/wall.png" trans="ff00ff" width="180" height="240"/>
+ </tileset>
+ <tileset firstgid="22" name="floor" tilewidth="60" tileheight="60" tilecount="9">
+  <image source="../img/floor.png" trans="ff00ff" width="180" height="180"/>
+ </tileset>
+ <layer name="圖塊層 1" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztzLcNwFAMQ0E555zt/fc0B6CKL7hwoQdcwYa1iDREK7Y66InB+DfCRMzGvwVWYjP+7XAQp/Hvgpt4fvIXQQyJskNLIYNc2aEVUEKlbM/zvusFXkgEGg==
+  </data>
+ </layer>
+</map>
