@@ -7,8 +7,9 @@ public class SuperUser : Singleton<SuperUser> {
 	
 	public bool isSkippingDialogues;
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+		if(isSkippingDialogues)
+			Debug.LogError("skip dialogues!!");
 	}
 	
 	// Update is called once per frame

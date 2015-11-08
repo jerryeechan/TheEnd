@@ -11,7 +11,6 @@ public class NoteManager : MonoBehaviour {
     // Use this for initialization
     void Awake () {
         noteAnim = GetComponent<Animator>();
-        print(noteAnim);
         instance = this;
         
         //add note to dictionary

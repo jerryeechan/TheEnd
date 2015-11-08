@@ -1,7 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class InteractableTrigger : GameTrigger {
-
-	
+﻿public class InteractableTrigger : GameTrigger {
+	protected override void Awake()
+	{
+		gameObject.tag="Interactable";
+	}
 }

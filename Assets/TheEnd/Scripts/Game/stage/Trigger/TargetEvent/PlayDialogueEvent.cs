@@ -1,7 +1,9 @@
-﻿public class PlayDialogueEvent : TargetEvent {
+﻿using UnityEngine;
+public class PlayDialogueEvent : MonoBehaviour,ITargetEvent {
 	public string id;
 	
-	public override void active()
+	
+	public void active()
 	{
 		DialogueManager.instance.PlayDialogue(id);
 	}

@@ -14,6 +14,10 @@ public class TypeWriter : MonoBehaviour {
 		coroutine = DialogueAsync();
 		StartCoroutine(coroutine);
 	}
+	public void SetText(string text)
+	{
+		this.text.text  = text;
+	}
 	public void Skip()
 	{
 		StopCoroutine(coroutine);

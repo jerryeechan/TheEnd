@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 460764}
   - 114: {fileID: 11463900}
   m_Layer: 0
-  m_Name: 1-1_Stairwell
+  m_Name: 1-1_stairwell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

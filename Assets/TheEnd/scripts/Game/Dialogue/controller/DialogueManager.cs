@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TheEnd;
-public class DialogueManager : MonoBehaviour {
+public class DialogueManager : Singleton<DialogueManager> {
 
 	// Use this for initialization
 	public TypeWriter typeWriter;
@@ -15,19 +15,13 @@ public class DialogueManager : MonoBehaviour {
     public DialoguePanelView dialoguePanel;
 	
 	public DialogueCharacterPanel chPanel;
+	public DialogueInvestigationPanel ivPanel;
     
-    public static DialogueManager instance;
+	
 	public enum TextFormat{JSON,TXT};
 	public TextFormat format;
 	void Awake()
 	{
-		if(instance == null)
-			instance = this;
-		else
-		{
-			Destroy(gameObject);
-			throw new UnityException("double singleton");
-		}
 		
 		dialogueDictionary = new Dictionary<string, Dialogue>();
 		characterDict = new Dictionary<string, DialogueCharacter>();
@@ -56,20 +50,26 @@ public class DialogueManager : MonoBehaviour {
 	}
 	public void PlayDialogue(Dialogue dialogue)
 	{
+		isDialogueOver = false;
+		playingType = DialogueLineType.description;
         dialoguePanel.Show();
         currentDialogue = dialogue;
 		PlayNextLine();
 	}
 	
+	DialogueLineType playingType = DialogueLineType.description;
+	bool isDialogueOver = false;
 	public void PlayNextLine()
 	{
-		
+		if(isDialogueOver == true)
+		return;
 		if(typeWriter.isPlaying == true)
 		{
 			SkipLine();
 		}
 		else
 		{
+			
 			DialogueLine line = currentDialogue.getCurrentLine();
 			
 			if(line!=null)
@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour {
 				
 				
 				typeWriter.Play(line.text);
-				print("next line");	
+//				print("next line");	
 				if(SuperUser.instance.isSkippingDialogues)
 				{
 					SkipLine();
@@ -98,9 +98,14 @@ public class DialogueManager : MonoBehaviour {
 				}
 				
 			}
-            else
+            else //end of dialogue
             {
-                dialoguePanel.Hide();
+				//chPanel.Hide();
+                
+				//ivPanel.Hide();
+				HideLastPanel();
+				dialoguePanel.Hide();
+				isDialogueOver = true;
             }
 
 		}
@@ -117,16 +122,44 @@ public class DialogueManager : MonoBehaviour {
 	}
 	public void PlayCharacterExpression(DialogueLine line)
     {
+		Debug.Log("character");
+		if(playingType != DialogueLineType.character)
+		{
+			HideLastPanel();
+		}
+		playingType = DialogueLineType.character;
+		chPanel.Show();
         chPanel.setCharater(line.chIndex,line.character, line.expression, line.addition);
     }
 	
 	public void PlayInvestigation(DialogueLine line)
 	{
+		Debug.Log("investigate");
+		if(playingType != DialogueLineType.investigate)
+		{
+			HideLastPanel();
+		}
+		playingType = DialogueLineType.investigate;
+		ivPanel.Show();
+		ivPanel.setPicture(line.image);
 		
 	}
 	public DialogueCharacter getCharacter(string chName)
 	{
 		return characterDict[chName];
+	}
+	public void HideLastPanel()
+	{
+		switch(playingType)
+		{
+			case DialogueLineType.character:
+				chPanel.Hide();
+			break;
+			case DialogueLineType.investigate:
+				ivPanel.Hide();
+			break;
+		}
+		
 	}
 	// Update is called once per frame
 }

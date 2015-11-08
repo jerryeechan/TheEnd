@@ -5,6 +5,7 @@ public class MapTrigger :GameTrigger {
 
 	void OnTriggerEnter2D(Collider2D collider2D)
 	{
-		activeTriggerEvent();
+		if(collider2D.tag == "Player")
+			activeTriggerEvent();
 	}
 }

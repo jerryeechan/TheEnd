@@ -4,17 +4,20 @@
 public class GameTrigger : MonoBehaviour {
 
 	// Use this for initialization
-	public void Awake(){
+	protected virtual void Awake(){
 		
 	}
 	public bool once;
-	
+	public bool isEnabled = true;
 	public void activeTriggerEvent()
 	{
-		Debug.Log("active");
-		GetComponent<TargetEvent>().active();
-		if(once == true)
-			Destroy(gameObject);
+		if(isEnabled)
+		{
+			GetComponent<ITargetEvent>().active();
+			if(once == true)
+				Destroy(gameObject);	
+		}
+		
 	}
 
    

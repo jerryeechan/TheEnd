@@ -18,8 +18,13 @@ public class DialoguePanelView : MonoBehaviour {
     }
     public void Hide()
     {
-        dialoguePanel.SetActive(false);
+        Invoke("WaitHide",1);
         print("hide dialogue panel");
+        
+    }
+    void WaitHide()
+    {
+        dialoguePanel.SetActive(false);
         UIManager.instance.showAllUI();
     }
 }

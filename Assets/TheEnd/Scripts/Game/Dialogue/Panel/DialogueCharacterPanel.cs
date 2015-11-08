@@ -2,12 +2,9 @@
 using System.Collections;
 using UnityEngine.UI;
 using TheEnd;
-public class DialogueCharacterPanel : MonoBehaviour {
+public class DialogueCharacterPanel : UIPanel {
     public Image[] characterImages;
     
-    void Awake()
-    {
-    }
     public void setCharater(int index,MainCharacterEnum character, Expression expression, AdditionMark addition)
     {
         clean();

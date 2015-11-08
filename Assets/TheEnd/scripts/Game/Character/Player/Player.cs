@@ -7,7 +7,7 @@ public class Player : MonoBehaviour {
 	public static Player instance;
     public PlayerData data;
     Rigidbody2D rb2d;
-    public InteractRange attackRange;
+    public InteractRangeController interactRangeController;
     Animator anim;
     Vector2 moveVec;
     public bool isCastingBaisema = false;
@@ -20,9 +20,9 @@ public class Player : MonoBehaviour {
 		anim = GetComponentInChildren<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
 
-        if(attackRange == null)
+        if(interactRangeController == null)
         {
-            attackRange = GetComponentInChildren<InteractRange>();
+            interactRangeController = GetComponentInChildren<InteractRangeController>();
         }
         
 		lastState = CharacterAnimationState.Stand_Front;
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour {
     public void setMoveVec(Vector2 moveVec)
     {
         this.moveVec = moveVec;
-        attackRange.changeDir(moveVec);
+        interactRangeController.changeDir(moveVec);
     }
     
     void Update()
@@ -95,17 +95,8 @@ public class Player : MonoBehaviour {
 
     public void skillBtnTouched()
     {
-        if(!attackRange.isObjectTrigger())
-        {
-            Enemy target = attackRange.getTarget();
-            if (target != null)
-            {
-                Baisema baisema = BaisemaManager.instance.genBaisema(target.transform.position);
-                baisema.lockUp(target);
-                anim.Play("magic");
-            }
-            
-        }
+        interactRangeController.interact();
+        
         
         
         

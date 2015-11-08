@@ -36,7 +36,9 @@ namespace TheEnd{
 				type = DialogueLineType.investigate;	
 			}
 			
-			//this.character = 
+			//Debug.Log(type);
+			//Debug.Log(text);
+			 
 		}
 		
 	}

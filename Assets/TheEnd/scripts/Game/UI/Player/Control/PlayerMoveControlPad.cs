@@ -73,7 +73,7 @@ public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,I
 			//		state = Player.PlayerAnimationState.Walk_Left;
 		} else
 			moveVec.x = 0;
-		print(delta);
+
 		
 		moveVec = moveVec.normalized;
 
