@@ -2,8 +2,11 @@ using System;
 using UnityEngine;
 using System.Collections;
 using TheEnd;
+
+
 namespace UnityStandardAssets._2D
 {
+	[ExecuteInEditMode]
     public class Camera2DFollow : MonoBehaviour
     {
         public Transform target;

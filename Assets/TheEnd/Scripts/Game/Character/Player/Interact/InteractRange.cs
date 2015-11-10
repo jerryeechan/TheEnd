@@ -3,16 +3,21 @@ using System.Collections.Generic;
 
 
 
-public class InteractRange:MonoBehaviour
+public class InteractRange:Singleton<InteractRange>
 {
     Collider2D c2d;
     
-    List<InteractableTrigger> interactableInRange;
+    public List<InteractableTrigger> interactableInRange;
     void Awake()
     {
         interactableInRange = new List<InteractableTrigger>();
     }
     
+    public void removeFromRange(InteractableTrigger trigger)
+    {
+         if (interactableInRange.Contains(trigger))
+            interactableInRange.Remove(trigger);    
+    }
     public enum InteractableTag{Interactable,Enemy}
     public InteractableTag targetTag; 
    
@@ -25,16 +30,15 @@ public class InteractRange:MonoBehaviour
     }
     protected virtual void addToList(Collider2D collider2D)
     {
-         InteractableTrigger interact = collider2D.GetComponent<InteractableTrigger>();
-         interactableInRange.Add(interact);
-         
+         InteractableTrigger[] interactTriggers = collider2D.GetComponents<InteractableTrigger>();
+         interactableInRange.AddRange(interactTriggers);
          /*
                 Enemy enemy = collider2D.GetComponent<Enemy>();
                 if(!enemy.isBaisemaLocked)
                 enemyInRange.Add(enemy);
             */
     }
-    void OnTriggerExit2D(Collider2D collider2D)
+    protected virtual void OnTriggerExit2D(Collider2D collider2D)
     {
         if(targetTag.ToString()==collider2D.tag)
         {
@@ -43,15 +47,36 @@ public class InteractRange:MonoBehaviour
     }
     protected virtual void removeFromList(Collider2D collider2D)
     {
-        InteractableTrigger interact = collider2D.GetComponent<InteractableTrigger>();
-        if (interactableInRange.Contains(interact))
-            interactableInRange.Remove(interact);
+        
+        InteractableTrigger[] interactTriggers = collider2D.GetComponents<InteractableTrigger>();
+        foreach (var trigger in interactTriggers)
+        {
+            if (interactableInRange.Contains(trigger))
+            interactableInRange.Remove(trigger);    
+        }
     }
     public bool Interact()
     {
         if (interactableInRange.Count > 0)
         {
-            interactableInRange[0].activeTriggerEvent();
+            foreach (var interactable in interactableInRange)
+            {
+                if(interactable.requiredState != "none")
+                {
+
+                    if(PlayerState.instance.checkState(interactable.requiredState))
+                    {
+                        Debug.Log(interactable.requiredState+" success");
+                        interactable.triggerEvent();
+                    }
+                    else{
+                        Debug.Log(interactable.requiredState+" fail");
+                    }
+                }
+                else{
+                    interactable.triggerEvent();
+                }
+            }
             return true;
         }
         return false;

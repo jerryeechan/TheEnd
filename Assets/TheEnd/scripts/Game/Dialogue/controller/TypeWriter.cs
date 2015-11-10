@@ -13,6 +13,7 @@ public class TypeWriter : MonoBehaviour {
 		this.content = text;
 		coroutine = DialogueAsync();
 		StartCoroutine(coroutine);
+		SoundManager.instance.PlaySound("typewriter");
 	}
 	public void SetText(string text)
 	{
@@ -23,6 +24,7 @@ public class TypeWriter : MonoBehaviour {
 		StopCoroutine(coroutine);
 		text.text += content.Substring(letterIndex);
 		isPlaying = false;
+		SoundManager.instance.StopSound();
 	}
 	
 	int letterIndex;
@@ -38,5 +40,6 @@ public class TypeWriter : MonoBehaviour {
 			yield return new WaitForSeconds(letterPause);
 		}
 		isPlaying = false;
+		SoundManager.instance.StopSound();
 	}
 }

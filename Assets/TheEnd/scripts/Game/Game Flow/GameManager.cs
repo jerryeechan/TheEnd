@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour {
 	public GameTrigger startTrigger;
 	void Start()
 	{
-		startTrigger.activeTriggerEvent();	
+		startTrigger.triggerEvent();	
 	}
 	
 }

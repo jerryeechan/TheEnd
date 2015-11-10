@@ -17,7 +17,55 @@ public class PlayerController : MonoBehaviour {
     float hori = 0;
     float vert = 0;
 
+    bool isMoveLocked = false;
+    #if UNITY_ANDROID
+    void Update()
+    {
+        
+    }
+    #else
+    void Update()
+    {
+        if(!isMoveLocked)
+        {
+            Vector2 moveVec = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
+            if (moveVec!= Vector2.zero)
+            {
+                move(moveVec);
+            }
+            
+        }
+        else
+        {
+            move(Vector2.zero);  
+        }
+        
+        
+        if(Input.GetKeyDown("z"))
+        {
+            player.skillBtnTouched();
+        }
+        
+        if(Input.GetKeyDown("space"))
+        {
+            SuperUser.instance.su_speed = 2;
+        }
+        if(Input.GetKeyUp("space"))
+        {
+            SuperUser.instance.su_speed = 1;
+        }
+        
+    }
+    #endif
     
+    public void lockMove ()
+    {
+        isMoveLocked = true;
+    }
+    public void unlockMove()
+    {
+        isMoveLocked = false;
+    }
     public void move(Vector2 moveVec)
     {
         CharacterAnimationState state = CharacterAnimationState.None;

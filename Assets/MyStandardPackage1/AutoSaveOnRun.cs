@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+﻿
+#if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
-
-
 [InitializeOnLoad]
 public class AutosaveOnRun: ScriptableObject
 {
@@ -19,3 +19,4 @@ public class AutosaveOnRun: ScriptableObject
 		};
 	}
 }
+#endif

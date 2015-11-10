@@ -11,11 +11,13 @@
  */
 // REQUIRES: VSCode 0.8.0 - Settings directory moved to .vscode
 // TODO: Currently VSCode will not debug mono on Windows -- need a solution.
+#if UNITY_EDITOR
 namespace dotBunny.Unity
 {
     using System;
     using System.IO;
     using System.Text.RegularExpressions;
+ 
     using UnityEditor;
     using UnityEngine;
 
@@ -1021,3 +1023,4 @@ namespace dotBunny.Unity
         }
     }
 }
+#endif

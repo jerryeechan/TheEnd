@@ -10,7 +10,6 @@ public class DialogueInvestigateImageManager : MonoBehaviour {
 		{
 			if(sprite != null)
 			{
-				Debug.Log(sprite.name);
 				dict.Add(sprite.name,sprite);
 			}
 		}

@@ -11,8 +11,10 @@ namespace TheEnd{
 		public AdditionMark addition;
 		public string image;
 		
+		public string special;
+		
 		public DialogueLineType type = DialogueLineType.description;
-		public DialogueLine(string text,string character,string expression,int chIndex,string image,string addition)
+		public DialogueLine(string text,string character,string expression,int chIndex,string image,string addition,string special)
 		{
 			this.text = text;
 			
@@ -35,6 +37,9 @@ namespace TheEnd{
 				this.image = image;
 				type = DialogueLineType.investigate;	
 			}
+			
+			if(special!=null)
+				this.special = special;
 			
 			//Debug.Log(type);
 			//Debug.Log(text);

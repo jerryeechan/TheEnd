@@ -1,7 +1,152 @@
-Base path: D:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-16188
+Base path: /Applications/Unity/Unity.app/Contents
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-165392384
 Cmd: getPlatforms
-Unhandled exception: Readfile from pipe failed. GLE=管道已結束。
-
+Cmd: compileSnippet
+  api=4 type=0 insize=14306 outsize=3825 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=14306 outsize=8881 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=14306 outsize=6191 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=14306 outsize=1351 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=14306 outsize=8539 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=14306 outsize=7248 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=14306 outsize=1436 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=14306 outsize=2080 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=14306 outsize=2795 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=14306 outsize=2080 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=14306 outsize=1753 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=7914 outsize=2915 kw=POINT ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=7914 outsize=369 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=7914 outsize=2915 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=7914 outsize=369 kw=SPOT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=7914 outsize=2915 kw=SPOT ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=7914 outsize=369 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=7914 outsize=4111 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=7914 outsize=2915 kw=DIRECTIONAL_COOKIE ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=7914 outsize=640 kw=POINT PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=7914 outsize=4899 kw=POINT PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=7914 outsize=4899 kw=DIRECTIONAL PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=7914 outsize=3305 kw=SPOT PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=7914 outsize=640 kw=POINT_COOKIE PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=7914 outsize=3305 kw=POINT_COOKIE PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=7914 outsize=640 kw=DIRECTIONAL_COOKIE PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=7914 outsize=4899 kw=DIRECTIONAL_COOKIE PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=7914 outsize=2070 kw=POINT ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=7914 outsize=235 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=7914 outsize=1290 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=7914 outsize=594 kw=SPOT ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=7914 outsize=3729 kw=SPOT ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=7914 outsize=3339 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=7914 outsize=2665 kw=DIRECTIONAL_COOKIE ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=7914 outsize=2070 kw=POINT PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=7914 outsize=235 kw=DIRECTIONAL PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=7914 outsize=1290 kw=DIRECTIONAL PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=7914 outsize=594 kw=SPOT PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=7914 outsize=3729 kw=SPOT PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=7914 outsize=3339 kw=POINT_COOKIE PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=7914 outsize=2665 kw=DIRECTIONAL_COOKIE PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6672 outsize=2728 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=6672 outsize=594 kw=PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6672 outsize=3118 kw=PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6672 outsize=746 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=6672 outsize=106 kw=PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6672 outsize=746 kw=PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=12632 outsize=4239 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=12632 outsize=737 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=12632 outsize=4239 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=12632 outsize=986 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=12632 outsize=4654 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=12632 outsize=986 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=12632 outsize=4654 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=12632 outsize=1453 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=12632 outsize=205 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=12632 outsize=1404 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=12632 outsize=260 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=12632 outsize=2088 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=12632 outsize=1404 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=12780 outsize=3963 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=12780 outsize=625 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=12780 outsize=3963 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=12780 outsize=864 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=12780 outsize=4353 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=12780 outsize=864 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=12780 outsize=4353 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON PIXELSNAP_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=12780 outsize=1737 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=12780 outsize=328 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=12780 outsize=1688 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=12780 outsize=385 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=8 type=1 insize=12780 outsize=2478 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF PIXELSNAP_ON HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=12780 outsize=1688 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON PIXELSNAP_ON ok=1
+End of pipe
 
 Quitting shader compiler process

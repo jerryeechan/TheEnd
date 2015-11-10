@@ -9,21 +9,33 @@ public class DialoguePanelView : MonoBehaviour {
     void Awake()
     {
         dialoguePanel = transform.Find("DialoguePanel").gameObject;
+        anim = dialoguePanel.GetComponent<Animator>();
     }
+    public bool isPlaying = false;
     public void Show()
     {
-        dialoguePanel.SetActive(true);
-        print("show dialogue panel");
-        UIManager.instance.hideAllUI();
+        if(isPlaying == false)
+        {
+            isPlaying = true;
+            dialoguePanel.SetActive(true);
+            anim.Play("show");
+            print("show dialogue panel");
+            UIManager.instance.hideAllUI();    
+        }
+        
+        
     }
     public void Hide()
     {
         Invoke("WaitHide",1);
         print("hide dialogue panel");
+        anim.Play("hide");
+        
         
     }
     void WaitHide()
     {
+        isPlaying = false;
         dialoguePanel.SetActive(false);
         UIManager.instance.showAllUI();
     }

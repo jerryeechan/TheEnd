@@ -5,23 +5,30 @@ using TheEnd;
 
 
 
-public class DialogueCharacterManager : MonoBehaviour
+public class DialogueCharacterManager : Singleton<DialogueCharacterManager>
 {
-    
-    public static DialogueCharacterManager instance;
     
     public DialogueCharacter moshiue;
     public DialogueCharacter riddle;
+    public DialogueCharacter ziching;
     Dictionary<MainCharacterEnum,DialogueCharacter> charDict = new Dictionary<MainCharacterEnum, DialogueCharacter>();
     void Awake()
     {
-        instance = this;
         charDict.Add(MainCharacterEnum.moshiue, moshiue);
         charDict.Add(MainCharacterEnum.riddle,riddle);
+        charDict.Add(MainCharacterEnum.ziching,ziching);
     }
     public DialogueCharacter getCharacter(MainCharacterEnum ch)
     {
-        return charDict[ch];
+        if(charDict.ContainsKey(ch))
+            return charDict[ch];    
+        else
+        {
+            Debug.LogError("Create and add the Character into DialogueCharacter Manger");
+            return null;
+        }
+            
+        
     }
     
     

@@ -12,7 +12,7 @@ public class DialogueInvestigationPanel : UIPanel {
 	// Update is called once per frame
 	public void setPicture(string image)
 	{
-		if(image =="pic6")
+		if(image =="pic4")
 		{
 			picture_vert.gameObject.SetActive(true);
 			picture_hori.gameObject.SetActive(false);

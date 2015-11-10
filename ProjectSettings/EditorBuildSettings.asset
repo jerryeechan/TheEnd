@@ -7,7 +7,9 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/Widgets.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/TheEnd/scene/_combatsystem.unity
   - enabled: 0
     path: Assets/forallie.unity
+  - enabled: 1
+    path: Assets/TheEnd/scene/1-1-garret.unity

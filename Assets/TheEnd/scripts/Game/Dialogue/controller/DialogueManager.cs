@@ -46,23 +46,37 @@ public class DialogueManager : Singleton<DialogueManager> {
 	Dialogue currentDialogue;
 	public void PlayDialogue(string dialogueKey)
 	{
-		PlayDialogue(dialogueDictionary[dialogueKey]);
+		
+		PlayDialogue(dialogueDictionary[dialogueKey]);	
+		
 	}
 	public void PlayDialogue(Dialogue dialogue)
 	{
-		isDialogueOver = false;
-		playingType = DialogueLineType.description;
-        dialoguePanel.Show();
-        currentDialogue = dialogue;
-		PlayNextLine();
+		if(!isDialoguePlaying)
+		{
+			PlayerController.instance.lockMove();
+			isDialoguePlaying = true;
+			isDialogueFinished = false;
+	
+			playingType = DialogueLineType.description;
+			Debug.Log("dialogue show");
+			dialoguePanel.Show();
+			currentDialogue = dialogue;
+			PlayNextLine();
+		}
+		else{
+			PlayNextLine();
+		}
 	}
 	
 	DialogueLineType playingType = DialogueLineType.description;
-	bool isDialogueOver = false;
+	public bool isDialoguePlaying = false;
+	bool isDialogueFinished = true;
 	public void PlayNextLine()
 	{
-		if(isDialogueOver == true)
+		if(isDialogueFinished == true)
 		return;
+		
 		if(typeWriter.isPlaying == true)
 		{
 			SkipLine();
@@ -105,11 +119,18 @@ public class DialogueManager : Singleton<DialogueManager> {
 				//ivPanel.Hide();
 				HideLastPanel();
 				dialoguePanel.Hide();
-				isDialogueOver = true;
+				PlayerController.instance.unlockMove();
+				Invoke("closed",1);
+				isDialogueFinished = true;
             }
 
 		}
 		
+	}
+	
+	void closed()
+	{
+		isDialoguePlaying = false;
 	}
 	public void SkipLine()
 	{
@@ -122,14 +143,14 @@ public class DialogueManager : Singleton<DialogueManager> {
 	}
 	public void PlayCharacterExpression(DialogueLine line)
     {
-		Debug.Log("character");
+//		Debug.Log("character");
 		if(playingType != DialogueLineType.character)
 		{
 			HideLastPanel();
 		}
 		playingType = DialogueLineType.character;
 		chPanel.Show();
-        chPanel.setCharater(line.chIndex,line.character, line.expression, line.addition);
+        chPanel.setCharater(line.chIndex,line.character, line.expression, line.addition,line.special == "memory");
     }
 	
 	public void PlayInvestigation(DialogueLine line)
@@ -150,13 +171,17 @@ public class DialogueManager : Singleton<DialogueManager> {
 	}
 	public void HideLastPanel()
 	{
+		Debug.Log("hide last panel");
+		Debug.Log(playingType);
 		switch(playingType)
 		{
 			case DialogueLineType.character:
 				chPanel.Hide();
+				Debug.Log("hide ch panel");
 			break;
 			case DialogueLineType.investigate:
 				ivPanel.Hide();
+				Debug.Log("hide iv panel");
 			break;
 		}
 		
