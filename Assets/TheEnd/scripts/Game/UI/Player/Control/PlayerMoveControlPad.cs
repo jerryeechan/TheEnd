@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.EventSystems;
-public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,IPointerDownHandler,IBeginDragHandler{
+public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,IBeginDragHandler{
 	#region IBeginDragHandler implementation
 	public GameObject pivot;
 	public Transform current;
@@ -14,14 +13,6 @@ public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,I
 
 	#endregion
 
-	#region IPointerDownHandler implementation
-
-	public void OnPointerDown (PointerEventData eventData)
-	{
-        
-	}
-
-	#endregion
 
 	#region IEndDragHandler implementation
 
@@ -33,17 +24,18 @@ public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,I
 
 	#endregion
 
-	public Vector2 last_position;
-	public Vector2 pivot_position;
+	Vector2 last_position;
+	Vector2 pivot_position;
 	bool isDown = false;
 	float th = Mathf.Sin(22.5f*Mathf.PI/180);
-	float pivotDis = 6;
+	float pivotDis = 40;
+	float minTh = 8;
 	public Vector2 moveVec = Vector2.zero;
 	void Update()
 	{
 		Vector2 v = Vector2.zero;
 
-		pivot_position = Vector2.SmoothDamp(pivot_position,last_position - moveVec*pivotDis, ref v,0.05f);
+		//pivot_position = Vector2.SmoothDamp(pivot_position,last_position - moveVec*pivotDis, ref v,0.05f);
 		pivot.transform.position = pivot_position;
 		current.position = last_position;
 		
@@ -53,6 +45,8 @@ public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,I
 	{
 		Vector2 delta = eventData.position-pivot_position;
 		float magnitude = delta.magnitude;
+		
+		
 		moveVec = delta.normalized;
 		if (moveVec.y > th) {
 			moveVec.y = 1;
@@ -76,18 +70,17 @@ public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,I
 
 		
 		moveVec = moveVec.normalized;
-
 		if (magnitude > pivotDis) {
-
-
-			PlayerController.instance.move (moveVec);
-
 			pivot_position += delta.normalized * eventData.delta.magnitude;
-
 		} 
-
-
-	
+		else if(magnitude<minTh)
+		{
+			moveVec = Vector2.zero;
+		}
+		if(!Player.instance.isMoveLocked)
+			PlayerController.instance.move (moveVec);
+		else
+			PlayerController.instance.move (Vector2.zero);
 		
 		/*
 		if(Input.touchCount > 0)

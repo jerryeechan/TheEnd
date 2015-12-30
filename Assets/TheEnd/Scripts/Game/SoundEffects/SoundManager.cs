@@ -5,7 +5,7 @@ public class SoundManager : Singleton<SoundManager> {
 
 	public AudioClip [] clips;
 	Dictionary<string,AudioClip> clipDict = new Dictionary<string,AudioClip>(); 
-	AudioSource audioSource;
+	public AudioSource audioSource;
 	void Awake()
 	{
 		foreach (var clip in clips)

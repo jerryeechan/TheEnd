@@ -12,24 +12,19 @@ AnimationClip:
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
   m_CompressedRotationCurves: []
-  m_PositionCurves: []
-  m_ScaleCurves:
+  m_PositionCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: -1.68339086, y: -1.68339086, z: -1.68339086}
-        outSlope: {x: -1.68339086, y: -1.68339086, z: -1.68339086}
-        tangentMode: 0
-      - time: .25
-        value: {x: .579152286, y: .579152286, z: .579152286}
-        inSlope: {x: -1.68339086, y: -1.68339086, z: -1.68339086}
-        outSlope: {x: -1.68339086, y: -1.68339086, z: -1.68339086}
+        value: {x: 0, y: 1.42999995, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: 
+  m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
@@ -65,17 +60,17 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - path: 0
-      attribute: 3
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 0
       attribute: 0
       script: {fileID: 0}
       classID: 212
       customType: 23
       isPPtrCurve: 1
+    - path: 0
+      attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
     pptrCurveMapping:
     - {fileID: 21300000, guid: 174b09a16ca50b447ab3cd10557e56a3, type: 3}
     - {fileID: 21300000, guid: 37d3c75546a0d02498bde71089029dd4, type: 3}
@@ -109,18 +104,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1
-        inSlope: -1.68339086
-        outSlope: -1.68339086
-        tangentMode: 10
-      - time: .25
-        value: .579152286
-        inSlope: -1.68339086
-        outSlope: -1.68339086
+        value: 0
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: m_LocalScale.x
+    attribute: m_LocalPosition.x
     path: 
     classID: 4
     script: {fileID: 0}
@@ -128,18 +118,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1
-        inSlope: -1.68339086
-        outSlope: -1.68339086
-        tangentMode: 10
-      - time: .25
-        value: .579152286
-        inSlope: -1.68339086
-        outSlope: -1.68339086
+        value: 1.42999995
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: m_LocalScale.y
+    attribute: m_LocalPosition.y
     path: 
     classID: 4
     script: {fileID: 0}
@@ -147,30 +132,18 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1
-        inSlope: -1.68339086
-        outSlope: -1.68339086
-        tangentMode: 10
-      - time: .25
-        value: .579152286
-        inSlope: -1.68339086
-        outSlope: -1.68339086
+        value: 0
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: m_LocalScale.z
+    attribute: m_LocalPosition.z
     path: 
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []
-  m_HasGenericRootTransform: 0
+  m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events:
-  - time: .833333313
-    functionName: SendToParent
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

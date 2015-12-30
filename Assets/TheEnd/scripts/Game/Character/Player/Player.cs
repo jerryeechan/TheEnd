@@ -12,7 +12,7 @@ public class Player : Singleton<Player> {
     public bool isCastingBaisema = false;
     
     
-    
+    public bool isMoveLocked = false;
     CharacterAnimationState lastState;
     void Awake()
 	{	
@@ -47,7 +47,16 @@ public class Player : Singleton<Player> {
         
         interactRangeController.changeDir(moveVec);
     }
-    
+    public void lockMove ()
+    {
+        isMoveLocked = true;
+        //PlayAnimation(state);
+        setMoveVec(Vector2.zero);
+    }
+    public void unlockMove()
+    {
+        isMoveLocked = false;
+    }
     void Update()
     {
         if (!isCastingBaisema)
@@ -112,23 +121,57 @@ public class Player : Singleton<Player> {
     {
         return data.damage;
     }
-
+    
+#region Gesture
     public void skillBtnTouched()
     {
         if(DialogueManager.instance.isDialoguePlaying)
             DialogueManager.instance.PlayNextLine();
         else if(NoteManager.instance.isPlaying)
             NoteManager.instance.dismissNote();
-        else
-            interactRangeController.interact();
+        else 
+        {
+            if(!interactRangeController.interact())
+            {
+                SetBaisema();
+            }
+        }    
     }
+    
+    
     public void swipeUp()
     {
-        anim.Play("magic");
-        BaisemaManager.instance.SetUpAll();
+        //anim.Play("magic");
+        //BaisemaManager.instance.SetUpAll();
     }
     public void swipeDown()
     {
+        //anim.Play("explode");
+        //BaisemaManager.instance.explodeAll();
+        Charging();
+    }
+    
+    public void release()
+    {
+        Explode();
+    }
+#endregion  
+    
+    public void SetBaisema()
+    {
+        lockMove();
+        anim.Play("magic");
+        //Invoke("unlockMove",1f);
+        BaisemaManager.instance.genBaisema(transform.position);
+    }
+    public void Charging()
+    {
+        lockMove();
+        anim.Play("charging");
+    }
+    public void Explode()
+    {
+        
         anim.Play("explode");
         BaisemaManager.instance.explodeAll();
     }

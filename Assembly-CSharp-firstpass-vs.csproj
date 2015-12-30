@@ -87,12 +87,21 @@
      <Compile Include="Assets\Standard Assets\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
+     <Compile Include="Assets\plugins\LeanAudio.cs" />
+     <Compile Include="Assets\plugins\LeanTest.cs" />
+     <Compile Include="Assets\plugins\LeanTween.cs" />
+     <Compile Include="Assets\plugins\Pixelplacement\iTween\Sample\MoveSample.cs" />
+     <Compile Include="Assets\plugins\Pixelplacement\iTween\Sample\RotateSample.cs" />
+     <Compile Include="Assets\plugins\Pixelplacement\iTween\Sample\SampleInfo.cs" />
+     <Compile Include="Assets\plugins\Pixelplacement\iTween\iTween.cs" />
      <Compile Include="Assets\plugins\SimpleJSON.cs" />
      <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
+     <None Include="Assets\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
      <None Include="Assets\Tiled2Unity\Shaders\shaTiledMap.shader" />
      <None Include="Assets\Tiled2Unity\Imported\1-1Warehouse.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Tiled2Unity.export.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1SketchClassRoom.tiled2unity.xml" />
+     <None Include="Assets\LeanTween\ReadMe.txt" />
      <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_FineArtClassRoom.tiled2unity.xml" />
      <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
@@ -103,11 +112,12 @@
      <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_Garret.tiled2unity.xml" />
      <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
-     <None Include="Assets\TheEnd\Dialogue\1-1Dialogues.txt" />
+     <None Include="Assets\plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_stairwell.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\License.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_3F.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
+     <None Include="Assets\TheEnd\Dialogue\1-1Dialogues.txt" />
      <None Include="Assets\Tiled2Unity\Meshes\_ReadMe.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

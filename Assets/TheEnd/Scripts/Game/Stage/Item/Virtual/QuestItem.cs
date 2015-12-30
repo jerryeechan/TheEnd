@@ -4,7 +4,7 @@ using System.Collections;
 public class QuestItem : Item {
 
 	// Use this for initialization
-	public string [] carriedStates;
+	public State [] carriedStates;
 	
 	public override void PickedUp()
 	{

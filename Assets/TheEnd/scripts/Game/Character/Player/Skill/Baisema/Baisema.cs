@@ -62,11 +62,12 @@ public class Baisema : MonoBehaviour{
         targetEnemy = enemy;
         targetEnemy.Locked();
         lockingTransform = targetEnemy.transform;
-        state = BaisemaState.TargetLocking;
+        //state = BaisemaState.TargetLocking;
         
         baseAnim.Play("setup");
     
-        Invoke("lockUpDone", 0.3f);
+        //Invoke("lockUpDone", 0.3f);
+        SetUp();
     }
 	public void lockUpDone()
 	{
@@ -75,20 +76,31 @@ public class Baisema : MonoBehaviour{
 	}
 	public void SetUp()
     {
+        print("setting");
         state = BaisemaState.Setting;
-        bodyCollider.enabled = true;
-        targetEnemy.Trapped();
         bodyAnim.Play("setup");
-        Invoke("SetUpDone",0.6f);
+        Invoke("SetUpDone",0.3f);
     }
     public void SetUpDone()
     {
+        print("set up done");
         state = BaisemaState.Set;
+        targetEnemy.Trapped();
+        bodyCollider.enabled = true;
+    }
+    
+    public void OnTriggerEnter2D(Collider2D collider2d)
+    {
+        if(collider2d.tag == "Enemy")
+        {
+            lockUp(collider2d.GetComponentInParent<Enemy>());
+        }
     }
 	//destroy the baiesma to attack the monster trap inside
 	public void explode()
 	{
         print("explode");
+        
         if (state == BaisemaState.Set)
         {
             print("success");
@@ -97,7 +109,10 @@ public class Baisema : MonoBehaviour{
             explosionAnim.Play("explode");
             baseAnim.Play("disappear");
             effectAnim.Play("disappear");
+            iTween.ShakePosition(Camera.main.gameObject,new Vector3(1,1),0.2f);
         }
+        else
+            print(state);
 	}
 	public bool isSet()
     {

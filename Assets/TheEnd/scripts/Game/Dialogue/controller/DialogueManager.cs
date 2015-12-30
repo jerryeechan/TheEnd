@@ -17,7 +17,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 	public DialogueCharacterPanel chPanel;
 	public DialogueInvestigationPanel ivPanel;
     
-	
+	public PlayDialogueEvent eventTriggerBy = null;
 	public enum TextFormat{JSON,TXT};
 	public TextFormat format;
 	void Awake()
@@ -54,7 +54,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 	{
 		if(!isDialoguePlaying)
 		{
-			PlayerController.instance.lockMove();
+			Player.instance.lockMove();
 			isDialoguePlaying = true;
 			isDialogueFinished = false;
 	
@@ -72,6 +72,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 	DialogueLineType playingType = DialogueLineType.description;
 	public bool isDialoguePlaying = false;
 	bool isDialogueFinished = true;
+	
 	public void PlayNextLine()
 	{
 		if(isDialogueFinished == true)
@@ -119,7 +120,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 				//ivPanel.Hide();
 				HideLastPanel();
 				dialoguePanel.Hide();
-				PlayerController.instance.unlockMove();
+				Player.instance.unlockMove();
 				Invoke("closed",1);
 				isDialogueFinished = true;
             }
@@ -131,6 +132,9 @@ public class DialogueManager : Singleton<DialogueManager> {
 	void closed()
 	{
 		isDialoguePlaying = false;
+		if(eventTriggerBy)
+		eventTriggerBy.SendMessage("Done",SendMessageOptions.DontRequireReceiver);
+		eventTriggerBy = null;
 	}
 	public void SkipLine()
 	{

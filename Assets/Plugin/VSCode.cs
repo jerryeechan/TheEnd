@@ -1,23 +1,21 @@
-﻿/*
+/*
  * Unity VSCode Support
  *
  * Seamless support for Microsoft Visual Studio Code in Unity
  *
  * Version:
- *   2.2
+ *   2.3
  *
  * Authors:
  *   Matthew Davey <matthew.davey@dotbunny.com>
  */
 // REQUIRES: VSCode 0.8.0 - Settings directory moved to .vscode
 // TODO: Currently VSCode will not debug mono on Windows -- need a solution.
-#if UNITY_EDITOR
 namespace dotBunny.Unity
 {
     using System;
     using System.IO;
     using System.Text.RegularExpressions;
- 
     using UnityEditor;
     using UnityEngine;
 
@@ -25,12 +23,12 @@ namespace dotBunny.Unity
     {
         /// <summary>
         /// Current Version Number
-        /// </summary
-        public const float Version = 2.2f;
+        /// </summary>
+        public const float Version = 2.3f;
 
         /// <summary>
         /// Current Version Code
-        /// </summary
+        /// </summary>
         public const string VersionCode = "-RELEASE";
 
         #region Properties
@@ -306,6 +304,7 @@ namespace dotBunny.Unity
             proc.StartInfo.Arguments = args;
             proc.StartInfo.UseShellExecute = false;
 #endif
+            proc.StartInfo.CreateNoWindow = true;
             proc.StartInfo.RedirectStandardOutput = true;
             proc.Start();
         }
@@ -814,7 +813,7 @@ namespace dotBunny.Unity
         static void UpdateLaunchFile(int port)
         {
             // Write out proper formatted JSON (hence no more SimpleJSON here)
-            string fileContent = "{\n\t\"version\":\"0.1.0\",\n\t\"configurations\":[ \n\t\t{\n\t\t\t\"name\":\"Unity\",\n\t\t\t\"type\":\"mono\",\n\t\t\t\"address\":\"localhost\",\n\t\t\t\"port\":" + port + "\n\t\t}\n\t]\n}";
+            string fileContent = "{\n\t\"version\":\"0.2.0\",\n\t\"configurations\":[ \n\t\t{\n\t\t\t\"name\":\"Unity\",\n\t\t\t\"type\":\"mono\",\n\t\t\t\"request\":\"attach\",\n\t\t\t\"address\":\"localhost\",\n\t\t\t\"port\":" + port + "\n\t\t}\n\t]\n}";
             File.WriteAllText(VSCode.LaunchPath, fileContent);
         }
 
@@ -1023,4 +1022,3 @@ namespace dotBunny.Unity
         }
     }
 }
-#endif

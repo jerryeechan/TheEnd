@@ -18,9 +18,9 @@ public class Enemy : MonoBehaviour {
     }
 
 
-    enum EnemyState { Movable, Trapped, Died };
+    public enum EnemyState { Movable, Trapped, Died };
     
-    EnemyState state = EnemyState.Movable;
+    public EnemyState state = EnemyState.Movable;
     /*
     void OnTriggerEnter2D(Collider2D collider2D)
     {
@@ -118,7 +118,8 @@ public class Enemy : MonoBehaviour {
 	
 	public void die()
 	{
-        spawner.recycleEnemy(); 
+        if(spawner)
+            spawner.recycleEnemy(); 
 		Destroy(gameObject);
 	}
 }

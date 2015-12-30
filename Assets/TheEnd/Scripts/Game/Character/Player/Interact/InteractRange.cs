@@ -31,7 +31,13 @@ public class InteractRange:Singleton<InteractRange>
     protected virtual void addToList(Collider2D collider2D)
     {
          InteractableTrigger[] interactTriggers = collider2D.GetComponents<InteractableTrigger>();
-         interactableInRange.AddRange(interactTriggers);
+         foreach (var trigger in interactTriggers)
+         {
+             if(!interactableInRange.Contains(trigger))
+             {
+                interactableInRange.Add(trigger);        
+             }
+         }
          /*
                 Enemy enemy = collider2D.GetComponent<Enemy>();
                 if(!enemy.isBaisemaLocked)
@@ -59,26 +65,47 @@ public class InteractRange:Singleton<InteractRange>
     {
         if (interactableInRange.Count > 0)
         {
-            foreach (var interactable in interactableInRange)
+            for (int i = 0; i < interactableInRange.Count; i++)
             {
-                if(interactable.requiredState != "none")
+                InteractableTrigger interactable = interactableInRange[i];       
+                
+                if(interactable.requiredStates.Length!=0)
                 {
-
-                    if(PlayerState.instance.checkState(interactable.requiredState))
+                    bool isanyfail = false;
+                    foreach (var state in interactable.requiredStates)
                     {
-                        Debug.Log(interactable.requiredState+" success");
-                        interactable.triggerEvent();
+                        
+                        if(PlayerState.instance.checkState(state))
+                        {
+                            Debug.Log(state+"success");
+                            
+                        }
+                        else{
+                            Debug.Log(state+" fail");
+                            isanyfail = true;
+                            break;
+                        }    
                     }
-                    else{
-                        Debug.Log(interactable.requiredState+" fail");
+                    if(isanyfail==false)
+                    interactable.triggerEvent();
+                    if(interactable.once)
+                    {
+                        interactableInRange.RemoveAt(i);
+                        i--;
                     }
                 }
                 else{
                     interactable.triggerEvent();
+                    if(interactable.once)
+                    {
+                        interactableInRange.RemoveAt(i);
+                        i--;
+                    }
                 }
             }
             return true;
         }
+        
         return false;
     }
 

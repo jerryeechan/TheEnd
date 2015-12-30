@@ -17,16 +17,12 @@ public class PlayerController : MonoBehaviour {
     float hori = 0;
     float vert = 0;
 
-    bool isMoveLocked = false;
-    #if UNITY_ANDROID
+    
+    
+    #if UNITY_EDITOR
     void Update()
     {
-        
-    }
-    #else
-    void Update()
-    {
-        if(!isMoveLocked)
+        if(!player.isMoveLocked)
         {
             Vector2 moveVec = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
             if (moveVec!= Vector2.zero)
@@ -35,15 +31,18 @@ public class PlayerController : MonoBehaviour {
             }
             
         }
-        else
-        {
-            move(Vector2.zero);  
-        }
-        
         
         if(Input.GetKeyDown("z"))
         {
             player.skillBtnTouched();
+        }
+        else if(Input.GetKeyDown("x"))
+        {
+            player.swipeDown();
+        }
+        else if(Input.GetKeyUp("x"))
+        {
+            player.release();
         }
         
         if(Input.GetKeyDown("space"))
@@ -58,14 +57,6 @@ public class PlayerController : MonoBehaviour {
     }
     #endif
     
-    public void lockMove ()
-    {
-        isMoveLocked = true;
-    }
-    public void unlockMove()
-    {
-        isMoveLocked = false;
-    }
     public void move(Vector2 moveVec)
     {
         CharacterAnimationState state = CharacterAnimationState.None;
@@ -99,7 +90,7 @@ public class PlayerController : MonoBehaviour {
             moveVec.x = 0;
 
 
-
+           
         moveVec = moveVec.normalized;
 
         

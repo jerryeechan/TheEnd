@@ -8,6 +8,7 @@ public class NoteManager : MonoBehaviour {
     public static NoteManager instance;
     public Note[] notePrefabs;
 	Dictionary<string,Note> noteDict = new Dictionary<string,Note>();
+    
     // Use this for initialization
     void Awake () {
         noteAnim = GetComponent<Animator>();
@@ -32,7 +33,7 @@ public class NoteManager : MonoBehaviour {
         note.SetParent(transform);
         note.localPosition = Vector3.zero;
         note.localScale = Vector3.one;
-        PlayerController.instance.lockMove();
+        Player.instance.lockMove();
         currentNote = note;
         Destroy(noteWrapper);
         
@@ -62,7 +63,7 @@ public class NoteManager : MonoBehaviour {
             bgAnim.Play("hidebg");
     
             currentNote.SendMessage("Done");
-            PlayerController.instance.unlockMove();
+            Player.instance.unlockMove();
             Invoke("destroyNote",0.5f);
         }
         
@@ -73,6 +74,7 @@ public class NoteManager : MonoBehaviour {
         Destroy(currentNote.gameObject);
         isPlaying = false;
         eventTriggeredBy.SendMessage("Done",SendMessageOptions.DontRequireReceiver);
+        eventTriggeredBy = null;
     }
     
     public ShowNoteEvent eventTriggeredBy;

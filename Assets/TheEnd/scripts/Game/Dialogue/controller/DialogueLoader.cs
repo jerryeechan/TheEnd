@@ -40,7 +40,6 @@ public class DialogueLoader  {
 
 	void parseLines(Dialogue dialogue,JSONArray linesJSON)
 	{
-		
 		foreach(JSONNode lineJSON in linesJSON)
 		{
 			dialogue.addLine(new DialogueLine(lineJSON["line"],lineJSON["character"], lineJSON["expression"], lineJSON["index"].AsInt,lineJSON["image"], lineJSON["addition"],lineJSON["special"]));

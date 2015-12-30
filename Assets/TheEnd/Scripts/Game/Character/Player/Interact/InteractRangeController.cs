@@ -5,10 +5,10 @@ public class InteractRangeController : MonoBehaviour {
     public InteractRange interactRange;
     
     
-    public void interact()
+    public bool interact()
     {
-        if(!interactRange.Interact())
-        {
+        
+            return interactRange.Interact();
             /*
             Enemy target = interactRange.getEnemy();
             if (target != null)
@@ -18,7 +18,7 @@ public class InteractRangeController : MonoBehaviour {
                 anim.Play("magic");
             }
             */
-        }
+            
     }
 	public void changeDir(Vector3 dir)
     {

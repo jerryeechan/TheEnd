@@ -16,8 +16,21 @@ public class OptionPanel : Singleton<OptionPanel> {
 	}
 	
 	// Update is called once per frame
-	void SetOption()
+	public void ShowOption(QuestItem item1, QuestItem item2)
 	{
+		image1.sprite = item1.sprite;
 		
+		button2.gameObject.SetActive(true);
+		image2.sprite = item2.sprite;
+	}
+	public void ShowOption(Item item)
+	{
+		image1.sprite = item.sprite;
+		button2.gameObject.SetActive(false);
+		
+	}
+	void Show()
+	{
+		DialogueManager.instance.PlayDialogue(new Dialogue());
 	}
 }
