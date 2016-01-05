@@ -114,6 +114,8 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\GameManager.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\LevelManager.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\SuperUser.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\LittleGame\Stage1-1_Sketchroom\ColorSplash.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\LittleGame\Stage1-1_Sketchroom\PaintingGame.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animate\SimpleAnimateEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animate\TransformEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Hardware\PlaySoundEvent.cs" />
@@ -144,9 +146,9 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Entrance.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Note\Note.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Note\NoteManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Player\Control\PlayerMoveControlPad.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Player\Control\SkillBtn.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Player\UIManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\Control\PlayerMoveControlPad.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\Control\SkillBtn.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\UIManager.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledInitialShaderProperties.cs" />
