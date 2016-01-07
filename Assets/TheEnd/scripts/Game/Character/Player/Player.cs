@@ -144,16 +144,23 @@ public class Player : Singleton<Player> {
         //anim.Play("magic");
         //BaisemaManager.instance.SetUpAll();
     }
+    bool isCharging = false;
     public void swipeDown()
     {
         //anim.Play("explode");
         //BaisemaManager.instance.explodeAll();
+        isCharging = true;
         Charging();
     }
     
     public void release()
     {
-        Explode();
+        if(isCharging==true)
+        {
+            Explode();
+            isCharging = false;
+        }
+        
     }
 #endregion  
     

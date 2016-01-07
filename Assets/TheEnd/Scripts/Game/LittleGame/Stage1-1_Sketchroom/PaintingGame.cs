@@ -22,6 +22,6 @@ public class PaintingGame : Singleton<PaintingGame> {
 	
 	void gameDone()
 	{
-		print("Done");
+		gameObject.SendMessage("Done");
 	}
 }

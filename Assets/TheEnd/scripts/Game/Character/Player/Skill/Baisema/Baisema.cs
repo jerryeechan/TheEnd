@@ -112,7 +112,12 @@ public class Baisema : MonoBehaviour{
             iTween.ShakePosition(Camera.main.gameObject,new Vector3(1,1),0.2f);
         }
         else
+        {
+            baseAnim.Play("disappear");
+            effectAnim.Play("disappear");
             print(state);
+        }
+            
 	}
 	public bool isSet()
     {

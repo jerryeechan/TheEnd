@@ -46,7 +46,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 	Dialogue currentDialogue;
 	public void PlayDialogue(string dialogueKey)
 	{
-		
+		print("Playing Dialogue:"+dialogueKey);
 		PlayDialogue(dialogueDictionary[dialogueKey]);	
 		
 	}

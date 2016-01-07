@@ -20,7 +20,7 @@ public class DialoguePanelView : MonoBehaviour {
             dialoguePanel.SetActive(true);
             anim.Play("show");
             print("show dialogue panel");
-            UIManager.instance.hideAllUI();    
+            UIManager.instance.hideAllUI();
         }
         
         

@@ -12,6 +12,7 @@ public enum State{
 	wet_palette,
 	plaster_moved,
 	no_palette,
+	plaster_colored
 	
 }
 public class PlayerState : Singleton<PlayerState>{

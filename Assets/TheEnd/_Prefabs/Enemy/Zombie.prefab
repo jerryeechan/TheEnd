@@ -27,8 +27,8 @@ GameObject:
   - 4: {fileID: 443692}
   - 58: {fileID: 5872860}
   m_Layer: 0
-  m_Name: attackRangeTrigger
-  m_TagString: Untagged
+  m_Name: rangeTrigger
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ GameObject:
   - 114: {fileID: 11410100}
   m_Layer: 0
   m_Name: Zombie
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.46000004, y: -7.5999999, z: 0}
+  m_LocalPosition: {x: 23.1800003, y: -18.7199993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 444712}
@@ -177,7 +177,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.51797581
+  m_Radius: .200000003
 --- !u!61 &6175084
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 185512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86730728704624edfa0d89950d793ad2, type: 3}
+  m_Script: {fileID: 11500000, guid: ec6e4618ee5094dbebb36db0360cfccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11429612
@@ -262,6 +262,7 @@ MonoBehaviour:
   data: {fileID: 11435350}
   anim: {fileID: 9595594}
   effectAnim: {fileID: 9591796}
+  state: 0
   lockedBaisema: {fileID: 0}
   isBaisemaLocked: 0
 --- !u!114 &11435350
@@ -304,7 +305,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2088901503
-  m_SortingOrder: 1514
+  m_SortingOrder: 3727
   m_Sprite: {fileID: 21300000, guid: e71e5f8aabb029c4f8e08aa853837281, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000

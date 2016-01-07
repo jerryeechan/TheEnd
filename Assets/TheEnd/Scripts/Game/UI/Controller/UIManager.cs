@@ -1,29 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UIManager : MonoBehaviour {
+public class UIManager : Singleton<UIManager> {
 
-    public static UIManager instance;
-
-    Transform skillBtn;
-    void Awake()
-    {
-
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(gameObject);
-
-        skillBtn = transform.Find("skillbtn");
-    }
+    public GameObject skillBtn;
+    public GameObject virtualJoyStick;
+    
 
     public void hideAllUI()
     {
-        skillBtn.gameObject.SetActive(false);
+        skillBtn.SetActive(false);
+        virtualJoyStick.SetActive(false);
     }
 
     public  void showAllUI()
     {
         skillBtn.gameObject.SetActive(true);
+        virtualJoyStick.SetActive(true);
     }
 }

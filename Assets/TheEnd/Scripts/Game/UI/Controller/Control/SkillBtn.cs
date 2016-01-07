@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using System;
 
-public class SkillBtn : MonoBehaviour,IPointerDownHandler,IDragHandler {
+public class SkillBtn : MonoBehaviour,IPointerDownHandler,IDragHandler,IPointerUpHandler {
     public void OnDrag(PointerEventData eventData)
     {
        if(eventData.delta.y>6)
@@ -13,7 +13,6 @@ public class SkillBtn : MonoBehaviour,IPointerDownHandler,IDragHandler {
        else if(eventData.delta.y < -6)
         {
             Player.instance.swipeDown();
-
         }
     }
 
@@ -22,6 +21,8 @@ public class SkillBtn : MonoBehaviour,IPointerDownHandler,IDragHandler {
         Player.instance.skillBtnTouched();
     }
 
-
-   
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        Player.instance.release();
+    }
 }
