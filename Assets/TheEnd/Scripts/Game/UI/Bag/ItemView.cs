@@ -42,6 +42,6 @@ public class ItemView : MonoBehaviour,IPointerClickHandler {
     public void OnPointerClick(PointerEventData eventData)
     {
 		print("pointer click"+itemName);
-     	BagView.instance.selectItem(itemName);
+     	UIManager.instance.bagView.selectItem(itemName);
     }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DialoguePanelView : MonoBehaviour {
+public class DialoguePanelView : AnimatableCanvas {
 
     Animator anim;
     GameObject dialoguePanel;

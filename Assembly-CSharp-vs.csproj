@@ -74,6 +74,7 @@
      <Compile Include="Assets\MyStandardPackage1\PoolManager\JPoolManager.cs" />
      <Compile Include="Assets\MyStandardPackage1\PoolManager\JPoolObject.cs" />
      <Compile Include="Assets\MyStandardPackage1\PoolManager\JPrefabPool.cs" />
+     <Compile Include="Assets\MyStandardPackage1\SIngletonCanvas.cs" />
      <Compile Include="Assets\MyStandardPackage1\Singleton.cs" />
      <Compile Include="Assets\Plugin\VSCode.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Character\CharacterAnimationStateManager.cs" />
@@ -100,8 +101,11 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\LittleGameManager.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\SceneLoader.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\SuperUser.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\LittleGame\LittleGameView.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\LittleGame\Stage1-1_Sketchroom\ColorSplash.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\LittleGame\Stage1-1_Sketchroom\PaintingGame.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\Quest.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\QuestStates.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animate\SimpleAnimateEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animate\TransformEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Hardware\PlaySoundEvent.cs" />
@@ -112,12 +116,12 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Player\ChangeStateEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Player\WalkInDoorEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Template\TargetEvent.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI\LittleGameCompleteEvent.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI\LittleGameStartEvent.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI\PlayDialogueEvent.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI\ShowNewsEvent.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI\ShowNoteEvent.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI\ShowOptionEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\LittleGameCompleteEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\LittleGameStartEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\PlayDialogueEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowNewsEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowNoteEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowOptionEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\FinishedTrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\GameTrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\InteractableTrigger.cs" />
@@ -135,9 +139,10 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Note\NoteManager.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Bag\BagView.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Bag\ItemView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Canvas\AnimatableCanvas.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\Control\PlayerMoveControlPad.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\Control\SkillBtn.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\UIManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\PlayerControllerView.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\Animation\PanelAnimation.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\DialogueTrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\Investigate\DialogueInvestigateImageManager.cs" />
@@ -154,6 +159,8 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\model\Dialogue.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\model\DialogueLine.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\view\DialoguePanelView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\UIManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\test\EnumPopup.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledInitialShaderProperties.cs" />
@@ -166,6 +173,7 @@
      <None Include="Assets\Tiled2Unity\Imported\1-1SketchClassRoom.tiled2unity.xml" />
      <None Include="Assets\LeanTween\ReadMe.txt" />
      <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\1-1_SketchClassRoom.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_FineArtClassRoom.tiled2unity.xml" />
      <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />

@@ -5,6 +5,7 @@ public class GameTrigger : MonoBehaviour {
 
 	public TargetEvent[] targetEvents;
 	public State [] requiredStates;
+	public Quest quest;
 	// Use this for initialization
 	protected virtual void Awake(){
 		

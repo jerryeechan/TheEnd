@@ -6,6 +6,7 @@ public class UIManager : Singleton<UIManager> {
     public GameObject skillBtn;
     public GameObject virtualJoyStick;
     
+    public BagView bagView;
 
     public void hideAllUI()
     {

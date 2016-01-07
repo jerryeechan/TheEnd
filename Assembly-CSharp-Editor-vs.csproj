@@ -51,6 +51,7 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
      <Compile Include="Assets\LeanTween\Editor\LeanTweenDocumentationEditor.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\Editor\QuestEditor.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\CustomTiledImporterAttribute.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ICustomTiledImporter.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Material.cs" />
@@ -70,6 +71,7 @@
      <None Include="Assets\Tiled2Unity\Imported\1-1SketchClassRoom.tiled2unity.xml" />
      <None Include="Assets\LeanTween\ReadMe.txt" />
      <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\1-1_SketchClassRoom.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_FineArtClassRoom.tiled2unity.xml" />
      <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />

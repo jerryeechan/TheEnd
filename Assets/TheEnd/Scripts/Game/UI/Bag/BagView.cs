@@ -1,20 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
-public class BagView : Singleton<BagView> {
+public class BagView : AnimatableCanvas {
 
 	ItemView[] itemViews;
 	Dictionary<string,ItemView> itemViewDict = new Dictionary<string,ItemView>();
 	public Transform arrowPivot;
 	public Text descriptionText;
 	
-	void Awake()
+	 
+	override protected void Awake()
 	{
+		base.Awake();
 		itemViews = GetComponentsInChildren<ItemView>();
 		foreach(ItemView itemView in itemViews)
 		{
 			itemViewDict[itemView.itemName] = itemView;
 		}
+		
+		
+	}
+	void Start()
+	{
+		hide(1);
 	}
 	public void selectItem(string itemName)
 	{
