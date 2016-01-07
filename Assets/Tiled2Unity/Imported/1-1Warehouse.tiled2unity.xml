@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 2015/11/8 下午 02:54:22-->
+<!--Last exported: 2016/1/8 上午 12:21:47-->
 <Tiled2Unity version="0.9.12.0">
   <AssignMaterial mesh="mesh_[00]_[00]" material="1-1_Warehouse_wall" sortingLayerName="" sortingOrder="0" alphaColorKey="#ff00ff" />
   <AssignMaterial mesh="mesh_[00]_[01]" material="1-1_Warehouse_floor" sortingLayerName="" sortingOrder="0" alphaColorKey="#ff00ff" />
