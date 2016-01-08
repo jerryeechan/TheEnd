@@ -1,7 +1,10 @@
-[I,map,alpha] = imread('plaster4s_color1.png');
-PSF = fspecial('gaussian',10,10);
-edgesTapered = edgetaper(I,PSF);
-alpha_filt = edgetaper(alpha,PSF);
-%alpha_filt = imfilter(alpha, PSF, 'replicate');
+for i=1:29
+    filename = ['plaster4s_color',num2str(i),'.png'];
+[I,map,alpha] = imread(filename);
+myfilter = fspecial('gaussian',60, 5);
+
+myfilteredimage = imfilter(I, myfilter, 'replicate');
+alpha_filt = imfilter(alpha, myfilter, 'replicate');
 imshow(myfilteredimage)
-imwrite(edgesTapered,'plaster4s_color1_.png','Alpha',alpha_filt);
+imwrite(myfilteredimage,filename,'Alpha',alpha_filt);
+end

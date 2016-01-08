@@ -7,7 +7,7 @@ public class UIManager : Singleton<UIManager> {
     public GameObject virtualJoyStick;
     
     public BagView bagView;
-
+    public DialoguePanelView dialogueView;
     public void hideAllUI()
     {
         skillBtn.SetActive(false);

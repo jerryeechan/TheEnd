@@ -68,7 +68,7 @@ public class InteractRange:Singleton<InteractRange>
             for (int i = 0; i < interactableInRange.Count; i++)
             {
                 InteractableTrigger interactable = interactableInRange[i];       
-                
+                /*
                 if(interactable.requiredStates.Length!=0)
                 {
                     bool isanyfail = false;
@@ -102,6 +102,7 @@ public class InteractRange:Singleton<InteractRange>
                         i--;
                     }
                 }
+                */
             }
             return true;
         }

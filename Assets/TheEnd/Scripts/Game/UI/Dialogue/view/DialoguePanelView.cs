@@ -6,8 +6,9 @@ public class DialoguePanelView : AnimatableCanvas {
     Animator anim;
     GameObject dialoguePanel;
     // Use this for initialization
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         dialoguePanel = transform.Find("DialoguePanel").gameObject;
         anim = dialoguePanel.GetComponent<Animator>();
     }

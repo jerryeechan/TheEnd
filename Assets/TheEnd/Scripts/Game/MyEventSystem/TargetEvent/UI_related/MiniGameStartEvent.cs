@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LittleGameStartEvent : TargetEvent {
+public class MiniGameStartEvent : TargetEvent {
 
-	public GameObject littlegame;
+	public GameObject miniGame;
 	// Use this for initialization
 	protected  override void active()
 	{
-		littlegame.SetActive(true);
+		miniGame.SetActive(true);
 		UIManager.instance.hideAllUI();
 	}
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LittleGameCompleteEvent : TargetEvent {
+public class MiniGameCompleteEvent : TargetEvent {
 
 	protected override void active()
 	{

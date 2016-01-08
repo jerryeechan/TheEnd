@@ -37,7 +37,6 @@ public class AnimatableCanvas : MonoBehaviour {
 		{
 			image.CrossFadeAlpha(1,duration,false);
 		}
-		
 		foreach(Text text in texts)
 		{
 			text.CrossFadeAlpha(1,duration,false);

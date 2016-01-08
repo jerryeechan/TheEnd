@@ -51,7 +51,8 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
      <Compile Include="Assets\LeanTween\Editor\LeanTweenDocumentationEditor.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\Editor\QuestEditor.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\Editor\New Folder\QuestEditor.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\Editor\GameTriggerEditor.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\CustomTiledImporterAttribute.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ICustomTiledImporter.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Material.cs" />
