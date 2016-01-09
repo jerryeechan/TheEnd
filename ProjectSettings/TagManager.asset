@@ -57,6 +57,9 @@ TagManager:
   - name: Unit
     uniqueID: 2088901503
     locked: 0
+  - name: Object
+    uniqueID: 771400971
+    locked: 0
   - name: Baisema_Top
     uniqueID: 3169430061
     locked: 0

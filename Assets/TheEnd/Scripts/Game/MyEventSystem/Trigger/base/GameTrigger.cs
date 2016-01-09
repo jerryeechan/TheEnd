@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 
-public enum TriggerTargetType{Quest,Event};
+public enum TriggerTargetType{Event,Quest};
 [ExecuteInEditMode]
 public class GameTrigger : MonoBehaviour {
 
-    public TriggerTargetType targetType;
+    //public TriggerTargetType targetType;
+    public bool doTriggerQuest = true;
+    public bool doTriggerEvent = true;
 	TargetEvent[] targetEvents;
 	public Quest[] quests;
     public string with_state = "";
     //public string goto_state;
 	protected virtual void Awake(){
+        /*
 		switch(targetType)
         {
             case TriggerTargetType.Event:
@@ -17,6 +20,10 @@ public class GameTrigger : MonoBehaviour {
             break;
             case TriggerTargetType.Quest:
             break;
+        }*/
+        if(doTriggerEvent)
+        {
+            targetEvents = GetComponentsInChildren<TargetEvent>();
         }
 	}
 	public bool once;
@@ -28,6 +35,7 @@ public class GameTrigger : MonoBehaviour {
 	{
 		if(isEnabled)
 		{
+               /*
             switch(targetType)
             {
                 case TriggerTargetType.Event:
@@ -40,7 +48,19 @@ public class GameTrigger : MonoBehaviour {
                     quests[0].triggered(with_state);
                 break;
             }
-			
+			*/
+            if(doTriggerEvent)
+            {
+                foreach (var targetEvent in targetEvents)
+                {
+                    targetEvent.triggerEvent();	
+                }
+            }
+            if(doTriggerQuest)
+            {
+                if(quests.Length==1)
+                    quests[0].triggered(with_state);
+            }
 			
 			
 			if(once == true)

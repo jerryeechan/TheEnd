@@ -5,6 +5,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	// Use this for initialization
 	public Enemy enemyPrefab;
+    bool isEnabled = false;
     int enemyMax;
     int enemyCount = 1;
     public Enemy currentEnemy;
@@ -17,6 +18,14 @@ public class EnemySpawner : MonoBehaviour {
 	{
 		
 	}
+    public void startSpawn()
+    {
+        
+    }
+    public void stopSpawn()
+    {
+    
+    }
     public void recycleEnemy()
     {
         print("recycle");
@@ -29,5 +38,9 @@ public class EnemySpawner : MonoBehaviour {
         currentEnemy = Instantiate(enemyPrefab,transform.position,transform.rotation) as Enemy;
         currentEnemy.spawner = this;
         enemyCount++;
+        if(enemyCount==enemyMax)
+        {
+			stopSpawn();
+        }
 	}
 }
