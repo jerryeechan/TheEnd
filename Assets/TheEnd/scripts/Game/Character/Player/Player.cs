@@ -125,6 +125,7 @@ public class Player : Singleton<Player> {
 #region Gesture
     public void skillBtnTouched()
     {
+        print("skill btn touched");
         if(DialogueManager.instance.isDialoguePlaying)
             DialogueManager.instance.PlayNextLine();
         else if(NoteManager.instance.isPlaying)

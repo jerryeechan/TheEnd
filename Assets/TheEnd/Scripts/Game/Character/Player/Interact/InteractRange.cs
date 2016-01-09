@@ -95,14 +95,15 @@ public class InteractRange:Singleton<InteractRange>
                     }
                 }
                 else{
+                    */
                     interactable.triggerEvent();
                     if(interactable.once)
                     {
                         interactableInRange.RemoveAt(i);
                         i--;
                     }
-                }
-                */
+                
+                
             }
             return true;
         }

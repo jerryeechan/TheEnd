@@ -1,20 +1,16 @@
 ﻿using UnityEngine;
-
-public class UIPanel : MonoBehaviour {
-	Animator anim;
-	void Awake()
-	{
-		
-	}
+using UnityEngine.UI;
+public class UIPanel : AnimatableCanvas {
 	public void Show()
-	{
-		anim = GetComponent<Animator>();
-		Debug.Log(anim);
-		anim.Play("show");
-	}
-	public void Hide()
-	{
-		anim = GetComponent<Animator>();
-		anim.Play("hide");
-	}
+    {
+        show(1);
+    }
+    public void Hide()
+    {
+        hide(1);
+        
+    }
+    
+    
+    
 }

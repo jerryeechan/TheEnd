@@ -12,7 +12,6 @@ public class SoundManager : Singleton<SoundManager> {
 		{
 			if(clip)
 			{
-				Debug.Log(clip.name);
 				clipDict.Add(clip.name,clip);	
 			}
 				

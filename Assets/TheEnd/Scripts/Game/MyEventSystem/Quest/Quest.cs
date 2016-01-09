@@ -4,12 +4,17 @@ public class Quest : MonoBehaviour {
 	public string questName;
     
 	public string[] states;
-    public string current_state;
+    public string current_state = "start";
     
     Dictionary<string, QuestEvent> questDict = new Dictionary<string,QuestEvent>();
+    
     void Start()
     {
-        
+        QuestEvent[] questEvents = GetComponentsInChildren<QuestEvent>();
+        foreach(QuestEvent questEvent in questEvents)
+        {
+            questDict.Add(states[questEvent.require_state_id],questEvent);
+        }
     }
     public void triggered(string with_state)
     {

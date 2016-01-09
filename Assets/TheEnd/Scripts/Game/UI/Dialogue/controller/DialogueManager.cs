@@ -7,6 +7,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 	// Use this for initialization
 	public TypeWriter typeWriter;
 	public TextAsset[] dialogueFiles;
+    
 	Dialogue testDialogue;
 	DialogueLoader loader;
 	Dictionary<string,Dialogue> dialogueDictionary;
@@ -16,7 +17,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 	
 	public DialogueCharacterPanel chPanel;
 	public DialogueInvestigationPanel ivPanel;
-    
+    public DialogueLinePanel linePanel;
 	public PlayDialogueEvent eventTriggerBy = null;
 	public enum TextFormat{JSON,TXT};
 	public TextFormat format;
@@ -54,13 +55,13 @@ public class DialogueManager : Singleton<DialogueManager> {
 	{
 		if(!isDialoguePlaying)
 		{
-			Player.instance.lockMove();
 			isDialoguePlaying = true;
 			isDialogueFinished = false;
-	
+	        Player.instance.lockMove();
 			playingType = DialogueLineType.description;
 			Debug.Log("dialogue show");
 			dialoguePanel.Show();
+            linePanel.Show();
 			currentDialogue = dialogue;
 			PlayNextLine();
 		}
@@ -119,7 +120,8 @@ public class DialogueManager : Singleton<DialogueManager> {
                 
 				//ivPanel.Hide();
 				HideLastPanel();
-				dialoguePanel.Hide();
+                linePanel.Hide();
+                dialoguePanel.Hide();
 				Player.instance.unlockMove();
 				Invoke("closed",1);
 				isDialogueFinished = true;
@@ -151,9 +153,11 @@ public class DialogueManager : Singleton<DialogueManager> {
 		if(playingType != DialogueLineType.character)
 		{
 			HideLastPanel();
+            chPanel.Show();
 		}
 		playingType = DialogueLineType.character;
-		chPanel.Show();
+		
+        print("character panel show");
         chPanel.setCharater(line.chIndex,line.character, line.expression, line.addition,line.special == "memory");
     }
 	
@@ -163,9 +167,9 @@ public class DialogueManager : Singleton<DialogueManager> {
 		if(playingType != DialogueLineType.investigate)
 		{
 			HideLastPanel();
+            ivPanel.Show();
 		}
 		playingType = DialogueLineType.investigate;
-		ivPanel.Show();
 		ivPanel.setPicture(line.image);
 		
 	}

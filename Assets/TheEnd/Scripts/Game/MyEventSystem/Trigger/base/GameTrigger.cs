@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 public enum TriggerTargetType{Event,Quest};
-[ExecuteInEditMode]
 public class GameTrigger : MonoBehaviour {
 
     //public TriggerTargetType targetType;
@@ -53,6 +52,7 @@ public class GameTrigger : MonoBehaviour {
             {
                 foreach (var targetEvent in targetEvents)
                 {
+                    print("trigger event");
                     targetEvent.triggerEvent();	
                 }
             }

@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour {
     }
     public void stopSpawn()
     {
-    
+        SendMessage("Done");
     }
     public void recycleEnemy()
     {

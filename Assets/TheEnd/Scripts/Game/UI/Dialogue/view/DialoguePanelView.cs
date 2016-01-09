@@ -1,43 +1,43 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DialoguePanelView : AnimatableCanvas {
+public class DialoguePanelView : UIPanel {
 
-    Animator anim;
-    GameObject dialoguePanel;
+    
+    
     // Use this for initialization
-    protected override void Awake()
-    {
-        base.Awake();
-        dialoguePanel = transform.Find("DialoguePanel").gameObject;
-        anim = dialoguePanel.GetComponent<Animator>();
-    }
+    //protected override 
+    
     public bool isPlaying = false;
+    /*
     public void Show()
     {
         if(isPlaying == false)
         {
             isPlaying = true;
-            dialoguePanel.SetActive(true);
-            anim.Play("show");
+            //dialoguePanel.SetActive(true);
+            //anim.Play("show");
             print("show dialogue panel");
-            UIManager.instance.hideAllUI();
+            //show(animateDuration);
+            //UIManager.instance.hideAllUI();
         }
         
         
     }
     public void Hide()
     {
-        Invoke("WaitHide",1);
+        Invoke("WaitHide",animateDuration);
         print("hide dialogue panel");
-        anim.Play("hide");
-        
+        //hide(animateDuration);
         
     }
     void WaitHide()
     {
         isPlaying = false;
-        dialoguePanel.SetActive(false);
-        UIManager.instance.showAllUI();
+        //dialoguePanel.SetActive(false);
+        //UIManager.instance.showAllUI();
+        
+        //needtomo
     }
+    */
 }
