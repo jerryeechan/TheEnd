@@ -124,7 +124,6 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowBagEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowNewsEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowNoteEvent.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowOptionEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\FinishedTrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\InteractableTrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\MapTrigger.cs" />

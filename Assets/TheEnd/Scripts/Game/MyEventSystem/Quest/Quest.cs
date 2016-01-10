@@ -13,7 +13,15 @@ public class Quest : MonoBehaviour {
         QuestEvent[] questEvents = GetComponentsInChildren<QuestEvent>();
         foreach(QuestEvent questEvent in questEvents)
         {
-            questDict.Add(states[questEvent.require_state_id],questEvent);
+            if( questDict.ContainsKey(states[questEvent.require_state_id]))
+            {
+                Debug.LogError(states[questEvent.require_state_id]);
+                Debug.LogError(gameObject.name);
+            }
+            else{
+                questDict.Add(states[questEvent.require_state_id],questEvent);    
+            }
+            
         }
     }
     public void triggered(string with_state)

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
-public class BagView : AnimatableCanvas {
+public class BagView : UIPanel {
 
 	ItemView[] itemViews;
 	Dictionary<string,ItemView> itemViewDict = new Dictionary<string,ItemView>();
@@ -20,32 +20,28 @@ public class BagView : AnimatableCanvas {
 		
 		
 	}
-	void Start()
-	{
-		hide(1);
-	}
 	public void selectItem(string itemName)
 	{
-	foreach(KeyValuePair<string, ItemView> entry in itemViewDict)
-	{
-		ItemView itemView = entry.Value;
-		
-		if(itemView.itemName == itemName)
-		{
-//			print(itemView.itemName);
-			itemView.selected();
-			LeanTween.rotateZ(arrowPivot.gameObject,itemView.degree,0.5f).setEase(LeanTweenType.easeInOutCubic);
-			print(itemView.degree);
-			print(itemView.itemName);
-			descriptionText.text = itemView.itemDescription;
-			//arrowPivot.
-		}
-		else
-		{
-//			print(itemView.itemName);
-			itemView.deselected();
-		}
-	}
+        foreach(KeyValuePair<string, ItemView> entry in itemViewDict)
+        {
+            ItemView itemView = entry.Value;
+            
+            if(itemView.itemName == itemName)
+            {
+    //			print(itemView.itemName);
+                itemView.selected();
+                LeanTween.rotateZ(arrowPivot.gameObject,itemView.degree,0.5f).setEase(LeanTweenType.easeInOutCubic);
+                print(itemView.degree);
+                print(itemView.itemName);
+                descriptionText.text = itemView.itemDescription;
+                //arrowPivot.
+            }
+            else
+            {
+    //			print(itemView.itemName);
+                itemView.deselected();
+            }
+        }
 	}
 	
 	public void getItem(string itemName)
@@ -56,4 +52,15 @@ public class BagView : AnimatableCanvas {
 	{
 	
 	}
+    
+    
+    public void useItem()
+    {
+        
+    }
+    
+    public void closeBag() 
+    {
+        hide(1);
+    }
 }

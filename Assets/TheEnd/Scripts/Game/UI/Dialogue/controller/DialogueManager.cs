@@ -116,9 +116,6 @@ public class DialogueManager : Singleton<DialogueManager> {
 			}
             else //end of dialogue
             {
-				//chPanel.Hide();
-                
-				//ivPanel.Hide();
 				HideLastPanel();
                 linePanel.Hide();
                 dialoguePanel.Hide();

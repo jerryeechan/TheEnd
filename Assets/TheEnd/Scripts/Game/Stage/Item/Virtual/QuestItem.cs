@@ -4,21 +4,19 @@ using System.Collections;
 public class QuestItem : Item {
 
 	// Use this for initialization
-	public State [] carriedStates;
-	
+	public Quest forQuest;
+    
+	public string pickUpState;
+    public string useState;
 	public override void PickedUp()
 	{
 		base.PickedUp();
-		PlayerState.instance.eventStateList.AddRange(carriedStates);
+		forQuest.current_state = pickUpState;
 	}
 	
 	//give the 
 	public override void GiveAway(){
 		base.GiveAway();
-		foreach (var state in carriedStates)
-		{
-			PlayerState.instance.eventStateList.Remove(state);	
-		}
 		
 	}
 	

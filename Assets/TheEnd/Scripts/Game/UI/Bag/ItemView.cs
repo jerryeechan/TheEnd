@@ -5,18 +5,21 @@ using UnityEngine.EventSystems;
 using System;
 
 public class ItemView : MonoBehaviour,IPointerClickHandler {
-	public Image image;
-	public Image halo;
+	Image image;
+    
+    public QuestItem item; 
 	public string itemName;
 	public int degree;
 	public string itemDescription;
+    
+    
 	
-	void Awake()
+	void Start()
 	{
 		image = GetComponent<Image>();
+        gameObject.SetActive(false);
 //		halo.canvasRenderer.SetAlpha(0);
-		image.canvasRenderer.SetAlpha(0);
-		getItem();
+		//getItem();
 	}
 	
 	

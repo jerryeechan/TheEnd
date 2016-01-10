@@ -5,7 +5,7 @@ public class PlayerControllerView : AnimatableCanvas {
 
 	// Use this for initialization
 	void Start () {
-	
+	   gameObject.SetActive(true);
 	}
 	
 }
