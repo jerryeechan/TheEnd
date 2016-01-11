@@ -40,4 +40,8 @@ public class Quest : MonoBehaviour {
            Debug.LogError("No mach Quest event state");
         }
     }
+    public void changeState(int id)
+    {
+        current_state = states[id];
+    }
 }

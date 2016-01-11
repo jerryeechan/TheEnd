@@ -8,6 +8,8 @@ public class AnimatableCanvas : MonoBehaviour {
     
 	protected virtual void Awake()
 	{
+        print(gameObject);
+        print(includeInChildren);
         if(includeInChildren)
 		graphics = GetComponentsInChildren<AnimatableGraphic>(true);
         else

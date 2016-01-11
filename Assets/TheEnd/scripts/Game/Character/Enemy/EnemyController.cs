@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour {
 	// Use this for initialization
 	Enemy enemy;
     Rigidbody2D rb2d;
+    public bool isMoving;
     void Awake () {
 		enemy = GetComponent<Enemy>();
 	}

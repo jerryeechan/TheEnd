@@ -100,7 +100,10 @@ public class PlayerController : MonoBehaviour {
         //rb2d.transform.position += (Vector3)moveVec*velocity;
 
     }
-
+    public void lockMove()
+    {
+        
+    }
     public void castSkill()
     {
 

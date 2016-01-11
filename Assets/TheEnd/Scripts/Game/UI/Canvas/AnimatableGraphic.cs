@@ -17,8 +17,13 @@ public class AnimatableGraphic : MonoBehaviour {
     public void show(float duration)
     {
         //print(gameObject.name);
+        
         if(graphic)
-        graphic.CrossFadeAlpha(showAlpha,duration,false);
+        {
+            setAlpha(0);
+            graphic.CrossFadeAlpha(showAlpha,duration,false);
+        }
+        
     }
     public void hide(float duration)
     {

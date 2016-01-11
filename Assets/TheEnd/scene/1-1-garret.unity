@@ -613,6 +613,7 @@ MonoBehaviour:
   quest: {fileID: 672795833}
   require_state_id: 0
   goto_state_id: 0
+  changeState_delay: 0
 --- !u!1 &44370069
 GameObject:
   m_ObjectHideFlags: 0
@@ -3673,6 +3674,7 @@ MonoBehaviour:
   quest: {fileID: 694734886}
   require_state_id: 1
   goto_state_id: 2
+  changeState_delay: 0
 --- !u!1001 &182043534
 Prefab:
   m_ObjectHideFlags: 0
@@ -8225,6 +8227,7 @@ MonoBehaviour:
   quest: {fileID: 672795833}
   require_state_id: 0
   goto_state_id: 0
+  changeState_delay: 0
 --- !u!1 &472596163
 GameObject:
   m_ObjectHideFlags: 0
@@ -8267,6 +8270,7 @@ MonoBehaviour:
   quest: {fileID: 672795833}
   require_state_id: 0
   goto_state_id: 0
+  changeState_delay: 0
 --- !u!1001 &477340585
 Prefab:
   m_ObjectHideFlags: 0
@@ -9134,6 +9138,7 @@ MonoBehaviour:
   quest: {fileID: 1912124084}
   require_state_id: 0
   goto_state_id: 0
+  changeState_delay: 0
 --- !u!1 &514213927
 GameObject:
   m_ObjectHideFlags: 0
@@ -12232,6 +12237,7 @@ MonoBehaviour:
   quest: {fileID: 672795833}
   require_state_id: 0
   goto_state_id: 0
+  changeState_delay: 0
 --- !u!1 &645776834
 GameObject:
   m_ObjectHideFlags: 0
@@ -12808,7 +12814,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 677516614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.1000004, y: -79, z: -10}
+  m_LocalPosition: {x: 14.9200001, y: -52.4000015, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13637,6 +13643,7 @@ MonoBehaviour:
   quest: {fileID: 672795833}
   require_state_id: 0
   goto_state_id: 0
+  changeState_delay: 0
 --- !u!1 &755845196
 GameObject:
   m_ObjectHideFlags: 0
@@ -13761,6 +13768,10 @@ Prefab:
     - target: {fileID: 457528, guid: 0390c246e600a7a49b4291e7399950ee, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331492, guid: 0390c246e600a7a49b4291e7399950ee, type: 2}
+      propertyPath: m_SortingLayerID
+      value: 951358769
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0390c246e600a7a49b4291e7399950ee, type: 2}
@@ -15265,11 +15276,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 470372, guid: 494812dd52cf3493d9bdebc46fd0ae7a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 14.8999996
+      value: 19.7000008
       objectReference: {fileID: 0}
     - target: {fileID: 470372, guid: 494812dd52cf3493d9bdebc46fd0ae7a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -52.5
+      value: -51.0099983
       objectReference: {fileID: 0}
     - target: {fileID: 470372, guid: 494812dd52cf3493d9bdebc46fd0ae7a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -15295,6 +15306,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 5013154, guid: 494812dd52cf3493d9bdebc46fd0ae7a, type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130636, guid: 494812dd52cf3493d9bdebc46fd0ae7a, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21285954, guid: 494812dd52cf3493d9bdebc46fd0ae7a, type: 2}
+      propertyPath: m_SortingOrder
+      value: 9664
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 494812dd52cf3493d9bdebc46fd0ae7a, type: 2}
   m_IsPrefabParent: 0
@@ -15302,24 +15325,24 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 108412, guid: 494812dd52cf3493d9bdebc46fd0ae7a, type: 2}
   m_PrefabInternal: {fileID: 853884268}
---- !u!114 &853884270
+--- !u!114 &853884270 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11409892, guid: 494812dd52cf3493d9bdebc46fd0ae7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 853884268}
+  m_Script: {fileID: 11500000, guid: 8ecad468f415748ae94c903104034bea, type: 3}
+--- !u!114 &853884271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 853884269}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ecad468f415748ae94c903104034bea, type: 3}
+  m_Script: {fileID: 11500000, guid: a839a1a2d583641cba07110891fcf525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  data: {fileID: 0}
-  anim: {fileID: 0}
-  effectAnim: {fileID: 0}
-  state: 0
-  lockedBaisema: {fileID: 0}
-  isBaisemaLocked: 0
+  isMoving: 0
 --- !u!1 &858476352
 GameObject:
   m_ObjectHideFlags: 0
@@ -15545,7 +15568,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2088901503
-  m_SortingOrder: 15722
+  m_SortingOrder: 10429
   m_Sprite: {fileID: 21300000, guid: 22537cb3792c94096ad69a63bde86480, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &862437933
@@ -16068,6 +16091,7 @@ MonoBehaviour:
   quest: {fileID: 694734886}
   require_state_id: 3
   goto_state_id: 4
+  changeState_delay: 0
 --- !u!1 &886651212
 GameObject:
   m_ObjectHideFlags: 0
@@ -16669,6 +16693,7 @@ MonoBehaviour:
   quest: {fileID: 672795833}
   require_state_id: 0
   goto_state_id: 0
+  changeState_delay: 0
 --- !u!1 &936675137
 GameObject:
   m_ObjectHideFlags: 0
@@ -17444,6 +17469,7 @@ MonoBehaviour:
   quest: {fileID: 1912124084}
   require_state_id: 1
   goto_state_id: 2
+  changeState_delay: 0
 --- !u!1 &963499081
 GameObject:
   m_ObjectHideFlags: 0
@@ -24631,7 +24657,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1436970324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.1000004, y: -79, z: 0}
+  m_LocalPosition: {x: 14.9200001, y: -52.4000015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 862437931}
@@ -26474,6 +26500,7 @@ MonoBehaviour:
   quest: {fileID: 672795833}
   require_state_id: 0
   goto_state_id: 0
+  changeState_delay: 0
 --- !u!1 &1535196107
 GameObject:
   m_ObjectHideFlags: 0
@@ -27002,6 +27029,7 @@ MonoBehaviour:
   quest: {fileID: 672795833}
   require_state_id: 0
   goto_state_id: 0
+  changeState_delay: 0
 --- !u!1 &1584770155
 GameObject:
   m_ObjectHideFlags: 0
@@ -27044,6 +27072,7 @@ MonoBehaviour:
   quest: {fileID: 672795833}
   require_state_id: 0
   goto_state_id: 0
+  changeState_delay: 0
 --- !u!1001 &1598834376
 Prefab:
   m_ObjectHideFlags: 0
@@ -31474,6 +31503,7 @@ MonoBehaviour:
   quest: {fileID: 694734886}
   require_state_id: 0
   goto_state_id: 0
+  changeState_delay: 0
 --- !u!4 &1933268560
 Transform:
   m_ObjectHideFlags: 0
@@ -31590,6 +31620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 580602929}
   dis: {x: -1, y: 0, z: 0}
+  duration: 1
 --- !u!114 &1952155910
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -77,6 +77,7 @@
      <Compile Include="Assets\MyStandardPackage1\SIngletonCanvas.cs" />
      <Compile Include="Assets\MyStandardPackage1\Singleton.cs" />
      <Compile Include="Assets\Plugin\VSCode.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\AnimatableSprite.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Character\CharacterAnimationStateManager.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Character\CharacterData.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\Enemy.cs" />
@@ -107,8 +108,8 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\Quest.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\QuestEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\QuestStates.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animate\SimpleAnimateEvent.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animate\TransformEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animation\SimpleAnimateEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animation\TransformEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Hardware\PlaySoundEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Hardware\VibrateEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Items\OpenDoorEvent.cs" />

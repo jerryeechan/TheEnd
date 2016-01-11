@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using TheEnd;
-public class Enemy : MonoBehaviour {
+public class Enemy : AnimatableSprite {
 
     public EnemySpawner spawner;
     Rigidbody2D rb2d;
@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour {
     }
 
 
-    public enum EnemyState { Movable, Trapped, Died };
+    public enum EnemyState {Stand, Movable, Trapped, Died };
     
     public EnemyState state = EnemyState.Movable;
     /*
@@ -58,6 +58,10 @@ public class Enemy : MonoBehaviour {
         anim.speed = 0;
         rb2d.isKinematic = true;
     }
+    public void StartToMove()
+    {
+        state = EnemyState.Movable;
+    }
     enum EnemyAnimationState { Walk_Back, Walk_Front, Walk_Left, Walk_Right }
     Vector2 moveVec = Vector2.zero;
     public void faceRight()
@@ -91,6 +95,7 @@ public class Enemy : MonoBehaviour {
         }
         string stateName = CharacterAnimationStateManager.instance.getAnimationStateString(state);
         anim.Play(stateName);
+        
         lastState = state;
     }
     void Update()
@@ -112,14 +117,16 @@ public class Enemy : MonoBehaviour {
 	public void DieAnimation()
 	{
 		state = EnemyState.Died;
-        effectAnim.Play("disappear");
+        //effectAnim.Play("disappear");
+        setAlpha(0,0.5f);
         Invoke("die",0.5f);
 	}
 	
 	public void die()
 	{
         if(spawner)
-            spawner.recycleEnemy(); 
-		Destroy(gameObject);
+           spawner.recycleEnemy(); 
+        else
+		  Destroy(gameObject);
 	}
 }

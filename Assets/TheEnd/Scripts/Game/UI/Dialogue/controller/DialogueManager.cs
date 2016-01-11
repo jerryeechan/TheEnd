@@ -103,8 +103,6 @@ public class DialogueManager : Singleton<DialogueManager> {
 						break;
 				}
 				
-				
-				
 				typeWriter.Play(line.text);
 //				print("next line");	
 				if(SuperUser.instance.isSkippingDialogues)
@@ -151,10 +149,11 @@ public class DialogueManager : Singleton<DialogueManager> {
 		{
 			HideLastPanel();
             chPanel.Show();
+            print("character panel show");
 		}
 		playingType = DialogueLineType.character;
 		
-        print("character panel show");
+        print("character line");
         chPanel.setCharater(line.chIndex,line.character, line.expression, line.addition,line.special == "memory");
     }
 	
