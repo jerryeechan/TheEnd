@@ -56,7 +56,7 @@ public class BagView : UIPanel {
     
     public void useItem()
     {
-        
+        SendMessage("");
     }
     
     public void closeBag() 

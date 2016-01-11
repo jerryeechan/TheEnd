@@ -144,6 +144,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 	}
 	public void PlayCharacterExpression(DialogueLine line)
     {
+        chPanel.setCharater(line.chIndex,line.character, line.expression, line.addition,line.special == "memory");
 //		Debug.Log("character");
 		if(playingType != DialogueLineType.character)
 		{
@@ -154,11 +155,12 @@ public class DialogueManager : Singleton<DialogueManager> {
 		playingType = DialogueLineType.character;
 		
         print("character line");
-        chPanel.setCharater(line.chIndex,line.character, line.expression, line.addition,line.special == "memory");
+        
     }
 	
 	public void PlayInvestigation(DialogueLine line)
 	{
+        ivPanel.setPicture(line.image);
 		Debug.Log("investigate");
 		if(playingType != DialogueLineType.investigate)
 		{
@@ -166,7 +168,7 @@ public class DialogueManager : Singleton<DialogueManager> {
             ivPanel.Show();
 		}
 		playingType = DialogueLineType.investigate;
-		ivPanel.setPicture(line.image);
+		
 		
 	}
 	public DialogueCharacter getCharacter(string chName)

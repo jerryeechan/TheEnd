@@ -8,7 +8,7 @@ public class DialogueCharacterPanel : UIPanel {
     
     public void setCharater(int index,MainCharacterEnum character, Expression expression, AdditionMark addition, bool isMemory = false)
     {
-        clean();
+        //clean();
         if(isMemory)
         {
             memoryMask.gameObject.SetActive(true);
@@ -21,10 +21,9 @@ public class DialogueCharacterPanel : UIPanel {
         {
             Debug.Log(character);
             DialogueCharacter ch = DialogueCharacterManager.instance.getCharacter(character);
-            Debug.Log(ch);
             Sprite sprite = ch.getExpression(expression);
             characterImages[index].sprite = sprite;
-            characterImages[index].enabled = true;    
+            //characterImages[index].enabled = true;    
         }
     }
     public void clean()

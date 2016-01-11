@@ -19,6 +19,7 @@ public class SkillBtn : MonoBehaviour,IPointerDownHandler,IDragHandler,IPointerU
     public void OnPointerDown(PointerEventData eventData)
     {
         Player.instance.skillBtnTouched();
+        
     }
 
     public void OnPointerUp(PointerEventData eventData)

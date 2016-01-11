@@ -15,9 +15,14 @@ public class Enemy : AnimatableSprite {
         c2d = GetComponent<BoxCollider2D>();
 
         lastState = CharacterAnimationState.Stand_Front;
+        
+        
     }
 
-
+    public bool hasAnimState(string state)
+    {
+        return  anim.HasState(0,Animator.StringToHash(state));
+    }
     public enum EnemyState {Stand, Movable, Trapped, Died };
     
     public EnemyState state = EnemyState.Movable;
@@ -94,9 +99,14 @@ public class Enemy : AnimatableSprite {
             }
         }
         string stateName = CharacterAnimationStateManager.instance.getAnimationStateString(state);
-        anim.Play(stateName);
+        if(hasAnimState(stateName))
+        {
+            anim.Play(stateName);
+            lastState = state;    
+        }
         
-        lastState = state;
+        
+       
     }
     void Update()
     {

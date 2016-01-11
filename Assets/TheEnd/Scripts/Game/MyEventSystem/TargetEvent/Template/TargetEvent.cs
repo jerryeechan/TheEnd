@@ -5,7 +5,7 @@ public interface ITargetEvent{
 }
 public class TargetEvent : MonoBehaviour {
 
-	float delayTime = 0;
+	public float delayTime = 0;
 	public virtual void triggerEvent()
 	{
 		if(delayTime!=0)

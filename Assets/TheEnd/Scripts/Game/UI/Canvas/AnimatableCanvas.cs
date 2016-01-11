@@ -15,6 +15,14 @@ public class AnimatableCanvas : MonoBehaviour {
         else
         graphics = GetComponents<AnimatableGraphic>();
 	}
+    
+    protected void loadGraphics()
+    {
+        if(includeInChildren)
+		  graphics = GetComponentsInChildren<AnimatableGraphic>(true);
+        else
+          graphics = GetComponents<AnimatableGraphic>();
+    }
 	
 	public void hide(float duration)
 	{
@@ -33,6 +41,7 @@ public class AnimatableCanvas : MonoBehaviour {
         activate();
 		foreach(AnimatableGraphic graphic in graphics)
 		{
+            print(graphic.gameObject);
             graphic.show(duration);
 		}
 	}

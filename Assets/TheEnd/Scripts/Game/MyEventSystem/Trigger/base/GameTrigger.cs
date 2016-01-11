@@ -6,7 +6,7 @@ public class GameTrigger : MonoBehaviour {
     //public TriggerTargetType targetType;
     public bool doTriggerQuest = true;
     public bool doTriggerEvent = true;
-	TargetEvent[] targetEvents;
+	public TargetEvent[] targetEvents;
 	public Quest[] quests;
     public string with_state = "";
     //public string goto_state;
@@ -20,7 +20,7 @@ public class GameTrigger : MonoBehaviour {
             case TriggerTargetType.Quest:
             break;
         }*/
-        if(doTriggerEvent)
+        if(doTriggerEvent&&targetEvents.Length==0)
         {
             targetEvents = GetComponentsInChildren<TargetEvent>();
         }

@@ -128,6 +128,9 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\FinishedTrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\InteractableTrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\MapTrigger.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\Skill\ExplodeTrigger.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\Skill\SetBaisemaTrigger.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\UITrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\base\GameTrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\SoundEffects\SoundManager.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Stage\Item\OnGameObject\ItemTag.cs" />
@@ -140,8 +143,6 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Entrance.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Note\Note.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Note\NoteManager.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Bag\BagView.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Bag\ItemView.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Canvas\AnimatableCanvas.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Canvas\AnimatableGraphic.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\Control\PlayerMoveControlPad.cs" />
@@ -164,6 +165,9 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\model\Dialogue.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\model\DialogueLine.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\view\DialoguePanelView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Item\Bag\BagView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Item\Bag\ItemView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Item\PickItemView.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\UIManager.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\test\EnumPopup.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />

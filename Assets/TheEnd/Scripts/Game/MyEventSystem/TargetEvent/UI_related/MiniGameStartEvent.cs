@@ -8,6 +8,6 @@ public class MiniGameStartEvent : TargetEvent {
 	protected  override void active()
 	{
 		miniGame.SetActive(true);
-		UIManager.instance.hideAllUI();
+		UIManager.instance.hideControlPanel();
 	}
 }

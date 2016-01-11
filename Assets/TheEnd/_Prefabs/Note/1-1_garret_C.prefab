@@ -11,6 +11,7 @@ GameObject:
   - 222: {fileID: 22209754}
   - 114: {fileID: 11453478}
   - 114: {fileID: 11473002}
+  - 114: {fileID: 11495646}
   m_Layer: 5
   m_Name: note
   m_TagString: Untagged
@@ -83,6 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ba8cdf7b3764efeae30b84452a322a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  includeInChildren: 1
 --- !u!114 &11469978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,10 +117,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ef6d0d0313d31438523e84459f38f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doTriggerQuest: 1
+  doTriggerEvent: 1
   targetEvents: []
-  requiredState: none
+  quests: []
+  with_state: 
   once: 0
   isEnabled: 1
+--- !u!114 &11495646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb83cc33d76e49c78ee81e321aac155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showAlpha: 1
 --- !u!222 &22209754
 CanvasRenderer:
   m_ObjectHideFlags: 1

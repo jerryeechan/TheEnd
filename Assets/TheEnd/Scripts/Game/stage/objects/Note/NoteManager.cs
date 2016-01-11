@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-public class NoteManager : MonoBehaviour {
+public class NoteManager : UIPanel {
 
-   Animator noteAnim;
-   public Animator bgAnim;
+
+   
     public static NoteManager instance;
+    public GameObject notebg;
     public Note[] notePrefabs;
 	Dictionary<string,Note> noteDict = new Dictionary<string,Note>();
     
     // Use this for initialization
-    void Awake () {
-        noteAnim = GetComponent<Animator>();
+    protected override void Awake () {
+        base.Awake();
         instance = this;
         
         //add note to dictionary
@@ -26,6 +27,7 @@ public class NoteManager : MonoBehaviour {
     public bool isPlaying = false;
 	public void showNote(string noteID)
     {
+        notebg.SetActive(true);
         isDismissed = false;
         GameObject noteWrapper = Instantiate(noteDict[noteID].gameObject);
         
@@ -37,16 +39,20 @@ public class NoteManager : MonoBehaviour {
         currentNote = note;
         Destroy(noteWrapper);
         
+        loadGraphics();
+        Show();
         print("shownote");
+        
+        /*
         bgAnim.gameObject.SetActive(true);
         noteAnim.Rebind();
         
         noteAnim.Play("showNote");
         bgAnim.Play("showbg");
-        
+        */
         isPlaying = true;
 
-        UIManager.instance.hideAllUI();
+        UIManager.instance.hideControlPanel();
     }
 
 //    int playingIndex;
@@ -57,17 +63,13 @@ public class NoteManager : MonoBehaviour {
         if(!isDismissed)
         {
            isDismissed = true;
-           UIManager.instance.showAllUI();
-            print("dismiss");
-            noteAnim.Play("hideNote");
-            bgAnim.Play("hidebg");
-    
-            currentNote.SendMessage("Done");
-            Player.instance.unlockMove();
-            Invoke("destroyNote",0.5f);
+           UIManager.instance.showControlPanel();
+           Hide();
+           print("dismiss");            
+           currentNote.SendMessage("Done",null,SendMessageOptions.DontRequireReceiver);
+           Player.instance.unlockMove();
+           Invoke("destroyNote",0.5f);
         }
-        
-        
     }
     void destroyNote()
     {

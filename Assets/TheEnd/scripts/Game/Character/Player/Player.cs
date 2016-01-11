@@ -10,7 +10,7 @@ public class Player : Singleton<Player> {
     Animator anim;
     Vector2 moveVec;
     public bool isCastingBaisema = false;
-    
+    public GameObject trigger;
     
     public bool isMoveLocked = false;
     CharacterAnimationState lastState;
@@ -171,6 +171,7 @@ public class Player : Singleton<Player> {
         anim.Play("magic");
         //Invoke("unlockMove",1f);
         BaisemaManager.instance.genBaisema(transform.position);
+        SendMessage("SetBaisemaTriggered");
     }
     public void Charging()
     {
@@ -182,5 +183,6 @@ public class Player : Singleton<Player> {
         
         anim.Play("explode");
         BaisemaManager.instance.explodeAll();
+        SendMessage("ExplodeTriggered");
     }
 }
