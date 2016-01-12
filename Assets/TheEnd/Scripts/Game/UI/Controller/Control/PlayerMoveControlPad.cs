@@ -6,6 +6,8 @@ public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,I
 	public Transform current;
 	public void OnBeginDrag (PointerEventData eventData)
 	{
+        pivot.SetActive(true);
+        current.gameObject.SetActive(true);
 		isDown = true;
 		last_position = eventData.position;
 		pivot_position = eventData.position;
@@ -20,12 +22,18 @@ public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,I
 	{
 		isDown = false;
 		PlayerController.instance.move (Vector2.zero);
+        pivot.SetActive(false);
+        current.gameObject.SetActive(false);
 	}
 
 	#endregion
 
 	Vector2 last_position;
 	Vector2 pivot_position;
+    void Awake(){
+        pivot_position = pivot.transform.position;
+        last_position = current.position;
+    }
 	bool isDown = false;
 	float th = Mathf.Sin(22.5f*Mathf.PI/180);
 	float pivotDis = 40;

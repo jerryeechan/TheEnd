@@ -8,7 +8,6 @@ public class DialoguePanelView : UIPanel {
     // Use this for initialization
     //protected override 
     
-    public bool isPlaying = false;
     /*
     public void Show()
     {

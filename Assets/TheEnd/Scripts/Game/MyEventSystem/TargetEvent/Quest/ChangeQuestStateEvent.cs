@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ChangeQuestStateEvent : MonoBehaviour {
+public class ChangeQuestStateEvent : TargetEvent {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public Quest quest;
+    public string state;
+    override protected void active()
+    {
+        quest.current_state = state;
+    } 
 }

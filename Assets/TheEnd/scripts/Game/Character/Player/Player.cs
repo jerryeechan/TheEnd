@@ -14,6 +14,8 @@ public class Player : Singleton<Player> {
     
     public bool isMoveLocked = false;
     CharacterAnimationState lastState;
+    public bool canUseSKill = false;
+    public bool isInputEnable = false; 
     void Awake()
 	{	
         footStepSound = GetComponent<AudioSource>();
@@ -32,20 +34,22 @@ public class Player : Singleton<Player> {
     
     public void setMoveVec(Vector2 moveVec)
     {
-        if(moveVec == Vector2.zero)
+        if(isInputEnable)
         {
-            footStepSound.Stop();
-        }
-        else{
-            if(footStepSound.isPlaying == false)
+            if(moveVec == Vector2.zero)
             {
-                footStepSound.Play();  
+                footStepSound.Stop();
             }
+            else{
+                if(footStepSound.isPlaying == false)
+                {
+                    footStepSound.Play();  
+                }
+            }
+            this.moveVec = moveVec;
+            
+            interactRangeController.changeDir(moveVec);    
         }
-        
-        this.moveVec = moveVec;
-        
-        interactRangeController.changeDir(moveVec);
     }
     public void lockMove ()
     {
@@ -122,21 +126,30 @@ public class Player : Singleton<Player> {
         return data.damage;
     }
     
+    
 #region Gesture
     public void skillBtnTouched()
     {
-        print("skill btn touched");
-        if(DialogueManager.instance.isDialoguePlaying)
-            DialogueManager.instance.PlayNextLine();
-        else if(NoteManager.instance.isPlaying)
-            NoteManager.instance.dismissNote();
-        else 
+        if(isInputEnable)
         {
-            if(!interactRangeController.interact())
+           print("skill btn touched");
+            if(DialogueManager.instance.isDialoguePlaying)
+                DialogueManager.instance.PlayNextLine();
+            else if(NoteManager.instance.isPlaying)
+                NoteManager.instance.dismissNote();
+            else if (UIManager.instance.pickItemView.isPlaying)//獲得物品
+                UIManager.instance.pickItemView.Hide();
+            else 
             {
-                SetBaisema();
-            }
-        }    
+                if(!interactRangeController.interact())
+                {
+                    if(canUseSKill)
+                    {
+                        SetBaisema();
+                    }
+                }
+            } 
+        }
     }
     
     
@@ -148,10 +161,14 @@ public class Player : Singleton<Player> {
     bool isCharging = false;
     public void swipeDown()
     {
+        if(canUseSKill)
+        {
+            isCharging = true;
+            Charging();    
+        }
         //anim.Play("explode");
         //BaisemaManager.instance.explodeAll();
-        isCharging = true;
-        Charging();
+        
     }
     
     public void release()
@@ -165,7 +182,7 @@ public class Player : Singleton<Player> {
     }
 #endregion  
     
-    public void SetBaisema()
+    void SetBaisema()
     {
         lockMove();
         anim.Play("magic");
@@ -173,12 +190,12 @@ public class Player : Singleton<Player> {
         BaisemaManager.instance.genBaisema(transform.position);
         SendMessage("SetBaisemaTriggered");
     }
-    public void Charging()
+    void Charging()
     {
         lockMove();
         anim.Play("charging");
     }
-    public void Explode()
+    void Explode()
     {
         
         anim.Play("explode");

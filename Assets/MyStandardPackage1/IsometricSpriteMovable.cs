@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-public class ShowBagEvent : TargetEvent {
+using System.Collections.Generic;
+[ExecuteInEditMode]
+public class IsometricSpriteMovable : IsometricSprite {
 
 	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+		setOrder();
 	}
 }
+

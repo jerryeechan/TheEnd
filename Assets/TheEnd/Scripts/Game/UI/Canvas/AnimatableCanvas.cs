@@ -8,8 +8,6 @@ public class AnimatableCanvas : MonoBehaviour {
     
 	protected virtual void Awake()
 	{
-        print(gameObject);
-        print(includeInChildren);
         if(includeInChildren)
 		graphics = GetComponentsInChildren<AnimatableGraphic>(true);
         else
@@ -26,13 +24,16 @@ public class AnimatableCanvas : MonoBehaviour {
 	
 	public void hide(float duration)
 	{
-		foreach(AnimatableGraphic graphic in graphics)
-		{
-            graphic.hide(duration);
-		}
-		Invoke("deActivate",1);
+        if(graphics!=null)
+        {
+            foreach(AnimatableGraphic graphic in graphics)
+            {
+                graphic.hide(duration);
+            }
+        }
+        Invoke("hideDone",duration);
 	}
-	void deActivate()
+	protected virtual void hideDone()
 	{
 		gameObject.SetActive(false);
 	}
@@ -41,12 +42,18 @@ public class AnimatableCanvas : MonoBehaviour {
         activate();
 		foreach(AnimatableGraphic graphic in graphics)
 		{
-            print(graphic.gameObject);
             graphic.show(duration);
 		}
+        Invoke("showDone",duration);
 	}
-	void activate()
+    
+	protected virtual void activate()
 	{
 		gameObject.SetActive(true);
 	}
+    
+    protected virtual void showDone()
+    {
+        
+    }
 }

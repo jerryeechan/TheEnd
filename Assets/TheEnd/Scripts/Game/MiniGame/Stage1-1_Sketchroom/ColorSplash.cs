@@ -6,7 +6,7 @@ using System;
 
 public class ColorSplash : MonoBehaviour, IPointerEnterHandler
 {
-
+    
     Image image;
 	bool hasDrawn = false;
     public void OnPointerEnter(PointerEventData eventData)

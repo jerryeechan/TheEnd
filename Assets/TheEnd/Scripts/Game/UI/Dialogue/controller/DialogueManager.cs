@@ -18,7 +18,9 @@ public class DialogueManager : Singleton<DialogueManager> {
 	public DialogueCharacterPanel chPanel;
 	public DialogueInvestigationPanel ivPanel;
     public DialogueLinePanel linePanel;
+    public DialogueOptionPanel optionPanel;
 	public PlayDialogueEvent eventTriggerBy = null;
+    
 	public enum TextFormat{JSON,TXT};
 	public TextFormat format;
 	void Awake()
@@ -37,7 +39,6 @@ public class DialogueManager : Singleton<DialogueManager> {
 	
 	**/
 	
-	
 	List<Dialogue> dialogues;
 	public void loadDialogue(int chapter)
 	{
@@ -45,8 +46,10 @@ public class DialogueManager : Singleton<DialogueManager> {
 	}
 	
 	Dialogue currentDialogue;
-	public void PlayDialogue(string dialogueKey)
+    bool showOption;
+	public void PlayDialogue(string dialogueKey,bool showOption)
 	{
+        this.showOption = showOption;
 		print("Playing Dialogue:"+dialogueKey);
 		PlayDialogue(dialogueDictionary[dialogueKey]);	
 		
@@ -58,6 +61,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 			isDialoguePlaying = true;
 			isDialogueFinished = false;
 	        Player.instance.lockMove();
+            UIManager.instance.hideControlPanel();
 			playingType = DialogueLineType.description;
 			Debug.Log("dialogue show");
 			dialoguePanel.Show();
@@ -114,18 +118,31 @@ public class DialogueManager : Singleton<DialogueManager> {
 			}
             else //end of dialogue
             {
-				HideLastPanel();
-                linePanel.Hide();
-                dialoguePanel.Hide();
-				Player.instance.unlockMove();
-				Invoke("closed",1);
-				isDialogueFinished = true;
+                if(showOption)
+                {
+                    optionPanel.Show();
+                }
+                else
+                {
+                    hideDialogue();
+                }
+				
             }
 
 		}
 		
 	}
-	
+	public void hideDialogue()
+    {
+        HideLastPanel();
+        linePanel.Hide();
+        dialoguePanel.Hide();
+        optionPanel.Hide();
+        Player.instance.unlockMove();
+        Invoke("closed",1);
+        isDialogueFinished = true;
+        UIManager.instance.showControlPanel();
+    }
 	void closed()
 	{
 		isDialoguePlaying = false;

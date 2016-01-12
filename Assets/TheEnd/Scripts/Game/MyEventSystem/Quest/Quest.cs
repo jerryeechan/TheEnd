@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 public class Quest : MonoBehaviour {
+    public static Quest currentQuest;
 	public string questName;
     
 	public string[] states;
@@ -24,20 +25,24 @@ public class Quest : MonoBehaviour {
             
         }
     }
-    public void triggered(string with_state)
+    public bool triggered(string with_state)
     {
+        string temp_state = current_state;
         if(with_state!="")
         {
-            current_state = with_state;    
+            temp_state = with_state;
         }
-        QuestEvent target;
-        if(target = questDict[current_state])
+        
+        if(questDict.ContainsKey(temp_state))
         {
-           target.triggerEvents();
+            questDict[temp_state].triggerEvents();  
+            current_state = temp_state;
+            return true;
         }
         else
         {
            Debug.LogError("No mach Quest event state");
+           return false;
         }
     }
     public void changeState(int id)

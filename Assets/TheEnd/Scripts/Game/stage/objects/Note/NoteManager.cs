@@ -24,7 +24,6 @@ public class NoteManager : UIPanel {
         
 	}
     Transform currentNote;
-    public bool isPlaying = false;
 	public void showNote(string noteID)
     {
         notebg.SetActive(true);

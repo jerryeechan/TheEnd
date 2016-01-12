@@ -22,6 +22,8 @@ public class QuestEvent : MonoBehaviour {
     
     public void triggerEvents()
     {
+        Quest.currentQuest = quest;
+        print(Quest.currentQuest);
         foreach (var targetEvent in events)
         {
             targetEvent.triggerEvent();	

@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class PaintingGame : Singleton<PaintingGame> {
+public class PaintingGame : UIPanel {
 
+    public static PaintingGame instance;
 	ColorSplash[] splashes;
 	int drawnNum;
 	
-	void Awake()
+	override protected void Awake()
 	{
+        instance = this;
+        base.Awake();
 		splashes = GetComponentsInChildren<ColorSplash>();
 	}
 	public void splashDrawn()

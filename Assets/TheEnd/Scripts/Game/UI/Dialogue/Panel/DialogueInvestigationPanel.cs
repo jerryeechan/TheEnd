@@ -7,9 +7,13 @@ public class DialogueInvestigationPanel : UIPanel {
 	public DialogueInvestigateImageManager ivImageManager;
 	public Image picture_hori;
 	public Image picture_vert;
-	
-	
+	public Image object_large;
 	// Update is called once per frame
+    public void setObject(string image)
+    {
+        object_large.gameObject.SetActive(true);
+        object_large.sprite = ivImageManager.getImage(image);
+    }
 	public void setPicture(string image)
 	{
 		if(image =="pic4")

@@ -8,6 +8,11 @@ public class UIManager : Singleton<UIManager> {
     
     public BagView bagView;
     public DialoguePanelView dialogueView;
+    public PickItemView pickItemView;
+    void Awake()
+    {
+        bagView.gameObject.SetActive(true);
+    }
     public void hideControlPanel()
     {
         skillBtn.SetActive(false);

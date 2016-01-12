@@ -3,11 +3,11 @@ using System.Collections;
 
 public class MiniGameStartEvent : TargetEvent {
 
-	public GameObject miniGame;
+	public MiniGameView miniGame;
 	// Use this for initialization
 	protected  override void active()
 	{
-		miniGame.SetActive(true);
+		miniGame.gameObject.SetActive(true);
 		UIManager.instance.hideControlPanel();
 	}
 }

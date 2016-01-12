@@ -4,14 +4,14 @@ using System.Collections;
 public class QuestItem : Item {
 
 	// Use this for initialization
-	public Quest forQuest;
     
-	public string pickUpState;
+    public string showname;
     public string useState;
+    
 	public override void PickedUp()
 	{
 		base.PickedUp();
-		forQuest.current_state = pickUpState;
+		//forQuest.current_state = pickUpState;
 	}
 	
 	//give the 

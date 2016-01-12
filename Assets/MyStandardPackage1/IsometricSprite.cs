@@ -31,7 +31,7 @@ public class IsometricSprite : MonoBehaviour {
 		
 	}
 	
-	void setOrder()
+	protected void setOrder()
 	{
 		for(int i=0;i<sprs.Count;i++)
 		{
@@ -40,9 +40,7 @@ public class IsometricSprite : MonoBehaviour {
 		}
 		
 	}
-	// Update is called once per frame
-	void Update () {
-		setOrder();
-	}
+
+	
 }
 
