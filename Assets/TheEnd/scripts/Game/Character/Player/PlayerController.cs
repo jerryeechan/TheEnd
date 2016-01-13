@@ -1,23 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using TheEnd;
-public class PlayerController : MonoBehaviour {
-    public static PlayerController instance;
+public class PlayerController : Singleton<PlayerController> {
 
     // Use Constant.this for initialization
 
     public Player player;
-    void Awake()
-    {
-        instance = this;
-    }
-    void Start() {
-    }
-
-    float hori = 0;
-    float vert = 0;
-
-    
+    Vector2 lastMoveVec;
     
     #if UNITY_EDITOR
     void Update()
@@ -25,16 +14,21 @@ public class PlayerController : MonoBehaviour {
         if(!player.isMoveLocked)
         {
             Vector2 moveVec = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
-            if (moveVec!= Vector2.zero)
+            
+            if (lastMoveVec != Vector2.zero && moveVec != Vector2.zero)
             {
                 move(moveVec);
             }
-            
+            lastMoveVec = moveVec;
         }
         
         if(Input.GetKeyDown("z"))
         {
             player.skillBtnTouched();
+        }
+        else if(Input.GetKeyUp("z"))
+        {
+            player.release();
         }
         else if(Input.GetKeyDown("x"))
         {
@@ -100,8 +94,24 @@ public class PlayerController : MonoBehaviour {
         //rb2d.transform.position += (Vector3)moveVec*velocity;
 
     }
+    public bool islocked = false;
     public void lockMove()
     {
+        if(!islocked)
+        {
+            islocked = true;
+            move(Vector2.zero);
+            player.lockMove();    
+        }
+        
+    }
+    public void unlockMove()
+    {
+        if(islocked)
+        {
+            islocked = false;
+            player.unlockMove();    
+        }
         
     }
     public void castSkill()

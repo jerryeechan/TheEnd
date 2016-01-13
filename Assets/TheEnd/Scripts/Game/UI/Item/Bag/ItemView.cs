@@ -9,7 +9,6 @@ public class ItemView : MonoBehaviour,IPointerClickHandler {
     
     public QuestItem item; 
 	public int degree;
-	public string itemDescription;
     
     
 	void Awake()

@@ -41,12 +41,20 @@ public class Quest : MonoBehaviour {
         }
         else
         {
-           Debug.LogError("No mach Quest event state");
+//           Debug.LogError("No mach Quest event state");
            return false;
         }
+    }
+    public static void broadcast(string with_state)
+    {
+        currentQuest.triggered(with_state);
     }
     public void changeState(int id)
     {
         current_state = states[id];
+    }
+    public void removeQuestEvent(int require_state_id)
+    {
+        questDict.Remove(states[require_state_id]);
     }
 }

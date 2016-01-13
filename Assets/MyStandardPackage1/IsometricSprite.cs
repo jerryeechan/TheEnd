@@ -11,22 +11,28 @@ public class IsometricSprite : MonoBehaviour {
 	List<int> localSortingOrders;
 	Transform myTransform;
 	bool hasInited = false;
+    
+    
 	
-	void Start () {
+	void Awake () {
+        
 		if(!hasInited)
 		{
 			sprs = new List<SpriteRenderer>();
 			localSortingOrders = new List<int>();
-			SpriteRenderer[] sprArray=  GetComponentsInChildren<SpriteRenderer>();
-			for(int i=0;i<sprArray.Length;i++)
+			
+            IsometricComponent[] ics = GetComponentsInChildren<IsometricComponent>();
+			for(int i=0;i<ics.Length;i++)
 			{
-				sprs.Add(sprArray[i]);
+                
+				sprs.Add(ics[i].GetComponent<SpriteRenderer>());
 				//original sorting order??/
-				localSortingOrders.Add(sprArray[i].sortingOrder);
+				localSortingOrders.Add(ics[i].localorder);
 			}
 			
 			myTransform = transform;
 			hasInited = true;
+            setOrder();
 		}
 		
 	}
@@ -35,8 +41,9 @@ public class IsometricSprite : MonoBehaviour {
 	{
 		for(int i=0;i<sprs.Count;i++)
 		{
-			//sprs[i].sortingOrder = localSortingOrders[i]- Mathf.RoundToInt(myTransform.position.y*200);
-			sprs[i].sortingOrder = - (Mathf.RoundToInt(myTransform.position.y*200) - Mathf.RoundToInt(sprs[i].transform.position.y));
+			sprs[i].sortingOrder = localSortingOrders[i] - Mathf.RoundToInt(myTransform.position.y*200);
+			//sprs[i].sortingOrder = - (Mathf.RoundToInt(myTransform.position.y*200) - Mathf.RoundToInt(sprs[i].transform.position.y));
+            
 		}
 		
 	}

@@ -5,9 +5,10 @@ public class ChangeQuestItemStateEvent : TargetEvent {
 
     public QuestItem item;
     public string state;
+    public string description;
 	// Use this for initialization
 	override protected void active()
     {
-        item.useState = state;
+        item.changeState(state,description);
     }
 }

@@ -18,17 +18,15 @@ public class DialogueInvestigationPanel : UIPanel {
 	{
 		if(image =="pic4")
 		{
-			picture_vert.gameObject.SetActive(true);
+			//picture_vert.gameObject.SetActive(true);
 			picture_hori.gameObject.SetActive(false);
-			
 			picture_vert.sprite = ivImageManager.getImage(image);
 		}
 			
 		else 
 		{
 			picture_vert.gameObject.SetActive(false);
-			picture_hori.gameObject.SetActive(true);
-			
+			//picture_hori.gameObject.SetActive(true);
 			picture_hori.sprite = ivImageManager.getImage(image);
 		}
 			

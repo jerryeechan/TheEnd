@@ -14,7 +14,7 @@ public class Player : Singleton<Player> {
     
     public bool isMoveLocked = false;
     CharacterAnimationState lastState;
-    public bool canUseSKill = false;
+    public bool canUseSkill = false;
     public bool isInputEnable = false; 
     void Awake()
 	{	
@@ -55,7 +55,7 @@ public class Player : Singleton<Player> {
     {
         isMoveLocked = true;
         //PlayAnimation(state);
-        setMoveVec(Vector2.zero);
+        //setMoveVec(Vector2.zero);
     }
     public void unlockMove()
     {
@@ -133,22 +133,23 @@ public class Player : Singleton<Player> {
         if(isInputEnable)
         {
            print("skill btn touched");
+           hasInteracted = true;
             if(DialogueManager.instance.isDialoguePlaying)
                 DialogueManager.instance.PlayNextLine();
             else if(NoteManager.instance.isPlaying)
                 NoteManager.instance.dismissNote();
             else if (UIManager.instance.pickItemView.isPlaying)//獲得物品
                 UIManager.instance.pickItemView.Hide();
+            else if (UIManager.instance.bagView.isPlaying)
+                UIManager.instance.bagView.useItem();
             else 
             {
                 if(!interactRangeController.interact())
                 {
-                    if(canUseSKill)
-                    {
-                        SetBaisema();
-                    }
+                    hasInteracted = false;    
                 }
             } 
+            
         }
     }
     
@@ -161,7 +162,7 @@ public class Player : Singleton<Player> {
     bool isCharging = false;
     public void swipeDown()
     {
-        if(canUseSKill)
+        if(canUseSkill)
         {
             isCharging = true;
             Charging();    
@@ -170,25 +171,37 @@ public class Player : Singleton<Player> {
         //BaisemaManager.instance.explodeAll();
         
     }
-    
+    bool hasInteracted;
     public void release()
     {
-        if(isCharging==true)
+        if(!hasInteracted)
         {
-            Explode();
-            isCharging = false;
+            if(isCharging==true)
+            {
+                Explode();
+                isCharging = false;
+            }
+            else{
+                if(canUseSkill)
+                {
+                    SetBaisema();
+                    
+                }
+            }
         }
+        
         
     }
 #endregion  
     
     void SetBaisema()
     {
+        print("SetBaisema");
         lockMove();
         anim.Play("magic");
         //Invoke("unlockMove",1f);
         BaisemaManager.instance.genBaisema(transform.position);
-        SendMessage("SetBaisemaTriggered");
+        Quest.broadcast("baisema_created");
     }
     void Charging()
     {
@@ -200,6 +213,6 @@ public class Player : Singleton<Player> {
         
         anim.Play("explode");
         BaisemaManager.instance.explodeAll();
-        SendMessage("ExplodeTriggered");
+        //Quest.broadcast("exploded");
     }
 }

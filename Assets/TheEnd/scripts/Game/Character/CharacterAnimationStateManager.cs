@@ -10,20 +10,28 @@ namespace TheEnd
         public static float th = Mathf.Sin(22.5f * Mathf.PI / 180);
     }
     
-    public class CharacterAnimationStateManager : MonoBehaviour
+    public class CharacterAnimationStateManager :Singleton<CharacterAnimationStateManager>
     {
         
-        public static CharacterAnimationStateManager instance;
+
          Dictionary<CharacterAnimationState, string> characterStateDict;
 
         public string getAnimationStateString(CharacterAnimationState state)
         {
-            return characterStateDict[state];
+            if(characterStateDict!=null)
+            {
+                if(characterStateDict.ContainsKey(state))
+                return characterStateDict[state];
+                else 
+                return null;    
+            }
+            else
+            return null;
+            
         }
         // Use this for initialization
         void Awake()
         {
-            instance = this;
             characterStateDict = new Dictionary<CharacterAnimationState, string>();
             characterStateDict.Add(CharacterAnimationState.Stand_Back, "stand_back");
             characterStateDict.Add(CharacterAnimationState.Stand_Front, "stand_front");

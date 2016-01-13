@@ -4,6 +4,7 @@ using System.Collections;
 public class PickUpItemEvent : TargetEvent {
 	
     public QuestItem item;
+    public GameObject pickUpObject;
 	protected override void active()
 	{	
 		//Bag.instance.addItem(GetComponent<ItemTag>().itemName);
@@ -15,8 +16,12 @@ public class PickUpItemEvent : TargetEvent {
 	}
 	void DestroyObject()
 	{
-		InteractRange.instance.removeFromRange(GetComponent<InteractableTrigger>());
-		Destroy(gameObject.transform.parent.gameObject);
+        if(pickUpObject)
+        {
+            InteractRange.instance.removeFromRange(pickUpObject.GetComponent<InteractableTrigger>());
+		    Destroy(pickUpObject);    
+        }
+		
         
 	}
 }

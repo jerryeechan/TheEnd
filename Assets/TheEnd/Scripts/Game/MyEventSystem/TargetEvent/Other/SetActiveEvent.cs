@@ -5,7 +5,7 @@ using System;
 public class SetActiveEvent : TargetEvent
 {
 
-    GameObject[] gameObjects;
+    public GameObject[] gameObjects;
 
     protected override void active()
     {

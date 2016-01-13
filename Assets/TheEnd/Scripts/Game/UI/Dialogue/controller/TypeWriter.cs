@@ -24,7 +24,7 @@ public class TypeWriter : MonoBehaviour {
 		StopCoroutine(coroutine);
 		text.text += content.Substring(letterIndex);
 		isPlaying = false;
-		SoundManager.instance.StopSound();
+		SoundManager.instance.StopSound("typewriter");
 	}
 	
 	int letterIndex;
@@ -40,6 +40,6 @@ public class TypeWriter : MonoBehaviour {
 			yield return new WaitForSeconds(letterPause);
 		}
 		isPlaying = false;
-		SoundManager.instance.StopSound();
+		SoundManager.instance.StopSound("typewriter");
 	}
 }

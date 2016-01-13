@@ -68,6 +68,7 @@
      <Compile Include="Assets\MyStandardPackage1\AutoSaveOnRun.cs" />
      <Compile Include="Assets\MyStandardPackage1\CameraBound.cs" />
      <Compile Include="Assets\MyStandardPackage1\Extensions.cs" />
+     <Compile Include="Assets\MyStandardPackage1\IsometricComponent.cs" />
      <Compile Include="Assets\MyStandardPackage1\IsometricSprite.cs" />
      <Compile Include="Assets\MyStandardPackage1\IsometricSpriteMovable.cs" />
      <Compile Include="Assets\MyStandardPackage1\MessageSender.cs" />
@@ -104,6 +105,8 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\SceneLoader.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\SuperUser.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\MiniGameView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-1_3FHall\BlackPaint.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-1_3FHall\RemovePaintGame.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-1_Sketchroom\ColorSplash.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-1_Sketchroom\PaintingGame.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\Quest.cs" />
@@ -112,12 +115,16 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\QuestStates.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animation\SimpleAnimateEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animation\TransformEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Enemy\EnemyAlterEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Enemy\SpawnEnemyEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Hardware\PlaySoundEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Hardware\VibrateEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Items\OpenDoorEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Items\PickUpItemEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Other\DestroyEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Other\SetActiveEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Player\ChangeStateEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Player\PlayerAlterEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Player\WalkInDoorEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Quest\ChangeQuestItemStateEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Quest\ChangeQuestStateEvent.cs" />
@@ -127,12 +134,10 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\PlayDialogueEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowNewsEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowNoteEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowPanelEvent.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\FinishedTrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\InteractableTrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\MapTrigger.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\Skill\ExplodeTrigger.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\Skill\SetBaisemaTrigger.cs" />
-     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\UITrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\base\GameTrigger.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\SoundEffects\SoundManager.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Stage\Item\OnGameObject\ItemTag.cs" />

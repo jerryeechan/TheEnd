@@ -2,9 +2,10 @@
 using System.Collections;
 using UnityEngine.UI;
 public class AnimatableGraphic : MonoBehaviour {
-    MaskableGraphic graphic;
+    protected MaskableGraphic graphic;
     public float showAlpha = 1;
 	// Use this for initialization
+    
 	void Awake()
     {
         graphic = GetComponent<MaskableGraphic>();
@@ -15,8 +16,7 @@ public class AnimatableGraphic : MonoBehaviour {
         graphic.canvasRenderer.SetAlpha(alpha);
     }
     public void show(float duration)
-    {
-        //print(gameObject.name);
+    { 
         if(graphic)
         {
             gameObject.SetActive(true);

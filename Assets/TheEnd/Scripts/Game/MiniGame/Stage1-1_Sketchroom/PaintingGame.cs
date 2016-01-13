@@ -11,8 +11,15 @@ public class PaintingGame : UIPanel {
 	{
         instance = this;
         base.Awake();
-		splashes = GetComponentsInChildren<ColorSplash>();
+		splashes = GetComponentsInChildren<ColorSplash>(true);
 	}
+    override public void Show()
+    {
+        //base.Show();
+        gameObject.SetActive(true);
+        GetComponent<AnimatableGraphic>().show(0.5f);
+        transform.Find("statuebase").GetComponent<AnimatableGraphic>().show(0.5f);
+    } 
 	public void splashDrawn()
 	{
 		print("drawn");
@@ -26,5 +33,6 @@ public class PaintingGame : UIPanel {
 	void gameDone()
 	{
 		gameObject.SendMessage("Done");
+        Invoke("Hide",0.5f);
 	}
 }

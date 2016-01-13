@@ -14,10 +14,15 @@ public class EnemySpawner : MonoBehaviour {
         if(currentEnemy)
             currentEnemy.spawner = this;
     }
-	void ScheduledSpawn(float delay,int num)
+	public void ScheduledSpawn(float delay,int num)
 	{
 		
 	}
+    public void spawn(int num)
+    {
+        for (int i=0;i<num;i++)
+        Spawn();
+    }
     public void startSpawn()
     {
         
@@ -30,7 +35,7 @@ public class EnemySpawner : MonoBehaviour {
     {
         print("recycle");
         enemyCount--;
-        Invoke("Spawn",1);
+       // Invoke("Spawn",1);
     }
 	void Spawn()
 	{

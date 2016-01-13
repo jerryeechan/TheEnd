@@ -34,7 +34,7 @@ public class NoteManager : UIPanel {
         note.SetParent(transform);
         note.localPosition = Vector3.zero;
         note.localScale = Vector3.one;
-        Player.instance.lockMove();
+        //PlayerController.instance.lockMove();
         currentNote = note;
         Destroy(noteWrapper);
         

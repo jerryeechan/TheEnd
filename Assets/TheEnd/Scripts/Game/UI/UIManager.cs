@@ -9,9 +9,17 @@ public class UIManager : Singleton<UIManager> {
     public BagView bagView;
     public DialoguePanelView dialogueView;
     public PickItemView pickItemView;
+    public UIPanel menuView;
+    public UIPanel blackCover;
     void Awake()
     {
         bagView.gameObject.SetActive(true);
+    }
+    void Start()
+    {
+        
+        menuView.Show();
+        blackCover.Appear();
     }
     public void hideControlPanel()
     {

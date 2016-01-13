@@ -4,10 +4,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 
-public class ColorSplash : MonoBehaviour, IPointerEnterHandler
+public class ColorSplash : AnimatableGraphic, IPointerEnterHandler
 {
-    
-    Image image;
 	bool hasDrawn = false;
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -19,16 +17,16 @@ public class ColorSplash : MonoBehaviour, IPointerEnterHandler
     }
 
     // Use this for initialization
-    void Awake()
+    void Start()
     {
-        image = GetComponent<Image>();
-        image.canvasRenderer.SetAlpha(0);
+        //image = GetComponent<Image>();
+        graphic.canvasRenderer.SetAlpha(0);
     }
     
 
     void drawColor()
     {
-        image.CrossFadeAlpha(1, 1, false);
+        graphic.CrossFadeAlpha(1, 1, false);
         PaintingGame.instance.splashDrawn();
     }
 

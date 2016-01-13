@@ -6,8 +6,6 @@ public class PlaySoundEvent : TargetEvent {
 	public bool oneshot = true;
 	protected override void active()
 	{
-		if(!SoundManager.instance.audioSource.isPlaying)
-		{
 			if(oneshot == true)
 			{
 				SoundManager.instance.PlayOneShot(clipName);
@@ -16,7 +14,7 @@ public class PlaySoundEvent : TargetEvent {
 			{
 				SoundManager.instance.PlaySound(clipName);
 			}	
-		}
+		
 		
 	}
 }

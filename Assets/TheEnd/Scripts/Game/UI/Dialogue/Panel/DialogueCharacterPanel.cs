@@ -3,15 +3,18 @@ using System.Collections;
 using UnityEngine.UI;
 using TheEnd;
 public class DialogueCharacterPanel : UIPanel {
-    public Image[] characterImages;
-    public Image memoryMask; 
+    public AnimatableGraphic[] characterImages;
     
+    public AnimatableGraphic memoryMask; 
+    
+
     public void setCharater(int index,MainCharacterEnum character, Expression expression, AdditionMark addition, bool isMemory = false)
     {
-        //clean();
+        
         if(isMemory)
         {
             memoryMask.gameObject.SetActive(true);
+            memoryMask.setAlpha(1);
         }
         else
         {
@@ -22,8 +25,27 @@ public class DialogueCharacterPanel : UIPanel {
             Debug.Log(character);
             DialogueCharacter ch = DialogueCharacterManager.instance.getCharacter(character);
             Sprite sprite = ch.getExpression(expression);
-            characterImages[index].sprite = sprite;
+            hideOther(index);
+            if(sprite!=null)
+                characterImages[index].GetComponent<Image>().sprite = sprite;
+            else
+                characterImages[index].gameObject.SetActive(false);
             //characterImages[index].enabled = true;    
+        }
+        //hideOther(index);
+    }
+    void hideOther(int index)
+    {
+        for(int i=0;i<characterImages.Length;i++)
+        {
+            if(index!=i)
+            {
+                print("hide"+i);    
+                characterImages[i].gameObject.SetActive(false);
+            }
+            else{
+                characterImages[i].gameObject.SetActive(true);
+            }
         }
     }
     public void clean()

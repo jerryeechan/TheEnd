@@ -60,7 +60,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 		{
 			isDialoguePlaying = true;
 			isDialogueFinished = false;
-	        Player.instance.lockMove();
+//	        Player.instance.lockMove();
             UIManager.instance.hideControlPanel();
 			playingType = DialogueLineType.description;
 			Debug.Log("dialogue show");
@@ -121,6 +121,7 @@ public class DialogueManager : Singleton<DialogueManager> {
                 if(showOption)
                 {
                     optionPanel.Show();
+                    isDialogueFinished = true;
                 }
                 else
                 {
@@ -161,7 +162,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 	}
 	public void PlayCharacterExpression(DialogueLine line)
     {
-        chPanel.setCharater(line.chIndex,line.character, line.expression, line.addition,line.special == "memory");
+        
 //		Debug.Log("character");
 		if(playingType != DialogueLineType.character)
 		{
@@ -169,6 +170,7 @@ public class DialogueManager : Singleton<DialogueManager> {
             chPanel.Show();
             print("character panel show");
 		}
+        chPanel.setCharater(line.chIndex,line.character, line.expression, line.addition,line.special == "memory");
 		playingType = DialogueLineType.character;
 		
         print("character line");
@@ -177,16 +179,15 @@ public class DialogueManager : Singleton<DialogueManager> {
 	
 	public void PlayInvestigation(DialogueLine line)
 	{
-        ivPanel.setPicture(line.image);
 		Debug.Log("investigate");
 		if(playingType != DialogueLineType.investigate)
 		{
+            print("show investigate");
 			HideLastPanel();
             ivPanel.Show();
 		}
-		playingType = DialogueLineType.investigate;
-		
-		
+        ivPanel.setPicture(line.image);
+		playingType = DialogueLineType.investigate;	
 	}
 	public DialogueCharacter getCharacter(string chName)
 	{

@@ -5,7 +5,7 @@ public class SoundManager : Singleton<SoundManager> {
 
 	public AudioClip [] clips;
 	Dictionary<string,AudioClip> clipDict = new Dictionary<string,AudioClip>(); 
-	public AudioSource audioSource;
+	public AudioSource[] audioSources;
 	void Awake()
 	{
 		foreach (var clip in clips)
@@ -17,22 +17,36 @@ public class SoundManager : Singleton<SoundManager> {
 				
 		}
 		
-		audioSource = GetComponent<AudioSource>();
+		audioSources = GetComponents<AudioSource>();
 	}
+    AudioSource emptyAudioSource()
+    {
+        foreach(AudioSource a in audioSources)
+        {
+           if(!a.isPlaying)
+            return a;
+        }
+        return null;
+    }
+    Dictionary<string,AudioSource> clipAudioDict = new Dictionary<string,AudioSource>();
 	public void PlaySound(string name)
 	{
 		AudioClip clip = clipDict[name];
-		audioSource.clip = clip;
-		audioSource.Play();
+        AudioSource a = emptyAudioSource();
+        a.clip = clip;
+		a.Play();
+        clipAudioDict[name] = a;
+        
 	}
-	public void StopSound()
+	public void StopSound(string name)
 	{
-		audioSource.Stop();
+        clipAudioDict[name].Stop();
+        clipAudioDict[name] = null;
 	}
 	public void PlayOneShot(string name)
 	{
 		AudioClip clip = clipDict[name];
-		
-		audioSource.PlayOneShot(clip,1);
+		AudioSource a = emptyAudioSource();
+		a.PlayOneShot(clip,1);
 	}
 }

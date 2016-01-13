@@ -5,7 +5,7 @@ public class AnimatableCanvas : MonoBehaviour {
     
     AnimatableGraphic[] graphics;
     public bool includeInChildren = true;
-    
+    bool isAnimating = false;
 	protected virtual void Awake()
 	{
         if(includeInChildren)
@@ -24,27 +24,36 @@ public class AnimatableCanvas : MonoBehaviour {
 	
 	public void hide(float duration)
 	{
-        if(graphics!=null)
+        if(!isAnimating)
         {
-            foreach(AnimatableGraphic graphic in graphics)
+            if(graphics!=null)
             {
-                graphic.hide(duration);
+                foreach(AnimatableGraphic graphic in graphics)
+                {
+                    graphic.hide(duration);
+                }
             }
+            Invoke("hideDone",duration);
+            isAnimating = true;
         }
-        Invoke("hideDone",duration);
 	}
 	protected virtual void hideDone()
 	{
+        isAnimating = false;
 		gameObject.SetActive(false);
 	}
 	public void show(float duration)
 	{
-        activate();
-		foreach(AnimatableGraphic graphic in graphics)
-		{
-            graphic.show(duration);
-		}
-        Invoke("showDone",duration);
+        if(!isAnimating)
+        {
+            activate();
+            foreach(AnimatableGraphic graphic in graphics)
+            {
+                graphic.show(duration);
+            }
+            Invoke("showDone",duration);
+            isAnimating = true;
+        }
 	}
     
 	protected virtual void activate()
@@ -54,6 +63,6 @@ public class AnimatableCanvas : MonoBehaviour {
     
     protected virtual void showDone()
     {
-        
+        isAnimating = false;
     }
 }

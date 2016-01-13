@@ -62,6 +62,7 @@ public class Enemy : AnimatableSprite {
         c2d.enabled = false;
         anim.speed = 0;
         rb2d.isKinematic = true;
+        Quest.broadcast("enemy_trapped");
     }
     public void StartToMove()
     {
@@ -134,6 +135,7 @@ public class Enemy : AnimatableSprite {
 	
 	public void die()
 	{
+        Quest.broadcast("enemy_died");
         if(spawner)
            spawner.recycleEnemy(); 
         else

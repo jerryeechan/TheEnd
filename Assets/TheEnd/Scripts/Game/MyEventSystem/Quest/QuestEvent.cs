@@ -11,7 +11,9 @@ public class QuestEvent : MonoBehaviour {
     public int require_state_id;
     public int goto_state_id;
     
+    
     public float changeState_delay = 0;
+    public bool once = false;
     //public string require_state;
     //public string goto_state;
 	void Awake()
@@ -29,6 +31,10 @@ public class QuestEvent : MonoBehaviour {
             targetEvent.triggerEvent();	
         }
         Invoke("changeState",changeState_delay);
+        if(once)
+        {
+           quest.removeQuestEvent(require_state_id);
+        }
     }
     void changeState()
     {

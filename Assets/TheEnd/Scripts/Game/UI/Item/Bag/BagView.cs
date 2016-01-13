@@ -12,15 +12,14 @@ public class BagView : UIPanel {
 	 
 	override protected void Awake()
 	{
-        print("Bag activate");
 		base.Awake();
 		itemViews = GetComponentsInChildren<ItemView>(true);
 		foreach(ItemView itemView in itemViews)
 		{
             if(itemView.item)
 			{
-                print(itemView.item.name);
                 itemViewDict.Add(itemView.item.name,itemView);
+                
             }
 		}
         transform.Find("slot").gameObject.SetActive(false);
@@ -31,7 +30,6 @@ public class BagView : UIPanel {
     }
     override public void Show()
     {
-        print("Bag show");
         base.Show();
         foreach(ItemView itemView in itemViews)
 		{
@@ -40,11 +38,19 @@ public class BagView : UIPanel {
                 itemView.gameObject.SetActive(false);
             }
 		}
+        if(selectedItem!=null)
+        {
+            selectItem(selectedItem.name);
+        }
+        UIManager.instance.hideControlPanel();
+        
     }
     override public void Hide()
     {
+        //UIManager.instance.showControlPanel();
         base.Hide();
         Quest.currentQuest = null;
+        UIManager.instance.showControlPanel();
     }
 	public void selectItem(string itemName)
 	{
@@ -60,7 +66,7 @@ public class BagView : UIPanel {
                 LeanTween.rotateZ(arrowPivot.gameObject,itemView.degree,0.5f).setEase(LeanTweenType.easeInOutCubic);
                 print(itemView.degree);
                 print(itemView.item.name);
-                descriptionText.text = itemView.itemDescription;
+                descriptionText.text = itemView.item.description;
                 //arrowPivot.
             }
             else
@@ -70,7 +76,13 @@ public class BagView : UIPanel {
             }
         }
 	}
-	
+	public void getAllItem()
+    {
+        foreach(ItemView itemView in itemViews)
+        {
+            itemView.has = true;
+        }
+    }
 	public void getItem(string itemName)
 	{
         
@@ -85,12 +97,16 @@ public class BagView : UIPanel {
     
     public void useItem()
     {
-        if(!Quest.currentQuest.triggered(selectedItem.useState))
+        if(selectedItem != null)
         {
-            DialogueManager.instance.PlayDialogue("noeffect",false);
+            if(!Quest.currentQuest.triggered(selectedItem.useState))
+            {
+                DialogueManager.instance.PlayDialogue("noeffect",false);
+            }
+            Quest.currentQuest = null;
+            Hide();
         }
-        Quest.currentQuest = null;
-        Hide();
+        
     }
     
 }

@@ -71,7 +71,7 @@ public class GameTrigger : MonoBehaviour {
 			
 			if(once == true)
 			{
-				Destroy(this);
+				Destroy(gameObject);
 			}
 				
 		}

@@ -6,6 +6,7 @@ public class QuestItem : Item {
 	// Use this for initialization
     
     public string showname;
+    public string description;
     public string useState;
     
 	public override void PickedUp()
@@ -19,6 +20,11 @@ public class QuestItem : Item {
 		base.GiveAway();
 		
 	}
-	
+	public void changeState(string state,string description)
+    {
+        this.useState = state;
+        if(description!="")
+        this.description = description;
+    }
 	
 }

@@ -57,17 +57,23 @@ public class Baisema : MonoBehaviour{
 
     Transform lockingTransform;
     Enemy targetEnemy;
+    bool isLocked = false;
 	public void lockUp(Enemy enemy)
 	{
-        targetEnemy = enemy;
-        targetEnemy.Locked();
-        lockingTransform = targetEnemy.transform;
-        //state = BaisemaState.TargetLocking;
+        if(!isLocked)
+        {
+            targetEnemy = enemy;
+            targetEnemy.Locked();
+            lockingTransform = targetEnemy.transform;
+            //state = BaisemaState.TargetLocking;
+            
+            baseAnim.Play("setup");
         
-        baseAnim.Play("setup");
-    
-        //Invoke("lockUpDone", 0.3f);
-        SetUp();
+            //Invoke("lockUpDone", 0.3f);
+            SetUp();
+            isLocked = true;    
+        }
+        
     }
 	public void lockUpDone()
 	{
@@ -93,6 +99,8 @@ public class Baisema : MonoBehaviour{
     {
         if(collider2d.tag == "Enemy")
         {
+            print("Ontrigger");
+            Debug.LogError(collider2d);
             lockUp(collider2d.GetComponentInParent<Enemy>());
         }
     }
