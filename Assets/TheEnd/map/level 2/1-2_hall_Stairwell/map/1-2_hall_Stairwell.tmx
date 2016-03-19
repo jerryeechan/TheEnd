@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="16" height="19" tilewidth="60" tileheight="60" nextobjectid="1">
+ <tileset firstgid="1" name="1-2_hall_Stairwell_floor" tilewidth="60" tileheight="60" tilecount="9">
+  <image source="../img/1-2_hall_Stairwell_floor.png" trans="ff00ff" width="180" height="180"/>
+ </tileset>
+ <tileset firstgid="10" name="1-2_hall_Stairwell_wall" tilewidth="60" tileheight="60" tilecount="12">
+  <image source="../img/1-2_hall_Stairwell_wall.png" trans="ff00ff" width="180" height="240"/>
+ </tileset>
+ <tileset firstgid="22" name="1-2_hall_Stairwell_stairs1" tilewidth="60" tileheight="60" tilecount="15">
+  <image source="../img/1-2_hall_Stairwell_stairs1.png" trans="ff00ff" width="180" height="300"/>
+ </tileset>
+ <layer name="圖塊層 1" width="16" height="19">
+  <data encoding="base64" compression="zlib">
+   eJyl020LgjAUhuHl0gzDUCrLUvPl///GnkGDMc6HPccD17fdMNjOwRiTBazh5gh5oNjZ5+RdpJ65i9SXf+eE/hScT23ieUAHT0Xr5gU9vJX9BwYYlf0EX5iV/QIrbMrevyH796S+IlyEviZchb4htEJ/I9yjPty9FFboGf694h1K5XbtB6VJBpg=
+  </data>
+ </layer>
+</map>

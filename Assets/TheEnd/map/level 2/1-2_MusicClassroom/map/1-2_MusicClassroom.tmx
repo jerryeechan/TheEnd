@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="24" height="15" tilewidth="60" tileheight="60" nextobjectid="1">
+ <tileset firstgid="1" name="1-2_MusicClassroom_blackboard" tilewidth="60" tileheight="60" tilecount="8">
+  <image source="../img/1-2_MusicClassroom_blackboard.png" trans="ff00ff" width="240" height="120"/>
+ </tileset>
+ <tileset firstgid="9" name="1-2_MusicClassroom_floor" tilewidth="60" tileheight="60" tilecount="9">
+  <image source="../img/1-2_MusicClassroom_floor.png" trans="ff00ff" width="180" height="180"/>
+ </tileset>
+ <tileset firstgid="18" name="1-2_MusicClassroom_podium" tilewidth="60" tileheight="60" tilecount="9">
+  <image source="../img/1-2_MusicClassroom_podium.png" trans="ff00ff" width="182" height="181"/>
+ </tileset>
+ <tileset firstgid="27" name="1-2_MusicClassroom_wall" tilewidth="60" tileheight="60" tilecount="12">
+  <image source="../img/1-2_MusicClassroom_wall.png" trans="ff00ff" width="180" height="240"/>
+ </tileset>
+ <layer name="圖塊層 1" width="24" height="15">
+  <data encoding="base64" compression="zlib">
+   eJzd0rkKgFAMRNG0rk9r9/X/P9FYCBaT7toYOO2FwHRm1gMG0ze6CTAH/cWtgC3o7+4AnEE/czmgCPqlqwD1D/pqs2RfbZbsq82SfbVZqn9TmyX76qfkGtjTb+2bS6/2BVcGFrg=
+  </data>
+ </layer>
+ <layer name="圖塊層 2" width="24" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBg4wAjETEiYhcrmswIxGxLmoLL51AZCQCxMAItQYL4oEIsRwOIUmC8BxJIEsBQF5o+CUTDSAAAXugK/
+  </data>
+ </layer>
+</map>

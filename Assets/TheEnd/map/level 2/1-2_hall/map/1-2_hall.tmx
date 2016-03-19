@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="31" height="28" tilewidth="60" tileheight="60" nextobjectid="1">
+ <tileset firstgid="1" name="1-2_hall_curtain" tilewidth="60" tileheight="60" tilecount="32">
+  <image source="../img/1-2_hall_curtain.png" trans="ff00ff" width="480" height="240"/>
+ </tileset>
+ <tileset firstgid="33" name="1-2_hall_floor" tilewidth="60" tileheight="60" tilecount="9">
+  <image source="../img/1-2_hall_floor.png" trans="ff00ff" width="180" height="180"/>
+ </tileset>
+ <tileset firstgid="42" name="1-2_hall_stage" tilewidth="60" tileheight="60" tilecount="25">
+  <image source="../img/1-2_hall_stage.png" trans="ff00ff" width="300" height="300"/>
+ </tileset>
+ <tileset firstgid="67" name="1-2_hall_stair" tilewidth="60" tileheight="60" tilecount="6">
+  <image source="../img/1-2_hall_stair.png" trans="ff00ff" width="180" height="120"/>
+ </tileset>
+ <layer name="FLOOR" width="31" height="28">
+  <data encoding="base64" compression="zlib">
+   eJztz1EKgDAMA9BeZc7pvP8F3UfzU9SB2BYkgfxsg5eJMAzD+KSMLsGtaq+jTc+ac2FsxsadZ+Fc2VGlTZv2v+2S4MLO+DPsPdEW9XuSjURusPbThv5xjxvbbpi9e5sTRo9Nvw==
+  </data>
+ </layer>
+ <layer name="stage" width="31" height="28">
+  <data encoding="base64" compression="zlib">
+   eJztz1sKgDAQQ9HuxwpaVKxv3f+izAaGKUIUIRfO74QJQX1dBZGkdrYbaEmSs90/uDkUYmz//e/uhb9HYzvDBDPJAquxvcEOB8kJl7GtlFJKKeV1A+S/KHs=
+  </data>
+ </layer>
+ <layer name="curtain" width="31" height="28">
+  <data encoding="base64" compression="zlib">
+   eJztzTkOg0AUBNHBGAM2+77Z+P6npFISJvkSSZf0go7auXMBHgjxRISXwY6RuOtSvPFBhhyFwS5Reb5rNGjRocdgsEdMnu8ZC1Zs+OJnsHf8Pd9KKaWUUkqp+zoAI6QGMQ==
+  </data>
+ </layer>
+ <layer name="Stair" width="31" height="28">
+  <data encoding="base64" compression="zlib">
+   eJztzbkNACAMADF2491/ItLTRTQIW7r6SoFTjVqi/vh7RDPRuvAGAOA/G+WpDCI=
+  </data>
+ </layer>
+</map>

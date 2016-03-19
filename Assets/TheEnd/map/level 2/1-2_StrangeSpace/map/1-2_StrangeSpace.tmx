@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="38" height="48" tilewidth="60" tileheight="60" nextobjectid="1">
+ <tileset firstgid="1" name="1-2_StrangeSpace_wall" tilewidth="60" tileheight="60" tilecount="28">
+  <image source="../img/1-2_StrangeSpace_wall.png" trans="ff00ff" width="420" height="240"/>
+ </tileset>
+ <tileset firstgid="29" name="1-2_StrangeSpace_floor" tilewidth="60" tileheight="60" tilecount="36">
+  <image source="../img/1-2_StrangeSpace_floor.png" trans="ff00ff" width="360" height="360"/>
+ </tileset>
+ <layer name="圖塊層 1" width="38" height="48">
+  <data encoding="base64" compression="zlib">
+   eJzNmAd22zAMhtm9927TNsOZjmM5ymjSpaPkKDqKj+Kj6Cj9EQIxjIC2lEh9wXt4tGgK/AXSwmeGEMId+G1u78Lvwe/Db6l+aW2/Ht+2PYY/4vYJ/Cn8Gfyh6pfW9uvxbdsr+EtuX8PfwN/CX6h+aW2/Ht+2fYR/4PYT/DP8C/y96pfW9uvxbdtX+DL8O7ff1Gfd732/wr7aga41+DH8iJ0+9zDtDjyDH3Of5zJ+qwNd21FHWIdvwDe57UPTiHXtw3/D/8BzR/9eB7qG8J2oI+zO+kWu9LxrSheeZbnfkS7KVxZ1FdBS9Pl6oHQdmPGyhsjrMuk/sEFbsCHPkcV5Cqxjofca+akZr/cW3ddFvg7VHEeJzz/C9Dd4YnRZ3W3ZT/ivMN3Xi9qctezz9V940YGupib7q4t3w3VMdHWxp65joquL3+B17KbmS94TXebLcl8dzhNdlK8HwefHVNy6ZrmvDufpfD0PPj+m4tY1y32a81IcrffXu+DzYyquF9Njd8t9mvNSHH2o8rUUfH5MxfVieuxOTGi5TzgvxdGyjlSbLEOuzGlTMT12FyYURw0eb/IapTha8kX1UTObxBipz2CSCt9VUh+8mB67b4dp/cX9Z8Q4YLGJrtO2PVHzC7OhnayzTl3P8V21G8ee2fyuONeS12F8pgnunVBs0oSclZqTNVdkqr831TTW98t4aBmjrxLtpE1rljjIR4mcl3imEjHLLc7XZox5fm9PxdUxMu6XWBnzYz8+F60l5WtC96t7KuisBmZtrTZ8X2LuErFKjC/3wpRVMzNW87zHOTtR1znfIm5h/4+MTCzhodyJn8f1H5PTWh2EKavauPNqH/9PKRCnEL4VHTKfzGnZzGMk4T89XljVrtu82qd/j/N42zNdw+YZaf0dZnl1EX+m+LYOt+p38k2y/8EiTY3YQ/bXKV/fBCP2kHyd8nVbpnlA6r+1FCsQe1gWsXxxVdM8IPXfak2xArGH3l9L4TJfXNU0D0j9t1pTrEDsIrWVaqXHF3XN5kLzgNR/qzXFCrKG+t1t+aKu2VzYM7xVR2uK6ShX+h1smaXJ2Z7NBfGartEeD9H8VNftmZqu2UeON/n/bnNh14Lqoa0VedQ1c6Y2WKCJvMn/UVoTzW72LMeLJdqFU0TXonw1qQH2jHM9zObLizWM48aKwy64Z955VpN82TNOy3gePxw6z0I8vcGc7zFqj7mrrgk3jpTrfHnMfhJm2ZxZu4KGivn6EqMOEs+YMn2W6LnHtXnMx0T/bomne6xLeHYU81kQo2YNdVnWyo2WInHPonNH4WnN2V6sukb7rY1zQuHDts5mKRdFS3GE6b14/wD2AcMH
+  </data>
+ </layer>
+</map>

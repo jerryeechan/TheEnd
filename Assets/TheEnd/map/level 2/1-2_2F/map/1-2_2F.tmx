@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="38" height="30" tilewidth="60" tileheight="60" nextobjectid="1">
+ <tileset firstgid="1" name="1-2_2F_wall" tilewidth="60" tileheight="60" tilecount="12">
+  <image source="../img/1-2_2F_wall.png" trans="ff00ff" width="180" height="240"/>
+ </tileset>
+ <tileset firstgid="13" name="1-2_2F_floor" tilewidth="60" tileheight="60" tilecount="9">
+  <image source="../img/1-2_2F_floor.png" trans="ff00ff" width="180" height="180"/>
+ </tileset>
+ <tileset firstgid="22" name="1-2_2F_stairs1" tilewidth="60" tileheight="60" tilecount="15">
+  <image source="../img/1-2_2F_stairs1.png" trans="ff00ff" width="180" height="300"/>
+ </tileset>
+ <tileset firstgid="37" name="1-2_2F_stairs2" tilewidth="60" tileheight="60" tilecount="15">
+  <image source="../img/1-2_2F_stairs2.png" trans="ff00ff" width="180" height="300"/>
+ </tileset>
+ <layer name="圖塊層 1" width="38" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztl8cKwzAQRO30Xp1Dej2k1///t4xhDUbgRRFjgkGCd1jQsE9gvGwYBEGJTDnIPqHcmYIZmEt9BCdwlnwFVMnUFK+k3wIswUrqC7iCm+TroEGmqXgl/dZgA7ZS38EDPCXfAm0yHcUr6bcDe3CQ+gXe4CP5LuiR6SteNv3i/AAMyYwUL5t+cX4MohTmnciByY9eNvl0Tnu36zG9bHt4L+/lvbxXUbzMeeXyljy8tHn1Ty9tPvrvy3vl7cXelVhe7F2J5cXelVhe7F2J4RXD3pVc/9157EcaRfcy51LeZO10XxEzIng=
+  </data>
+ </layer>
+</map>
