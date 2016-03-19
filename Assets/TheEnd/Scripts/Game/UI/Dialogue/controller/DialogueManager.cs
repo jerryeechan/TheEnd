@@ -63,7 +63,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 //	        Player.instance.lockMove();
             UIManager.instance.hideControlPanel();
 			playingType = DialogueLineType.description;
-			Debug.Log("dialogue show");
+			
 			dialoguePanel.Show();
             linePanel.Show();
 			currentDialogue = dialogue;
@@ -108,13 +108,12 @@ public class DialogueManager : Singleton<DialogueManager> {
 				}
 				
 				typeWriter.Play(line.text);
-//				print("next line");	
+				print("next line");	
 				if(SuperUser.instance.isSkippingDialogues)
 				{
 					SkipLine();
 					PlayNextLine();
 				}
-				
 			}
             else //end of dialogue
             {
@@ -139,7 +138,6 @@ public class DialogueManager : Singleton<DialogueManager> {
         linePanel.Hide();
         dialoguePanel.Hide();
         optionPanel.Hide();
-        Player.instance.unlockMove();
         Invoke("closed",1);
         isDialogueFinished = true;
         UIManager.instance.showControlPanel();

@@ -63,8 +63,9 @@ public class BagView : UIPanel {
     //			print(itemView.itemName);
                 itemView.selected();
                 selectedItem = itemView.item;
-                LeanTween.rotateZ(arrowPivot.gameObject,itemView.degree,0.5f).setEase(LeanTweenType.easeInOutCubic);
-                print(itemView.degree);
+                LeanTween.moveX(arrowPivot.gameObject,itemView.transform.GetPositionX(),0.5f).setEase(LeanTweenType.easeInOutCubic);
+                
+//                LeanTween.rotateZ(arrowPivot.gameObject,itemView.degree,0.5f).setEase(LeanTweenType.easeInOutCubic);
                 print(itemView.item.name);
                 descriptionText.text = itemView.item.description;
                 //arrowPivot.
@@ -97,7 +98,7 @@ public class BagView : UIPanel {
     
     public void useItem()
     {
-        if(selectedItem != null)
+        if(selectedItem != null&&Quest.currentQuest!= null)
         {
             if(!Quest.currentQuest.triggered(selectedItem.useState))
             {

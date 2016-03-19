@@ -40,7 +40,7 @@ public class DialogueCharacterPanel : UIPanel {
         {
             if(index!=i)
             {
-                print("hide"+i);    
+//                print("hide"+i);    
                 characterImages[i].gameObject.SetActive(false);
             }
             else{

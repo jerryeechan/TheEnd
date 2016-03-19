@@ -63,15 +63,25 @@ public class Player : Singleton<Player> {
     }
     void Update()
     {
-        if (!isCastingBaisema)
+        if (!isMoveLocked)
         {
             rb2d.velocity = moveVec * data.moveVelocity * SuperUser.instance.su_speed;
             //print(rb2d.velocity);
         }
-        //new Vector2(hori,vert).normalized
         else
             rb2d.velocity = Vector2.zero;
-            
+        
+        
+        
+        if(!isMoveLocked)
+        {
+           bool isItemInFront = interactRangeController.testInteract();
+           if(isItemInFront)
+            SkillBtn.instance.changeMode(SkillBtn.SkillBtnMode.Investigate);
+           else
+            SkillBtn.instance.changeMode(SkillBtn.SkillBtnMode.Baisema);    
+        }
+        
     }
 
     void OnCollisionEnter2D(Collision2D collision2d)

@@ -20,6 +20,10 @@ public class InteractRangeController : MonoBehaviour {
             */
             
     }
+    public bool testInteract()
+    {
+        return interactRange.testInteract();
+    }
 	public void changeDir(Vector3 dir)
     {
         if(dir.x==1)

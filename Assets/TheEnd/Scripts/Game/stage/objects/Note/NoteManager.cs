@@ -74,8 +74,11 @@ public class NoteManager : UIPanel {
     {
         Destroy(currentNote.gameObject);
         isPlaying = false;
-        eventTriggeredBy.SendMessage("Done",SendMessageOptions.DontRequireReceiver);
-        eventTriggeredBy = null;
+        if(eventTriggeredBy)
+        {
+            eventTriggeredBy.SendMessage("Done",SendMessageOptions.DontRequireReceiver);
+            eventTriggeredBy = null;
+        }
     }
     
     public ShowNoteEvent eventTriggeredBy;

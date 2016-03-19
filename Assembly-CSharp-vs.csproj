@@ -67,6 +67,7 @@
      <Compile Include="Assets\LeanTween\Examples\Scripts\TestingRigidbodyCS.cs" />
      <Compile Include="Assets\MyStandardPackage1\AutoSaveOnRun.cs" />
      <Compile Include="Assets\MyStandardPackage1\CameraBound.cs" />
+     <Compile Include="Assets\MyStandardPackage1\DelayOperation.cs" />
      <Compile Include="Assets\MyStandardPackage1\Extensions.cs" />
      <Compile Include="Assets\MyStandardPackage1\IsometricComponent.cs" />
      <Compile Include="Assets\MyStandardPackage1\IsometricSprite.cs" />
@@ -104,6 +105,7 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\LittleGameManager.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\SceneLoader.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\SuperUser.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\MiniGameHint.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\MiniGameView.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-1_3FHall\BlackPaint.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-1_3FHall\RemovePaintGame.cs" />
@@ -152,6 +154,7 @@
      <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Note\NoteManager.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Canvas\AnimatableCanvas.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Canvas\AnimatableGraphic.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Character\HealthBarPanel.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\Control\PlayerMoveControlPad.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\Control\SkillBtn.cs" />
      <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\PlayerControllerView.cs" />

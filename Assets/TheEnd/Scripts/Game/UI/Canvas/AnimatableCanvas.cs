@@ -26,6 +26,7 @@ public class AnimatableCanvas : MonoBehaviour {
 	{
         if(!isAnimating)
         {
+            isAnimating = true;
             if(graphics!=null)
             {
                 foreach(AnimatableGraphic graphic in graphics)
@@ -33,26 +34,38 @@ public class AnimatableCanvas : MonoBehaviour {
                     graphic.hide(duration);
                 }
             }
-            Invoke("hideDone",duration);
-            isAnimating = true;
+            if(duration == 0)
+                hideDone();
+            else
+                Invoke("hideDone",duration);
+            
+        }
+        else{
+            Debug.LogError("Fuck animating");
         }
 	}
 	protected virtual void hideDone()
 	{
         isAnimating = false;
 		gameObject.SetActive(false);
+        print("hideDone");
 	}
 	public void show(float duration)
 	{
         if(!isAnimating)
         {
+            isAnimating = true;
             activate();
             foreach(AnimatableGraphic graphic in graphics)
             {
                 graphic.show(duration);
             }
-            Invoke("showDone",duration);
-            isAnimating = true;
+            print(duration);
+            if (duration == 0)
+                showDone();
+            else
+                Invoke("showDone",duration);
+         
         }
 	}
     
@@ -64,5 +77,6 @@ public class AnimatableCanvas : MonoBehaviour {
     protected virtual void showDone()
     {
         isAnimating = false;
+        print("showDone"+name);
     }
 }

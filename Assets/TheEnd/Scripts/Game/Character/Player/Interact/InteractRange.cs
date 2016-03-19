@@ -61,6 +61,10 @@ public class InteractRange:Singleton<InteractRange>
             interactableInRange.Remove(trigger);    
         }
     }
+    public bool testInteract()
+    {
+        return interactableInRange.Count > 0;
+    }
     public bool Interact()
     {
         if (interactableInRange.Count > 0)
