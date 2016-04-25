@@ -6,6 +6,8 @@ public class EnemyAlterEvent : TargetEvent {
     public string todo;
 	protected override void active()
 	{
+        if(!conditionValid())
+            return;
 		switch(todo)
         {
             case "move":

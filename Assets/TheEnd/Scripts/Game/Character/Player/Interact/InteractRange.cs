@@ -69,9 +69,9 @@ public class InteractRange:Singleton<InteractRange>
     {
         if (interactableInRange.Count > 0)
         {
-            for (int i = 0; i < interactableInRange.Count; i++)
-            {
-                InteractableTrigger interactable = interactableInRange[i];       
+           // for (int i = 0; i < interactableInRange.Count; i++)
+            //{
+             //   InteractableTrigger interactable = interactableInRange[i];       
                 /*
                 if(interactable.requiredStates.Length!=0)
                 {
@@ -100,16 +100,15 @@ public class InteractRange:Singleton<InteractRange>
                 }
                 else{
                     */
+                    InteractableTrigger interactable = interactableInRange[0];//interactableInRange.Count-1];
                     interactable.triggerEvent();
                     if(interactable.once)
                     {
-                        interactableInRange.RemoveAt(i);
-                        i--;
+                        interactableInRange.Remove(interactable);
                     }
-                
-                
-            }
-            return true;
+                    return true;    
+            //}
+            
         }
         
         return false;

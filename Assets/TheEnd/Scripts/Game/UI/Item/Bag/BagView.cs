@@ -10,7 +10,7 @@ public class BagView : UIPanel {
     
 	QuestItem selectedItem;
 	 
-	override protected void Awake()
+	override public void Awake()
 	{
 		base.Awake();
 		itemViews = GetComponentsInChildren<ItemView>(true);
@@ -105,6 +105,11 @@ public class BagView : UIPanel {
                 DialogueManager.instance.PlayDialogue("noeffect",false);
             }
             Quest.currentQuest = null;
+            Hide();
+        }
+        else
+        {
+            DialogueManager.instance.PlayDialogue("noeffect",false);
             Hide();
         }
         

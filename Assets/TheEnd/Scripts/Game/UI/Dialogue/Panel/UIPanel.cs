@@ -4,7 +4,11 @@ public class UIPanel : AnimatableCanvas {
     public bool isPlaying;
     public float duration = 0.5f;
     
-    override protected void Awake()
+    public void initWithParameter(string parameter)
+    {
+        
+    }
+    override public void Awake()
     {
         
         base.Awake();
@@ -21,30 +25,49 @@ public class UIPanel : AnimatableCanvas {
     }
 	public virtual void Show()
     {
-        isPlaying = true;
-        if(SuperUser.instance.isSkippingDialogues)
-            duration = 0;
-        show(duration);
         print("show panel"+name);
+        isPlaying = true;
+        if(SuperUser.instance)
+        {
+            if(SuperUser.instance.isSkippingDialogues)
+            duration = 0;
+            Player.instance.isInputEnable = false;
+            Player.instance.lockMove();
+                
+        }
+        show(duration);
+        
     }
     
     override protected void showDone()
     {
         base.showDone();
-        Player.instance.isInputEnable = true;
+        if(Player.instance)
+        {
+            Player.instance.isInputEnable = true;
+            Player.instance.lockMove();    
+        }
+        
     }
     public virtual void Hide()
     {
         hide(duration);
-//        print("hide panel");
-        Player.instance.isInputEnable = false;
-        PlayerController.instance.unlockMove();
+        if(Player.instance)
+        {
+           Player.instance.isInputEnable = false;
+           PlayerController.instance.unlockMove();    
+        }
+        
     }
     
     override protected void hideDone()
     {
         isPlaying = false;
-        Player.instance.isInputEnable = true;
+        if(Player.instance!=null)
+        {
+            Player.instance.isInputEnable = true;
+            PlayerController.instance.unlockMove();
+        }
         base.hideDone();
     }
     

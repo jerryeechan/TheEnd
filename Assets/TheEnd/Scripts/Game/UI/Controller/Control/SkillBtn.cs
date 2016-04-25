@@ -41,6 +41,7 @@ public class SkillBtn : Singleton<SkillBtn>,IPointerDownHandler,IDragHandler,IPo
         }
        else if(eventData.delta.y < -6)
         {
+            Player.instance.setMoveVec(Vector2.zero);
             Player.instance.swipeDown();
         }
     }
@@ -48,6 +49,7 @@ public class SkillBtn : Singleton<SkillBtn>,IPointerDownHandler,IDragHandler,IPo
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("Touched");
+        Player.instance.setMoveVec(Vector2.zero);
         Player.instance.skillBtnTouched();
         
     }

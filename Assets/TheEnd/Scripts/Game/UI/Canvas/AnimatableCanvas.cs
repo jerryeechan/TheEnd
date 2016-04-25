@@ -5,8 +5,8 @@ public class AnimatableCanvas : MonoBehaviour {
     
     AnimatableGraphic[] graphics;
     public bool includeInChildren = true;
-    bool isAnimating = false;
-	protected virtual void Awake()
+    public bool isAnimating = false;
+	public virtual void Awake()
 	{
         if(includeInChildren)
 		graphics = GetComponentsInChildren<AnimatableGraphic>(true);
@@ -48,7 +48,6 @@ public class AnimatableCanvas : MonoBehaviour {
 	{
         isAnimating = false;
 		gameObject.SetActive(false);
-        print("hideDone");
 	}
 	public void show(float duration)
 	{

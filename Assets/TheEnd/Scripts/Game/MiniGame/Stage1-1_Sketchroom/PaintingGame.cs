@@ -7,7 +7,7 @@ public class PaintingGame : UIPanel {
 	ColorSplash[] splashes;
 	int drawnNum;
 	
-	override protected void Awake()
+	override public  void Awake()
 	{
         instance = this;
         base.Awake();
@@ -29,7 +29,7 @@ public class PaintingGame : UIPanel {
 			gameDone();	
 		}
 	}
-	
+
 	void gameDone()
 	{
 		gameObject.SendMessage("Done");

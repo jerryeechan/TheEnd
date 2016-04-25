@@ -1,53 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-	<ProductVersion>10.0.20506</ProductVersion>
-	<SchemaVersion>2.0</SchemaVersion>
-	<RootNamespace></RootNamespace>
-	<ProjectGuid>{D377FD5C-C48C-6EC0-4911-83937FFBF34C}</ProjectGuid>
-	<OutputType>Library</OutputType>
-	<AppDesignerFolder>Properties</AppDesignerFolder>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
-	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-	<FileAlignment>512</FileAlignment>
-	<BaseDirectory>Assets</BaseDirectory>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{D377FD5C-C48C-6EC0-4911-83937FFBF34C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
 	<LangVersion>default</LangVersion>
 </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-	<DebugSymbols>true</DebugSymbols>
-	<DebugType>full</DebugType>
-	<Optimize>false</Optimize>
-	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_5_2_0;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;CROSS_PLATFORM_INPUT;MOBILE_INPUT</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_3_4;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;CROSS_PLATFORM_INPUT;MOBILE_INPUT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
 	<LangVersion>default</LangVersion>
 </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-	<DebugType>pdbonly</DebugType>
-	<Optimize>true</Optimize>
-	<OutputPath>Temp\bin\Release\</OutputPath>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
 	<LangVersion>default</LangVersion>
 </PropertyGroup>
   <ItemGroup>
-	<Reference Include="System" />
+    <Reference Include="System" />
     <Reference Include="System.XML" />
-	<Reference Include="System.Core" />
-	<Reference Include="System.Xml.Linq" />
-	<Reference Include="UnityEngine">
-	  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-	</Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AstarPathfindingProject\Core\AI\AILerp.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AI\AIPath.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AI\NavmeshController.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AI\Seeker.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AstarData.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AstarMath.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AstarPath.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\GraphUpdateScene.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\GraphUpdateShape.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\AnimationLink.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\AstarDebugger.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\AstarEnumFlagAttr.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\BinaryHeap.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\GraphEditorBase.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\GraphModifier.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\GraphUpdateProcessor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\Int3.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\ListPool.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\NodeLink.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\NodeLink2.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\NodeLink3.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\ObjectPool.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\PathPool.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\PathProcessor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\PathReturnQueue.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\StackPool.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\ThreadControlQueue.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\WindowsStoreCompatibility.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\WorkItemProcessor.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Nodes\GraphNode.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Path.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\PathHandler.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Serialization\JsonConverters.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Serialization\JsonSerializer.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Serialization\SimpleJsonReplacement.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Serialization\SimpleZipReplacement.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\astarclasses.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\Example12_Procedural\ProceduralGridMover.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\Example12_Procedural\ProceduralWorld.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\AIFollow.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\AstarSmoothFollow2.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\DoorController.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\DynamicGridObstacle.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\MineBotAI.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\ObjectPlacer.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\TargetMover.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\Base.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\GridGenerator.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\NavMeshGenerator.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\NodeClasses\GridNode.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\NodeClasses\PointNode.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\NodeClasses\TriangleMeshNode.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\PointGenerator.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\QuadtreeGraph.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\BBTree.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\EuclideanEmbedding.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\NavMeshRenderer.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\ObjImporter.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\RecastMeshGatherer.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\AlternativePath.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\FunnelModifier.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\Modifiers.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\RaycastModifier.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\SimpleSmoothModifier.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\StartEndModifier.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Navmesh\RelevantGraphSurface.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Pathfinders\ABPath.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\AstarChecksum.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\AstarMemory.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\AstarParallel.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\AstarProfiler.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\DotNetReplacements.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\GraphUpdateUtilities.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\LockFreeStack.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\PathUtilities.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
      <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasicCS.cs" />
      <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasics2dCS.cs" />
      <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralCameraShake.cs" />
@@ -79,154 +157,220 @@
      <Compile Include="Assets\MyStandardPackage1\SIngletonCanvas.cs" />
      <Compile Include="Assets\MyStandardPackage1\Singleton.cs" />
      <Compile Include="Assets\Plugin\VSCode.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\AnimatableSprite.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\CharacterAnimationStateManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\CharacterData.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Enemy\Enemy.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Enemy\EnemyController.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Enemy\EnemyData.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Enemy\EnemyManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Enemy\EnemySpawner.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Camera2DFollow.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Interact\AttackRange.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Interact\InteractRange.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Interact\InteractRangeController.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Player.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\PlayerController.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\PlayerData.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\PlayerState.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Skill\Baisema\Baisema.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Skill\Baisema\BaisemaManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Skill\BaisemaGestureHandler.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Character\Player\Skill\EnemyAutoLocker.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Game Flow\GameManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Game Flow\LevelManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Game Flow\LittleGameManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Game Flow\SceneLoader.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\Game Flow\SuperUser.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MiniGame\MiniGameHint.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MiniGame\MiniGameView.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MiniGame\Stage1-1_3FHall\BlackPaint.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MiniGame\Stage1-1_3FHall\RemovePaintGame.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MiniGame\Stage1-1_Sketchroom\ColorSplash.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MiniGame\Stage1-1_Sketchroom\PaintingGame.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\Quest\Quest.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\Quest\QuestEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\Quest\QuestManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\Quest\QuestStates.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Animation\SimpleAnimateEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Animation\TransformEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Enemy\EnemyAlterEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Enemy\SpawnEnemyEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Hardware\PlaySoundEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Hardware\VibrateEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Items\OpenDoorEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Items\PickUpItemEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Other\DestroyEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Other\SetActiveEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Player\ChangeStateEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Player\PlayerAlterEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Player\WalkInDoorEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Quest\ChangeQuestItemStateEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Quest\ChangeQuestStateEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\Template\TargetEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\UI_related\MiniGameCompleteEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\UI_related\MiniGameStartEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\UI_related\PlayDialogueEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowNewsEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowNoteEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowPanelEvent.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\Trigger\FinishedTrigger.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\Trigger\InteractableTrigger.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\Trigger\MapTrigger.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\MyEventSystem\Trigger\base\GameTrigger.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\SoundEffects\SoundManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Canvas\AnimatableCanvas.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Canvas\AnimatableGraphic.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Character\HealthBarPanel.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Controller\Control\PlayerMoveControlPad.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Controller\Control\SkillBtn.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Controller\PlayerControllerView.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\Animation\PanelAnimation.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\Investigate\DialogueInvestigateImageManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\Panel\DialogueCharacterPanel.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\Panel\DialogueInvestigationPanel.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\Panel\DialogueLinePanel.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\Panel\DialogueOptionPanel.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\Panel\UIPanel.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\character\DialogueCharacter.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\character\DialogueCharacterManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\controller\DialogueInputManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\controller\DialogueLoader.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\controller\DialogueManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\controller\TypeWriter.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\model\Dialogue.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\model\DialogueLine.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Dialogue\view\DialoguePanelView.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Item\Bag\BagView.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Item\Bag\ItemView.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\Item\PickItemView.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\UI\UIManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\stage\Item\OnGameObject\ItemTag.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\stage\Item\Virtual\Bag.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\stage\Item\Virtual\Collectable.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\stage\Item\Virtual\Item.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\stage\Item\Virtual\ItemPoolManager.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\stage\Item\Virtual\QuestItem.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\stage\objects\Door.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\stage\objects\Entrance.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\stage\objects\Note\Note.cs" />
-     <Compile Include="Assets\TheEnd\scripts\Game\stage\objects\Note\NoteManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\AnimatableSprite.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\CharacterAnimationStateManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\CharacterData.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\Enemy.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\EnemyController.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\EnemyData.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\EnemyGroup.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\EnemyManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Enemy\EnemySpawner.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\AnimationCharacterPool.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Camera2DFollow.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Interact\AttackRange.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Interact\InteractRange.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Interact\InteractRangeController.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Player.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\PlayerController.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\PlayerData.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\PlayerEffect.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Skill\Baisema\Baisema.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Skill\Baisema\BaisemaManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Skill\BaisemaGestureHandler.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Character\Player\Skill\EnemyAutoLocker.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Combat\Gadget\HealCube.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\GameManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\LevelManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\LittleGameManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\MiniGameManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\ReviveSpot.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\ReviveSpotManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\SceneLoader.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Game Flow\SuperUser.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\MiniGameHint.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\MiniGameView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-1_3FHall\BlackPaint.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-1_3FHall\RemovePaintGame.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-1_Sketchroom\ColorSplash.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-1_Sketchroom\PaintingGame.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-2_ControlRoom Panel\ControlRoomPanel.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-2_ControlRoom Panel\Generic\ISwitchable.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-2_ControlRoom Panel\SwitchButton.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-2_ControlRoom Panel\SwitchableLight.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-2_PlayPiano\MidiNote.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-2_PlayPiano\PianoGame.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-2_PlayPiano\PianoKey.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-2_PlayPiano\PianoKeyTrack.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-2_PlayPiano\PianoNotePlayer.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-2_PlayPiano\SheetNote.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MiniGame\Stage1-2_doll\SelectDoll.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Condition\CharacterCondition.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Condition\ControlRoomLightTurnedCondition.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Condition\EventCondition.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Condition\LightCorrectCondition.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Condition\QuestStateCondition.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\Quest.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\QuestEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\QuestManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Quest\QuestStates.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animation\CameraEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animation\ShakeCameraEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animation\SimpleAnimateEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Animation\TransformEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Audio\ChangeBGMEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Audio\PlaySoundEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Audio\SoundPlayerEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Audio\StopSoundEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\DestroyObjectEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Die\KillByEnemyDieEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Die\LightDollDieEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Die\PianoDieEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Enemy\EnemyAlterEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Enemy\SpawnEnemyEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Hardware\VibrateEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Items\OpenDoorEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Items\PickUpItemEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\MiniGame\SelectDollEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Other\DestroyEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Other\SetActiveEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Player\AddSwitchableCharacter.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Player\PlayEffectEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Player\PlayerAlterEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Player\WalkInDoorEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Player\WalkInEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Quest\ChangeQuestItemStateEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Quest\ChangeQuestStateEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\Template\TargetEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\MiniGameCompleteEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\MiniGameStartEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\PlayConditionDialogueEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\PlayDialogueEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowNewsEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowNoteEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\TargetEvent\UI_related\ShowPanelEvent.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\FinishedTrigger.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\InteractableTrigger.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\MapTrigger.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\MyEventSystem\Trigger\base\GameTrigger.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\SoundEffects\SoundManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\SoundEffects\SoundPlayer.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Stage\Item\OnGameObject\ItemTag.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Stage\Item\Virtual\Bag.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Stage\Item\Virtual\Collectable.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Stage\Item\Virtual\Item.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Stage\Item\Virtual\ItemPoolManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Stage\Item\Virtual\QuestItem.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Door.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Entrance.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Note\Note.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\Stage\objects\Note\NoteManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Canvas\AnimatableCanvas.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Canvas\AnimatableGraphic.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Character\HealthBarPanel.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\Control\PlayerMoveControlPad.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\Control\SkillBtn.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Controller\PlayerControllerView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\Animation\PanelAnimation.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\Investigate\DialogueInvestigateImageManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\Panel\ArtworkPanel.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\Panel\DialogueCharacterPanel.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\Panel\DialogueInvestigationPanel.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\Panel\DialogueLinePanel.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\Panel\DialogueOptionPanel.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\Panel\UIPanel.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\character\DialogueCharacter.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\character\DialogueCharacterManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\controller\DialogueInputManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\controller\DialogueLoader.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\controller\DialogueManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\controller\TypeWriter.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\model\Dialogue.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\model\DialogueLine.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\view\Artwork.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Dialogue\view\DialoguePanelView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Effect\BloodSplash.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Item\Bag\BagView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Item\Bag\ItemView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Item\PickItemView.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\LoadPanel.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Menu\CharacterMenu.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Menu\MainMenu.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\Menu\MenuButton.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\UI\UIManager.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Game\test\AssignMaterial.cs" />
+     <Compile Include="Assets\TheEnd\Scripts\Movie\MoviePlayer.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledInitialShaderProperties.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs" />
+     <Compile Include="Assets\UITween\Prefabs\Click Effect Pref\ClickedWaveAnimation.cs" />
+     <Compile Include="Assets\UITween\ScenesExamplesScripts\ActivateOnEnable.cs" />
+     <Compile Include="Assets\UITween\ScenesExamplesScripts\CreateAnimImage.cs" />
+     <Compile Include="Assets\UITween\ScenesExamplesScripts\FollowClick.cs" />
+     <Compile Include="Assets\UITween\Scripts\EasyTween.cs" />
+     <Compile Include="Assets\UITween\Scripts\ReferencedFrom.cs" />
+     <Compile Include="Assets\UITween\Scripts\UITween.cs" />
      <None Include="Assets\Tiled2Unity\Imported\1-2_2F.tiled2unity.xml" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
+     <None Include="Assets\mai_free_voices\mai_free_voices.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-2_Stairwell.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\1-2_hall_Stairwell.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
      <None Include="Assets\LeanTween\Examples\Shader\2dUnlitWithFade.shader" />
      <None Include="Assets\Tiled2Unity\Shaders\shaTiledMap.shader" />
      <None Include="Assets\Tiled2Unity\Imported\1-2_StrangeSpace.tiled2unity.xml" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1Warehouse.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\1-2_MusicClassroom.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Tiled2Unity.export.txt" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
      <None Include="Assets\Tiled2Unity\Imported\1-2_hall.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\1-1SketchClassRoom.tiled2unity.xml" />
      <None Include="Assets\LeanTween\ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-2_hall_ControlRoom.tiled2unity.xml" />
      <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_SketchClassRoom.tiled2unity.xml" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_FineArtClassRoom.tiled2unity.xml" />
-     <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
+     <None Include="Assets\Fantasy SFX for Particle Distort Texture effect library\readme_Fantasy SFX for Particle Distort Texture effect library.txt" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1-1.tiled2unity.xml" />
+     <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Fonts\OFL.txt" />
      <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_Garret.tiled2unity.xml" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
      <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
+     <None Include="Assets\AstarPathfindingProject\Readme.txt" />
      <None Include="Assets\plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
-     <None Include="Assets\Tiled2Unity\Imported\1-1_Stairwell.tiled2unity.xml" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\JsonFxLicense.txt" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\1-1_stairwell.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\License.txt" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\NavmeshOutline.shader" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_3F.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
-     <None Include="Assets\TheEnd\dialogue\1-1Dialogues.txt" />
+     <None Include="Assets\TheEnd\Dialogue\1-1Dialogues.txt" />
+     <None Include="Assets\AstarPathfindingProject\link.xml" />
      <None Include="Assets\Tiled2Unity\Meshes\_ReadMe.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>/Users/jerry/Desktop/game_project/TheEnd/TheEnd/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.JsonFx">
+ <HintPath>/Users/jerry/Desktop/game_project/TheEnd/TheEnd/Assets/AstarPathfindingProject/Plugins/JsonFx/Pathfinding.JsonFx.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.SharpZipLib">
- <HintPath>D:/Users/jerry/Documents/GitHub/TheEnd/Assets/plugins/ICSharpCode.SharpZipLib.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Cecil">
- <HintPath>D:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>D:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>/Users/jerry/Desktop/game_project/TheEnd/TheEnd/Assets/plugins/ICSharpCode.SharpZipLib.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -235,7 +379,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-	   Other similar extension points exist, see Microsoft.Common.targets.
+       Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">

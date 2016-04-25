@@ -14,9 +14,10 @@ public class Quest : MonoBehaviour {
         QuestEvent[] questEvents = GetComponentsInChildren<QuestEvent>();
         foreach(QuestEvent questEvent in questEvents)
         {
-            if( questDict.ContainsKey(states[questEvent.require_state_id]))
+            if(questDict.ContainsKey(states[questEvent.require_state_id]))
             {
                 Debug.LogError(states[questEvent.require_state_id]);
+                Debug.LogError(gameObject.transform.parent.name);
                 Debug.LogError(gameObject.name);
             }
             else{
@@ -47,7 +48,8 @@ public class Quest : MonoBehaviour {
     }
     public static void broadcast(string with_state)
     {
-        currentQuest.triggered(with_state);
+        if(currentQuest)
+            currentQuest.triggered(with_state);
     }
     public void changeState(int id)
     {

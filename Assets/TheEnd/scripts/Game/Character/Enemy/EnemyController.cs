@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour {
 	Enemy enemy;
     Rigidbody2D rb2d;
     public bool isMoving;
+    public bool isXFlip = true;
     void Awake () {
 		enemy = GetComponent<Enemy>();
 	}
@@ -16,12 +17,20 @@ public class EnemyController : MonoBehaviour {
         if(enemy.state == Enemy.EnemyState.Movable)
 		MoveTowardPlayer();
 	}
-	
+	static LayerMask defaultLayer = LayerMask.GetMask("Default");
 	void MoveTowardPlayer()
 	{
-		Vector3 position = Player.instance.transform.position;
-        Vector3 moveDir = (position - enemy.transform.position).normalized;
-        move(moveDir);
+
+//        RaycastHit2D ray = Physics2D.Raycast(enemy.transform.position,Player.instance.transform.position-enemy.transform.position,10,defaultLayer);
+
+        
+     //   if(ray&&ray.collider.tag=="Player")
+       // {
+
+            Vector3 position = Player.instance.transform.position;
+            Vector3 moveDir = (position - enemy.transform.position).normalized;
+            move(moveDir);
+        //}
         
 	}
     void move(Vector2 moveVec)
@@ -40,11 +49,13 @@ public class EnemyController : MonoBehaviour {
         if (moveVec.x > Constant.th)
         {
             animState = CharacterAnimationState.Walk_Right;
+            if(isXFlip)
             enemy.faceRight();
         }
         else if (moveVec.x < -Constant.th)
         {
             animState = CharacterAnimationState.Walk_Left;
+            if(isXFlip)
             enemy.faceLeft();
         }
         enemy.PlayAnimation(animState);

@@ -11,12 +11,14 @@ public class DialogueCharacterManager : Singleton<DialogueCharacterManager>
     public DialogueCharacter moshiue;
     public DialogueCharacter riddle;
     public DialogueCharacter ziching;
+    public DialogueCharacter shiunyin;
     Dictionary<MainCharacterEnum,DialogueCharacter> charDict = new Dictionary<MainCharacterEnum, DialogueCharacter>();
     void Awake()
     {
         charDict.Add(MainCharacterEnum.moshiue, moshiue);
         charDict.Add(MainCharacterEnum.riddle,riddle);
         charDict.Add(MainCharacterEnum.ziching,ziching);
+        charDict.Add(MainCharacterEnum.shiunyin,shiunyin);
     }
     public DialogueCharacter getCharacter(MainCharacterEnum ch)
     {

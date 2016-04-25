@@ -19,6 +19,11 @@ public class Door : MonoBehaviour {
 		{
 			spr.sprite = closedSprite;
 		} 
+        if(isOpened)
+        {
+            GetComponent<SpriteRenderer>().sprite = openedSprite;
+		    blockCollider.enabled = false; 
+        }
 	}
 	public bool isOpened = false; 
 	public void Switch()

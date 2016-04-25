@@ -3,13 +3,14 @@ using System.Collections.Generic;
 
 namespace TheEnd
 {
-	public enum MainCharacterEnum {none,moshiue,riddle,ziching};
+	public enum MainCharacterEnum {none,moshiue,riddle,ziching,shiunyin};
 	public enum Expression{none,angry,ordinary,sad,shocked,smile,worried};
 	public enum AdditionMark{none,exclamation};
+    
 	public class DialogueCharacter : MonoBehaviour {
 
 		// Use this for initialization
-	
+	    public string characterName;
 		//Animator anim;
 		SpriteRenderer spr;
 		public List<Sprite> expressions;

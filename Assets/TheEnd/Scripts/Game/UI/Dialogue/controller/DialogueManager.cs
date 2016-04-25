@@ -19,7 +19,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 	public DialogueInvestigationPanel ivPanel;
     public DialogueLinePanel linePanel;
     public DialogueOptionPanel optionPanel;
-	public PlayDialogueEvent eventTriggerBy = null;
+	public TargetEvent eventTriggerBy = null;
     
 	public enum TextFormat{JSON,TXT};
 	public TextFormat format;
@@ -49,6 +49,7 @@ public class DialogueManager : Singleton<DialogueManager> {
     bool showOption;
 	public void PlayDialogue(string dialogueKey,bool showOption)
 	{
+        
         this.showOption = showOption;
 		print("Playing Dialogue:"+dialogueKey);
 		PlayDialogue(dialogueDictionary[dialogueKey]);	
@@ -60,7 +61,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 		{
 			isDialoguePlaying = true;
 			isDialogueFinished = false;
-//	        Player.instance.lockMove();
+            
             UIManager.instance.hideControlPanel();
 			playingType = DialogueLineType.description;
 			
@@ -117,6 +118,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 			}
             else //end of dialogue
             {
+                print(showOption);
                 if(showOption)
                 {
                     optionPanel.Show();
@@ -132,22 +134,37 @@ public class DialogueManager : Singleton<DialogueManager> {
 		}
 		
 	}
+    
+    public bool isAnimating = false;
 	public void hideDialogue()
     {
-        HideLastPanel();
-        linePanel.Hide();
-        dialoguePanel.Hide();
-        optionPanel.Hide();
-        Invoke("closed",1);
-        isDialogueFinished = true;
-        UIManager.instance.showControlPanel();
+        if(!isAnimating&&!optionPanel.isAnimating)
+        {
+            isAnimating = true;
+            HideLastPanel();
+            linePanel.Hide();
+            dialoguePanel.Hide();
+            optionPanel.Hide();
+            print("hideDialogue");
+            Invoke("closed",1);
+            isDialogueFinished = true;
+            UIManager.instance.showControlPanel();    
+        }
+        
     }
 	void closed()
 	{
+        print("closed Done");
+        print(eventTriggerBy);
+        isAnimating = false;
 		isDialoguePlaying = false;
 		if(eventTriggerBy)
-		eventTriggerBy.SendMessage("Done",SendMessageOptions.DontRequireReceiver);
-		eventTriggerBy = null;
+        {
+            TargetEvent temp = eventTriggerBy;
+            eventTriggerBy = null; 
+            temp.SendMessage("Done",SendMessageOptions.DontRequireReceiver);
+        }
+		
 	}
 	public void SkipLine()
 	{

@@ -46,6 +46,15 @@ public class Enemy : AnimatableSprite {
             //c2d.isTrigger = true;
         }
     }*/
+    void OnCollisionEnter2D(Collision2D collision2D)
+    {
+        if (collision2D.collider.tag == "Player")
+        {
+            print(data.damage);
+            Player.instance.damaged(data.damage);
+            //c2d.isTrigger = true;
+        }
+    }
     public Baisema lockedBaisema;
     public bool isBaisemaLocked;
     public bool isMovable()
@@ -80,7 +89,16 @@ public class Enemy : AnimatableSprite {
     }
     public void setMoveVec(Vector2 dir)
     { 
-        moveVec = dir;
+        
+            moveVec = dir;
+            if (state == EnemyState.Movable)
+            {
+                rb2d.velocity = moveVec * data.moveVelocity;
+            }
+        
+            
+        
+        
 	}
     CharacterAnimationState lastState;
     public void PlayAnimation(CharacterAnimationState state)
@@ -108,13 +126,6 @@ public class Enemy : AnimatableSprite {
         
         
        
-    }
-    void Update()
-    {
-        if (state == EnemyState.Movable)
-        {
-            rb2d.velocity = moveVec * data.moveVelocity;
-        }
     }
     public void takeDamage(float damage)
 	{

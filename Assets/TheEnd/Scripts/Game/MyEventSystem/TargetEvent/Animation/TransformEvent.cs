@@ -8,6 +8,8 @@ public class TransformEvent : TargetEvent {
     public float duration = 1;
 	protected override void active()
 	{
+        if(!conditionValid())
+            return;
 		LeanTween.move(target.gameObject,target.position+dis,duration).setEase(LeanTweenType.easeOutCubic);
 	}
 }

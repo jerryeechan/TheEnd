@@ -26,11 +26,11 @@ public class InteractRangeController : MonoBehaviour {
     }
 	public void changeDir(Vector3 dir)
     {
-        if(dir.x==1)
+        if(dir.x>0)
         {
             transform.rotation = Quaternion.Euler(0,0,0);
         }
-        else if(dir.x == -1)
+        else if(dir.x < 0)
         {
             transform.rotation = Quaternion.Euler(0, 0, 180);
         }

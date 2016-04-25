@@ -11,7 +11,7 @@ public class NoteManager : UIPanel {
 	Dictionary<string,Note> noteDict = new Dictionary<string,Note>();
     
     // Use this for initialization
-    protected override void Awake () {
+    public override void Awake () {
         base.Awake();
         instance = this;
         
@@ -26,32 +26,37 @@ public class NoteManager : UIPanel {
     Transform currentNote;
 	public void showNote(string noteID)
     {
-        notebg.SetActive(true);
-        isDismissed = false;
-        GameObject noteWrapper = Instantiate(noteDict[noteID].gameObject);
-        
-        RectTransform note = noteWrapper.transform.Find("note") as RectTransform;
-        note.SetParent(transform);
-        note.localPosition = Vector3.zero;
-        note.localScale = Vector3.one;
-        //PlayerController.instance.lockMove();
-        currentNote = note;
-        Destroy(noteWrapper);
-        
-        loadGraphics();
-        Show();
-        print("shownote");
-        
-        /*
-        bgAnim.gameObject.SetActive(true);
-        noteAnim.Rebind();
-        
-        noteAnim.Play("showNote");
-        bgAnim.Play("showbg");
-        */
-        isPlaying = true;
+        if(isAnimating == false)
+        {
+            
+            print("shownote");
+            //notebg.SetActive(true);
+            isDismissed = false;
+            GameObject noteWrapper = Instantiate(noteDict[noteID].gameObject);
+            
+            RectTransform note = noteWrapper.transform.Find("note") as RectTransform;
+            note.SetParent(transform);
+            note.localPosition = Vector3.zero;
+            note.localScale = Vector3.one;
+            //PlayerController.instance.lockMove();
+            currentNote = note;
+            Destroy(noteWrapper);
+            
+            loadGraphics();
+            Show();
+            
+            /*
+            bgAnim.gameObject.SetActive(true);
+            noteAnim.Rebind();
+            
+            noteAnim.Play("showNote");
+            bgAnim.Play("showbg");
+            */
+            
 
-        UIManager.instance.hideControlPanel();
+            UIManager.instance.hideControlPanel();
+        }
+       
     }
 
 //    int playingIndex;
@@ -59,7 +64,7 @@ public class NoteManager : UIPanel {
     public void dismissNote()
     {
         
-        if(!isDismissed)
+        if(!isDismissed&&isAnimating==false)
         {
            isDismissed = true;
            UIManager.instance.showControlPanel();
@@ -72,6 +77,7 @@ public class NoteManager : UIPanel {
     }
     void destroyNote()
     {
+        
         Destroy(currentNote.gameObject);
         isPlaying = false;
         if(eventTriggeredBy)

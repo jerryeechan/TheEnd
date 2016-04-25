@@ -18,3 +18,5 @@
 /Users/jerry/Desktop/game_project/TheEnd/TheEnd/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/jerry/Desktop/game_project/TheEnd/TheEnd/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/jerry/Desktop/game_project/TheEnd/TheEnd/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/jerry/Desktop/game_project/TheEnd/TheEnd/Temp/bin/Debug/Pathfinding.JsonFx.dll
+/Users/jerry/Desktop/game_project/TheEnd/TheEnd/Temp/bin/Debug/Pathfinding.Ionic.Zip.Reduced.dll

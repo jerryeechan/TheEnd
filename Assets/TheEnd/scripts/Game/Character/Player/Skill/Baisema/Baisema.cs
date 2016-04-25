@@ -100,7 +100,7 @@ public class Baisema : MonoBehaviour{
         if(collider2d.tag == "Enemy")
         {
             print("Ontrigger");
-            Debug.LogError(collider2d);
+            //Debug.LogError(collider2d);
             lockUp(collider2d.GetComponentInParent<Enemy>());
         }
     }

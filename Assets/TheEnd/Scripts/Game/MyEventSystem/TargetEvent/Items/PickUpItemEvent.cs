@@ -8,10 +8,14 @@ public class PickUpItemEvent : TargetEvent {
 	protected override void active()
 	{	
 		//Bag.instance.addItem(GetComponent<ItemTag>().itemName);
-        
-        UIManager.instance.pickItemView.setContent(item.sprite,item.showname);
-        UIManager.instance.pickItemView.Show();
-        UIManager.instance.bagView.getItem(item.name);
+        if(!conditionValid())
+            return;
+        if(item)
+        {
+            UIManager.instance.pickItemView.setContent(item.sprite,item.showname);
+            UIManager.instance.pickItemView.Show();
+            UIManager.instance.bagView.getItem(item.name);    
+        }
 		Invoke("DestroyObject",0.1f);
 	}
 	void DestroyObject()

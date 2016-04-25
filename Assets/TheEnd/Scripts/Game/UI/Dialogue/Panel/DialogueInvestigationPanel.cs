@@ -25,9 +25,11 @@ public class DialogueInvestigationPanel : UIPanel {
 			
 		else 
 		{
-			picture_vert.gameObject.SetActive(false);
+            if(picture_vert)
+			    picture_vert.gameObject.SetActive(false);
 			//picture_hori.gameObject.SetActive(true);
 			picture_hori.sprite = ivImageManager.getImage(image);
+            picture_hori.SetNativeSize();
 		}
 			
 	}

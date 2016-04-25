@@ -31,7 +31,7 @@ public class DialogueLoader  {
 		foreach(JSONNode dialogueJSON in dialoguesJSON)
 		{
 			Dialogue newDialogue = new Dialogue();
-//			Debug.Log(dialogueJSON);
+			Debug.Log(dialogueJSON);
 			parseLines(newDialogue,dialogueJSON["lines"].AsArray);
 			dict.Add(dialogueJSON["id"],newDialogue);
 		}

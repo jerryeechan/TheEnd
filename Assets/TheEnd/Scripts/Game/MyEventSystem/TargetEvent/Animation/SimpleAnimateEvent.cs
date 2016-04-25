@@ -9,6 +9,8 @@ public class SimpleAnimateEvent : TargetEvent {
 	
 	protected override void active()
 	{
+        if(!conditionValid())
+            return;
 		if(target==null)
 		target = GetComponent<SpriteRenderer>();
 		target.sprite = sprite;

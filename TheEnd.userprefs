@@ -1,8 +1,35 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../VRSpeech/Assets/Cardboard/DemoScene/Teleport.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Player/WalkInEvent.cs">
     <Files>
-      <File FileName="../../VRSpeech/Assets/Cardboard/DemoScene/Teleport.cs" Line="17" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Movie/MoviePlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-1_Sketchroom/PaintingGame.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/UI_related/ShowPanelEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/Character/Enemy/EnemyController.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/LoadPanel.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Menu/MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/MyStandardPackage1/Singleton.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_PlayPiano/SheetNote.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/MiniGame/SelectDollEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_doll/SelectDoll.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/SoundEffects/SoundManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/SoundEffects/SoundPlayer.cs" Line="22" Column="27" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_ControlRoom Panel/SwitchableLight.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Dialogue/controller/DialogueLoader.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Items/PickUpItemEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Dialogue/controller/DialogueManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_PlayPiano/PianoNotePlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Controller/PlayerControllerView.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Character/HealthBarPanel.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/Game Flow/SuperUser.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/UI_related/ShowNoteEvent.cs" Line="9" Column="34" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Canvas/AnimatableGraphic.cs" Line="28" Column="37" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Audio/PlaySoundEvent.cs" Line="6" Column="2" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Audio/StopSoundEvent.cs" Line="10" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Audio/SoundPlayerEvent.cs" Line="8" Column="30" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Player/WalkInDoorEvent.cs" Line="22" Column="3" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Player/WalkInEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/Character/Player/Player.cs" Line="16" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

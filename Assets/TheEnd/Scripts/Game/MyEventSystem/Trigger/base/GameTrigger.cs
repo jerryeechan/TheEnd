@@ -27,12 +27,11 @@ public class GameTrigger : MonoBehaviour {
             if(eventObject==null)
                 targetEvents = GetComponents<TargetEvent>();
             else
-                targetEvents = eventObject.GetComponents<TargetEvent>();
+                targetEvents = eventObject.GetComponentsInChildren<TargetEvent>();
         }
 	}
 	public bool once;
 	public bool isEnabled = true;
-	
 	
 	//trigger the target events binded
 	public virtual void triggerEvent()
@@ -71,7 +70,7 @@ public class GameTrigger : MonoBehaviour {
 			
 			if(once == true)
 			{
-				Destroy(gameObject);
+				isEnabled = false;
 			}
 				
 		}

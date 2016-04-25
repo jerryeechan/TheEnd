@@ -24,18 +24,31 @@ public class PlayerController : Singleton<PlayerController> {
         
         if(Input.GetKeyDown("z"))
         {
-            player.skillBtnTouched();
+            if(!player.isMoveLocked)
+            {
+                move(Vector2.zero);
+            }
+            player.skillBtnTouched();   
         }
         else if(Input.GetKeyUp("z"))
         {
-            player.release();
+            if(!player.isMoveLocked)
+            {
+                player.release();
+            }
         }
         else if(Input.GetKeyDown("x"))
         {
-            player.swipeDown();
+            if(!player.isMoveLocked)
+            {   
+                player.hasInteracted = false;
+                move(Vector2.zero);
+                player.swipeDown();    
+            }
         }
         else if(Input.GetKeyUp("x"))
         {
+
             player.release();
         }
         
@@ -47,12 +60,18 @@ public class PlayerController : Singleton<PlayerController> {
         {
             SuperUser.instance.su_speed = 1;
         }
+        if(Input.GetKeyDown("c"))
+        {
+            CharacterMenu.instance.SwitchChracter();
+        }
         
     }
     #endif
     
     public void move(Vector2 moveVec)
     {
+        if(player.state != Player.PlayerState.Moving)
+            return;
         CharacterAnimationState state = CharacterAnimationState.None;
         if (moveVec.y > Constant.th)
         {
@@ -100,25 +119,23 @@ public class PlayerController : Singleton<PlayerController> {
         if(!islocked)
         {
             islocked = true;
-            move(Vector2.zero);
-            player.lockMove();    
+            
         }
+        move(Vector2.zero);
+        player.lockMove(); 
         
     }
     public void unlockMove()
     {
+        print("unlockMove");
         if(islocked)
         {
             islocked = false;
-            player.unlockMove();    
         }
+        player.unlockMove(); 
         
     }
-    public void castSkill()
-    {
-
-    }
-	
+    
 	
 	
 	
