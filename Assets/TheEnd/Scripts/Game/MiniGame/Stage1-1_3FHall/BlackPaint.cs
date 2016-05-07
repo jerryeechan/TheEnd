@@ -9,7 +9,8 @@ public class BlackPaint : MonoBehaviour,IDragHandler {
     public void OnDrag(PointerEventData eventData)
     {
         if (eventData.delta.y<0)
-        {
+        {   
+            SoundManager.instance.PlayOneShot("paint_secret");
             image.fillAmount-=0.002f*Math.Abs(eventData.delta.y);
             if(image.fillAmount==0)
             {

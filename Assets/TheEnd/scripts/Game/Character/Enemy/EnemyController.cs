@@ -10,27 +10,28 @@ public class EnemyController : MonoBehaviour {
     public bool isXFlip = true;
     void Awake () {
 		enemy = GetComponent<Enemy>();
+        defaultLayer = LayerMask.GetMask("Player");
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if(enemy.state == Enemy.EnemyState.Movable)
-		MoveTowardPlayer();
+		    MoveTowardPlayer();
 	}
-	static LayerMask defaultLayer = LayerMask.GetMask("Default");
+	LayerMask defaultLayer;
 	void MoveTowardPlayer()
 	{
 
-//        RaycastHit2D ray = Physics2D.Raycast(enemy.transform.position,Player.instance.transform.position-enemy.transform.position,10,defaultLayer);
+     RaycastHit2D ray = Physics2D.Raycast(enemy.transform.position,Player.instance.transform.position-enemy.transform.position,8,defaultLayer);
 
         
-     //   if(ray&&ray.collider.tag=="Player")
-       // {
+        if(ray&&ray.collider.tag=="Player")
+        {
 
             Vector3 position = Player.instance.transform.position;
             Vector3 moveDir = (position - enemy.transform.position).normalized;
             move(moveDir);
-        //}
+        }
         
 	}
     void move(Vector2 moveVec)

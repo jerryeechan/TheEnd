@@ -154,6 +154,8 @@ public class Player : Singleton<Player> {
     
 	public void PlayAnimation(CharacterAnimationState state)
 	{
+        if(isInputEnable == false)
+            return;
 		if(state == CharacterAnimationState.None)
 		{
 			switch(lastState)
@@ -311,9 +313,16 @@ public class Player : Singleton<Player> {
     }
     public void dead()
     {
+        setMoveVec(Vector2.zero);
         anim.Play("death");
         isInputEnable = false;
-        GameManager.instance.GameOver(1);
+        GameManager.instance.GameOver(2);
+    }
+    public void revive()
+    {
+        PlayAnimation(CharacterAnimationState.Stand_Front);
+        recover(100);
+        isInputEnable = true;
     }
     public float getAttackValue()
     {

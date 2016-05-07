@@ -89,16 +89,11 @@ public class Enemy : AnimatableSprite {
     }
     public void setMoveVec(Vector2 dir)
     { 
-        
             moveVec = dir;
             if (state == EnemyState.Movable)
             {
                 rb2d.velocity = moveVec * data.moveVelocity;
             }
-        
-            
-        
-        
 	}
     CharacterAnimationState lastState;
     public void PlayAnimation(CharacterAnimationState state)
@@ -123,9 +118,6 @@ public class Enemy : AnimatableSprite {
             anim.Play(stateName);
             lastState = state;    
         }
-        
-        
-       
     }
     public void takeDamage(float damage)
 	{
@@ -138,17 +130,23 @@ public class Enemy : AnimatableSprite {
 	} 
 	public void DieAnimation()
 	{
+        anim.speed = 1;
 		state = EnemyState.Died;
         //effectAnim.Play("disappear");
-        setAlpha(0,0.5f);
-        Invoke("die",0.5f);
+        //setAlpha(0,0.5f);
+        
+        anim.Play("dead");
+        Invoke("die",1f);
 	}
 	
 	public void die()
 	{
         Quest.broadcast("enemy_died");
         if(spawner)
-           spawner.recycleEnemy(); 
+        {
+            spawner.recycleEnemy();
+            gameObject.SetActive(false);
+        } 
         else
 		  Destroy(gameObject);
 	}

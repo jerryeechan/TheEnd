@@ -49,11 +49,12 @@ public class DialogueManager : Singleton<DialogueManager> {
     bool showOption;
 	public void PlayDialogue(string dialogueKey,bool showOption)
 	{
-        
-        this.showOption = showOption;
-		print("Playing Dialogue:"+dialogueKey);
-		PlayDialogue(dialogueDictionary[dialogueKey]);	
-		
+        if(!isDialoguePlaying)
+		{
+			this.showOption = showOption;
+			print("Playing Dialogue:"+dialogueKey);
+			PlayDialogue(dialogueDictionary[dialogueKey]);	
+		}
 	}
 	public void PlayDialogue(Dialogue dialogue)
 	{
@@ -81,11 +82,11 @@ public class DialogueManager : Singleton<DialogueManager> {
 	
 	public void PlayNextLine()
 	{
-		if(isDialogueFinished == true)
-		return;
 		
 		if(typeWriter.isPlaying == true)
 		{
+			if(linePanel.isAnimating)
+			return;
 			SkipLine();
 		}
 		else
@@ -148,6 +149,7 @@ public class DialogueManager : Singleton<DialogueManager> {
             print("hideDialogue");
             Invoke("closed",1);
             isDialogueFinished = true;
+			
             UIManager.instance.showControlPanel();    
         }
         

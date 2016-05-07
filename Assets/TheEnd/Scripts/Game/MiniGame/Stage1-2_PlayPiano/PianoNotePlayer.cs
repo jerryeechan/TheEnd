@@ -91,8 +91,8 @@ public class PianoNotePlayer : MonoBehaviour {
     }
     public void StartGame()
     {
-        //prepareNote();
-        testNote();
+        prepareNote();
+        //testNote();
         isGameStarted = true;
         timeCounter = 0;
         nextNoteID = 0;

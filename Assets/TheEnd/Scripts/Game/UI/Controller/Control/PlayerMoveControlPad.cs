@@ -35,8 +35,8 @@ public class PlayerMoveControlPad : MonoBehaviour,IDragHandler,IEndDragHandler,I
         last_position = current.position;
     }
 	bool isDown = false;
-	float th = Mathf.Sin(22.5f*Mathf.PI/180);
-	float pivotDis = 30;
+	float th = Mathf.Sin(45f*Mathf.PI/180);
+	float pivotDis = 50;
 	float minTh = 8;
 	public Vector2 moveVec = Vector2.zero;
 	void Update()

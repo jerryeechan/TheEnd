@@ -13,14 +13,14 @@ public class SwitchButton : MonoBehaviour,IPointerClickHandler {
     void Awake()
     {
         image = GetComponent<Image>();
-        
+		onNum = 0;
     }
     void Start()
     {
-        if(index == 0)
-        {
+
+        if(ControlRoomPanel.instance.lightOn[index]==true)
             SwitchOn();
-        }
+        
         ControlRoomPanel.instance.lightTouched = false;
     }
     Image image;

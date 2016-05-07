@@ -11,7 +11,7 @@ public class SwitchableLight : MonoBehaviour,ISwitchable {
     {
         controlLight = GetComponentInChildren<Light>();
         spr = GetComponent<SpriteRenderer>();
-        if(name!="Light0")
+        if(name!="Light0"&&name!="Light1"&&name!="Light_hint_hair")
         Off();
     }
     

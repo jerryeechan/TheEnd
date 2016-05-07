@@ -11,7 +11,7 @@ public class CharacterMenu : Singleton<CharacterMenu> {
     void Awake()
     {
         availableCh.Add(MainCharacterEnum.moshiue);
-        availableCh.Add(MainCharacterEnum.shiunyin);
+        //availableCh.Add(MainCharacterEnum.shiunyin);
         
         
     }

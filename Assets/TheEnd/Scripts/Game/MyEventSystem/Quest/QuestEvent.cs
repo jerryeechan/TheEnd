@@ -26,11 +26,15 @@ public class QuestEvent : MonoBehaviour {
     {
         Quest.currentQuest = quest;
         print(Quest.currentQuest);
+        
+        
+        Invoke("changeState",changeState_delay);
+            
         foreach (var targetEvent in events)
         {
             targetEvent.triggerEvent();	
         }
-        Invoke("changeState",changeState_delay);
+        
         if(once)
         {
            quest.removeQuestEvent(require_state_id);
@@ -38,6 +42,9 @@ public class QuestEvent : MonoBehaviour {
     }
     void changeState()
     {
+        print("changeState");
+        print(goto_state_id);
         quest.changeState(goto_state_id);
+        print(quest.current_state);
     }
 }

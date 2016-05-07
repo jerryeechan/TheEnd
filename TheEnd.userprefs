@@ -1,7 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Player/WalkInEvent.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_PlayPiano/SheetNote.cs">
     <Files>
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_PlayPiano/PianoNotePlayer.cs" Line="21" Column="4" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Quest/ChangeQuestStateEvent.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Movie/MoviePlayer.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-1_Sketchroom/PaintingGame.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/UI_related/ShowPanelEvent.cs" Line="1" Column="1" />
@@ -9,27 +11,46 @@
       <File FileName="Assets/TheEnd/Scripts/Game/UI/LoadPanel.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Game/UI/Menu/MainMenu.cs" Line="1" Column="1" />
       <File FileName="Assets/MyStandardPackage1/Singleton.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_PlayPiano/SheetNote.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_PlayPiano/SheetNote.cs" Line="35" Column="29" />
       <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/MiniGame/SelectDollEvent.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_doll/SelectDoll.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Game/SoundEffects/SoundManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/Scripts/Game/SoundEffects/SoundPlayer.cs" Line="22" Column="27" />
-      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_ControlRoom Panel/SwitchableLight.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/SoundEffects/SoundPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_ControlRoom Panel/SwitchableLight.cs" Line="12" Column="8" />
       <File FileName="Assets/TheEnd/Scripts/Game/UI/Dialogue/controller/DialogueLoader.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Items/PickUpItemEvent.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Game/UI/Dialogue/controller/DialogueManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_PlayPiano/PianoNotePlayer.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Game/UI/Controller/PlayerControllerView.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Game/UI/Character/HealthBarPanel.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Game/Game Flow/SuperUser.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/UI_related/ShowNoteEvent.cs" Line="9" Column="34" />
-      <File FileName="Assets/TheEnd/Scripts/Game/UI/Canvas/AnimatableGraphic.cs" Line="28" Column="37" />
-      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Audio/PlaySoundEvent.cs" Line="6" Column="2" />
-      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Audio/StopSoundEvent.cs" Line="10" Column="1" />
-      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Audio/SoundPlayerEvent.cs" Line="8" Column="30" />
-      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Player/WalkInDoorEvent.cs" Line="22" Column="3" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/UI_related/ShowNoteEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Canvas/AnimatableGraphic.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Audio/PlaySoundEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Audio/StopSoundEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Audio/SoundPlayerEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Player/WalkInDoorEvent.cs" Line="1" Column="1" />
       <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Player/WalkInEvent.cs" Line="1" Column="1" />
-      <File FileName="Assets/TheEnd/Scripts/Game/Character/Player/Player.cs" Line="16" Column="25" />
+      <File FileName="Assets/TheEnd/Scripts/Game/Character/Player/Player.cs" Line="39" Column="33" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/Quest/Quest.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/Quest/QuestEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Animation/SimpleAnimateEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Canvas/AnimatableCanvas.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Dialogue/Panel/UIPanel.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/Character/Enemy/Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/Game Flow/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Controller/Control/SkillBtn.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Other/SetPositionEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Enemy/EnemyAlterEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/Game Flow/ReviveSpot.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Controller/Control/PlayerMoveControlPad.cs" Line="38" Column="25" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_ControlRoom Panel/ControlRoomPanel.cs" Line="19" Column="26" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_ControlRoom Panel/SwitchButton.cs" Line="16" Column="13" />
+      <File FileName="Assets/TheEnd/Scripts/Game/UI/Menu/CharacterMenu.cs" Line="14" Column="11" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MyEventSystem/TargetEvent/Die/PianoDieEvent.cs" Line="6" Column="5" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_PlayPiano/PianoGame.cs" Line="4" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_PlayPiano/PianoKey.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_PlayPiano/PianoKeyTrack.cs" Line="1" Column="1" />
+      <File FileName="Assets/TheEnd/Scripts/Game/MiniGame/Stage1-2_PlayPiano/MidiNote.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

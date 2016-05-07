@@ -49,6 +49,15 @@ public class SoundManager : Singleton<SoundManager> {
 		}
         
 	}
+	public void PlayOneShot(AudioClip clip)
+	{
+		AudioSource a = emptyAudioSource();
+		a.PlayOneShot(clip,1);
+	}
+	public void PlaySound(AudioClip clip)
+	{
+		
+	}
 	public void PlayOneShot(string name)
 	{
         print("sound");

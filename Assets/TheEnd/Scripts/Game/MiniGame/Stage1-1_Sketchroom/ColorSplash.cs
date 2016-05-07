@@ -12,6 +12,7 @@ public class ColorSplash : AnimatableGraphic, IPointerEnterHandler
 		if(hasDrawn == false)
      	{
 			 drawColor();
+             SoundManager.instance.PlayOneShot("paint_single");
 			 hasDrawn = true;
 		}
     }

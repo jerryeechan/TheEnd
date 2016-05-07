@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlaySoundEvent : TargetEvent {
 	public string clipName;
+	public AudioClip clip;
 	public bool oneshot = true;
 
 	protected override void active()
@@ -12,6 +13,11 @@ public class PlaySoundEvent : TargetEvent {
         
 			if(oneshot == true)
 	        {
+				if(clip)
+				{
+					SoundManager.instance.PlayOneShot(clip);	
+				}
+				else
 	            SoundManager.instance.PlayOneShot(clipName);
 	        }
 	        else

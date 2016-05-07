@@ -9,7 +9,8 @@ public class SoundPlayer: MonoBehaviour {
 
 	void Awake()
 	{
-		PlaySound(autoPlay);
+		if(autoPlay)
+			PlaySound(autoPlay);
 	}
 
     Dictionary<AudioClip,AudioSource> clipAudioDict = new Dictionary<AudioClip,AudioSource>();

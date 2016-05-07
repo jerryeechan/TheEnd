@@ -99,7 +99,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 439890}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &416626
 Transform:
   m_ObjectHideFlags: 1
@@ -111,7 +111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 439890}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &439890
 Transform:
   m_ObjectHideFlags: 1
@@ -122,9 +122,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 480540}
   - {fileID: 400930}
   - {fileID: 416626}
-  - {fileID: 480540}
   m_Father: {fileID: 499252}
   m_RootOrder: 0
 --- !u!4 &480540
@@ -138,7 +138,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 439890}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!4 &499252
 Transform:
   m_ObjectHideFlags: 1
@@ -331,13 +331,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0619e460a775cc458d37cb4a214a189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumTilesWide: 16
-  NumTilesHigh: 19
+  NumTilesWide: 15
+  NumTilesHigh: 23
   TileWidth: 60
   TileHeight: 60
   ExportScale: 0.016666
-  MapWidthInPixels: 960
-  MapHeightInPixels: 1140
+  MapWidthInPixels: 900
+  MapHeightInPixels: 1380
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

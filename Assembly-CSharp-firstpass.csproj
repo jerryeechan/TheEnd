@@ -132,9 +132,10 @@
      <None Include="Assets\plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\JsonFxLicense.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
-     <None Include="Assets\Tiled2Unity\Imported\1-1_stairwell.tiled2unity.xml" />
+     <None Include="Assets\Tiled2Unity\Imported\1-1_Stairwell.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\License.txt" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\NavmeshOutline.shader" />
+     <None Include="Assets\Tiled2Unity\Imported\1-2_SpaceHallway.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\1-1_3F.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
      <None Include="Assets\TheEnd\Dialogue\1-1Dialogues.txt" />

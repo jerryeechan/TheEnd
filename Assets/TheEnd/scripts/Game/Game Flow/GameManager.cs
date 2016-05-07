@@ -17,7 +17,13 @@ public class GameManager : Singleton<GameManager> {
     {
         bloodSplash.gameObject.SetActive(true);
         bloodSplash.splash();
-        hasGameOver = false ;   
+        //hasGameOver = false ;   
+    }
+    public void Revive()
+    {
+        hasGameOver = false;
+        ReviveSpotManager.instance.Revive();
+        Player.instance.revive();
     }
 	bool hasGameOver = false;
     public void quitGame()

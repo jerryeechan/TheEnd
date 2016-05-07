@@ -3,13 +3,11 @@ using System.Collections;
 
 public class ReviveSpot : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void OnTriggerEnter2D(Collider2D collider2d)
+	{
+		if(collider2d.tag == "Player")
+		{
+			ReviveSpotManager.instance.lastSpot = transform;
+		}
 	}
 }

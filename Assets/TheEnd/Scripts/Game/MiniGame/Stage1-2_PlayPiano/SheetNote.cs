@@ -32,7 +32,7 @@ public class SheetNote : MonoBehaviour {
     {
         float y = rectT.localPosition.y;
         print("test piano hit");
-        if(y <= -580&&y>=-680)
+        if(y <= -560&&y>=-700)
          {
              
              successHit();

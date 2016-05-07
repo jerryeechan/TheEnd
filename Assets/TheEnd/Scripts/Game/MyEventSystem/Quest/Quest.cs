@@ -36,8 +36,7 @@ public class Quest : MonoBehaviour {
         
         if(questDict.ContainsKey(temp_state))
         {
-            questDict[temp_state].triggerEvents();  
-            current_state = temp_state;
+            questDict[temp_state].triggerEvents();     
             return true;
         }
         else

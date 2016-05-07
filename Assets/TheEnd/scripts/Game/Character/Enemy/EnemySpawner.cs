@@ -34,7 +34,9 @@ public class EnemySpawner : MonoBehaviour {
     public void recycleEnemy()
     {
         print("recycle");
+        
         enemyCount--;
+        
        // Invoke("Spawn",1);
     }
 	void Spawn()
